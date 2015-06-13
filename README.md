@@ -1,5 +1,3 @@
-![travis-build](https://api.travis-ci.org/ritenv/atwork.svg)
-
 	    ___     _ _      _                 
 	   /   \___| (_) ___(_) ___  _   _ ___ 
 	  / /\ / _ \ | |/ __| |/ _ \| | | / __|
@@ -18,7 +16,7 @@
 
 ## Idea
 
-** Coming soon **
+**Coming soon**
 
 ## Stack
 
@@ -34,7 +32,7 @@
 
 Contributions are very much welcome!
 
-![contribute](fast-typing.gif)
+![contribute](minions.gif)
 
 ## Background
 
