@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html ng-app="AtWork">
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <base href="/"></base>
+        <title ng-bind="systemSettings ? systemSettings.workplace : 'AtWork'"></title>
+    </head>
+    <body layout="row" ng-controller="AppCtrl">
+      <!-- new deployment: 25, May, 2015!! -->
+      <div class="preloader" ng-if="!appReady">
+        <div class="preloader-content">
+          <img src="images/preloader.gif" width="300">
+          <h1>Flying</h1>
+          <p>Hold on, tightly...</p>
+        </div>
+      </div>
+      <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')" ng-if="isLoggedIn">
+        <md-toolbar layout="row">
+          <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" ng-if="isLoggedIn">
+            <span class="visuallyhidden">Menu</span>
+          </button>
+          <h1>{{systemSettings ? systemSettings.workplace : 'AtWork'}}</h1>
+        </md-toolbar>
+        <div class="md-padding sidebar-list" layout-padding>
+            <div ng-include="'/system/public/views/search.html'"></div>
+            
+            <!-- Load user streams -->
+            <div ng-include="'/modules/streams/views/streamsList.html'"></div>
+        </div>
+
+      </md-sidenav>
+      <div layout="column" flex>
+
+          <md-toolbar layout="column">
+            <div class="md-toolbar-tools">
+                <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" ng-if="isLoggedIn">
+                  <span class="visuallyhidden">Menu</span>
+                </button>
+                <!-- <h2 hide-gt-sm flex>{{systemSettings ? systemSettings.workplace : 'AtWork'}}</h2> -->
+                <md-button class="md-old-style" ng-if="isLoggedIn" ng-click="goHome($event)" title="Home">
+                  <md-inline-list-icon class="fa fa-globe"></md-inline-list-icon>
+                </md-button>
+                <span hide-sm ng-if="!isLoggedIn">{{systemSettings ? systemSettings.workplace : 'AtWork'}}</span>
+                <span hide-sm hide-md class="tiny" flex>&nbsp; {{barTitle}}</span>
+                <span flex hide-md></span>
+                <md-button class="md-old-style" ng-if="isLoggedIn && (user.roles.indexOf('admin') !== -1)" href="/settings" title="Settings">
+                  <md-inline-list-icon class="fa fa-cog"></md-inline-list-icon>
+                </md-button>
+                <md-button class="md-old-style" ng-if="isLoggedIn" title="Invite" ng-click="inviteOthers($event)" ng-controller="InviteCtrl">
+                  <md-inline-list-icon class="fa fa-envelope"></md-inline-list-icon>
+                </md-button>
+                <div ng-controller="notificationsCtrl">
+                  <md-button class="md-old-style" ng-if="isLoggedIn" ng-click="showUserNotifications($event)" title="Alerts">
+                    <md-inline-list-icon class="fa fa-bell notification-count"> <span ng-if="notificationCount">{{notificationCount}} </span></md-inline-list-icon>
+                  </md-button>
+                  
+                  <div class="notifications md-whiteframe-z1" ng-if="isLoggedIn && notificationShown">
+                    <md-list>
+                      <!-- notif loop start -->
+                      <md-list-item class="item" ng-repeat="item in items">
+                        <md-button href="{{item.href}}" ng-click="markRead(item)" layout-wrap>
+                          <md-item-content layout="row">
+                              <img ng-src="{{item.actor.face || '/images/user.jpg'}}" class="face" alt="{{item.actor.name}}">
+                              <div>
+                                <p>{{::item.display.text}}</p>
+                                <span class="mute">{{::item.created | date:'medium'}}</span>
+                              </div>
+                          </md-item-content>
+                        </md-button>
+                      </md-item>
+                      <!-- notif loop -->
+
+                      <!-- no notif start -->
+                      <md-item class="item" ng-if="!items.length">
+                        <md-button ng-click="showUserNotifications()">
+                          <md-item-content>
+                              <div class="md-tile-content">
+                                <p>No unread notifications.</p>
+                              </div>
+                          </md-item-content>
+                        </md-button>
+                      </md-item>
+                      <!-- no notif -->
+                    </md-list>
+                  </div>
+                </div>
+
+                <md-button class="user-profile-btn md-old-style" ng-if="isLoggedIn" ng-click="showUserActions($event)" title="Profile">
+                  <md-inline-list-icon class="fa fa-user"></md-inline-list-icon>
+                </md-button>
+
+            </div>
+          </md-toolbar>
+
+
+          <div layout="column" flex id="content">
+            
+            <md-content flex class="md-padding greyed" md-scroll-y>
+              <div class="main-view" ng-view layout="row" layout-align="center" layout-fill></div>
+            </md-content>
+          </div>
+          
+      </div>
+      <!-- <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="right" md-is-locked-open="$media('gt-md')" ng-if="isLoggedIn">
+
+      </md-sidenav> -->
+      <!-- Angular Material Dependencies -->
+      <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/angular-aria/angular-aria.js"></script>
+      <script src="/bower_components/angular-animate/angular-animate.js"></script>
+      <script src="/bower_components/angular-material/angular-material.js"></script>
+      <script src="/bower_components/angular-route/angular-route.js"></script>
+      <script src="/bower_components/angular-messages/angular-messages.js"></script>
+      <script src="/bower_components/angular-resource/angular-resource.js"></script>
+      <script src="/bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+      <script src="/bower_components/lodash/lodash.min.js"></script>
+      
+      <!-- Other modules -->
+      <script src="/bower_components/q/q.js"></script>
+      <script src="/bower_components/ng-file-upload/angular-file-upload.js"></script>
+
+        
+      <!-- System -->
+      <script type="text/javascript" src="/system/utils.js"></script>
+      <script type="text/javascript" src="/system/index.js"></script>
+      <script type="text/javascript" src="/bower_components/socket.io-client/socket.io.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.controllers.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.routes.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.services.js"></script>
+      
+      <!-- Modules -->
+      
+      <!-- Users Module -->
+      <script type="text/javascript" src="/modules/users/users.js"></script>
+      <script type="text/javascript" src="/modules/users/users.controllers.js"></script>
+      <script type="text/javascript" src="/modules/users/users.routes.js"></script>
+      <script type="text/javascript" src="/modules/users/users.services.js"></script>
+
+      <!-- Posts Module -->
+      <script type="text/javascript" src="/modules/posts/posts.js"></script>
+      <script type="text/javascript" src="/modules/posts/posts.controllers.js"></script>
+      <script type="text/javascript" src="/modules/posts/posts.routes.js"></script>
+      <script type="text/javascript" src="/modules/posts/posts.services.js"></script>
+
+      <!-- Streams Module -->
+      <script type="text/javascript" src="/modules/streams/streams.js"></script>
+      <script type="text/javascript" src="/modules/streams/streams.controllers.js"></script>
+      <script type="text/javascript" src="/modules/streams/streams.routes.js"></script>
+      <script type="text/javascript" src="/modules/streams/streams.services.js"></script>
+
+      <!-- Activities Module -->
+      <script type="text/javascript" src="/modules/activities/activities.js"></script>
+      <script type="text/javascript" src="/modules/activities/activities.controllers.js"></script>
+      <script type="text/javascript" src="/modules/activities/activities.routes.js"></script>
+      <script type="text/javascript" src="/modules/activities/activities.services.js"></script>
+
+      <!-- Notifications Module -->
+      <script type="text/javascript" src="/modules/notifications/notifications.js"></script>
+      <script type="text/javascript" src="/modules/notifications/notifications.services.js"></script>
+      <script type="text/javascript" src="/modules/notifications/notifications.controllers.js"></script>
+
+      <!-- Main angular file -->
+      <script src="/app.js"></script>
+
+      <!-- Non-critical CSS -->
+      <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/bower_components/angular-loading-bar/build/loading-bar.min.css">
+    </body>
+</html>
+

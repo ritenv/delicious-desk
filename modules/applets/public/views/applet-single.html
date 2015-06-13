@@ -1,0 +1,41 @@
+<md-button ng-click="open()">
+  <os-icon class="os-icon">
+    <img ng-src="{{::data.icon}}" alt="{{::data.title}}">
+    <p>{{::data.title}}</p>
+  </os-icon>
+</md-button>
+
+<div class="os-window" ng-if="almostReady" ng-class="{maximized: maximized, minimized: minimized, active: active}" ng-click="activate()">
+  <os-window-cover ng-click="activate()"></os-window-cover>
+  <md-toolbar class="os-window-toolbar">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Close" ng-click="close()">
+        <md-icon md-font-icon="fa fa-close"></md-icon>
+      </md-button>
+      <h2>
+        <span>{{::data.title}}</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Minimize" ng-click="minimize()">
+        <md-icon md-font-icon="fa fa-minus"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Maximize" ng-click="maximize()">
+        <md-icon md-font-icon="fa fa-square-o"></md-icon>
+      </md-button>
+      <!-- <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="/images/assets/more_vert.svg"></md-icon>
+      </md-button> -->
+    </div>
+  </md-toolbar>
+  <!-- http://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai -->
+  <!-- http://cburgdorf.github.io/angular-todo-app/ -->
+  <!-- <md-content> -->
+  <div class="loading">
+    <md-icon md-font-icon="fa fa-spinner fa-spin"></md-icon>
+  </div>
+  
+  <os-window-content layout-fill>
+    <iframe ng-if="ready" layout="row" layout-fill src="{{::data.url}}" width="100%" height="100%" frameborder="0"></iframe>
+  </os-window-content>
+  <!-- </md-content> -->
+</div>

@@ -1,0 +1,142 @@
+<div class="user-profile" layout-fill>
+  <div ng-show="profile" layout-align="center" layout-fill flex-gt-sm="90" flex-gt-md="80" class="user-profile">
+    <md-card class="user-profile">
+      <md-card-content class="user-profile-info">
+        <p ng-if="selfProfile && !profile.face"><strong>Tip: Click photo to edit</strong></p>
+        <div layout="row">
+          <!-- TODO: The file select dialog appears even on other users' profiles (no issue for now, they cannot edit the avatar) -->
+          <img src="images/spacer.gif" style="background-image: url('{{profile.face || '/images/user.jpg'}}')" class="face {{!selfProfile?'':'clickable'}}" alt="{{profile.name}}" ng-file-select ng-accept="'image/*'" ng-model="avatar">
+          <div class="unspaced-headings" layout="row" flex>
+
+            <div layout="column" flex class="user-details">
+              <div ng-if="!editMode">
+                <h2>{{::profile.name}} <md-inline-list-icon title="Status" class="fa fa-circle tiny status" ng-class="{online: profile.loggedIn || selfProfile}"></md-inline-list-icon></h2>
+                <h3>@{{::profile.username}}</h3>
+                <p>{{::profile.designation}}</p>
+              </div>
+              <div ng-if="editMode">
+                <form name="userForm" ng-submit="updateProfile(userForm.$valid)" novalidate>
+                  <md-input-container>
+                    <label>Full Name</label>
+                    <input name="name" ng-model="profile.name" required md-maxlength="100" minlength="5">
+                    <div ng-messages="userForm.name.$error" ng-show="userForm.bio.$dirty">
+                      <div ng-message="required">This is required!</div>
+                      <div ng-message="md-maxlength">That's too long!</div>
+                      <div ng-message="minlength">That's too short!</div>
+                    </div>
+                  </md-input-container>
+                  <md-input-container>
+                    <label>Designation</label>
+                    <input name="name" ng-model="profile.designation" required md-maxlength="100" minlength="2">
+                    <div ng-messages="userForm.designation.$error" ng-show="userForm.bio.$dirty">
+                      <div ng-message="required">This is required!</div>
+                      <div ng-message="md-maxlength">That's too long!</div>
+                      <div ng-message="minlength">That's too short!</div>
+                    </div>
+                  </md-input-container>
+                  <md-button class="md-primary md-raised" ng-if="editMode">
+                    Update
+                  </md-button>
+                  <md-button class="md-raised" ng-click="cancelEditProfile()" ng-if="editMode">
+                    Cancel
+                  </md-button>
+                  <br><br>
+                </form>
+                <h3>@{{::profile.username}}</h3>
+              </div>
+              <!-- <p>{{::profile.email}}</p> -->
+
+              <div class="profile-buttons">
+                <md-button class="md-primary md-raised no-true-margin" ng-click="follow()" ng-if="!selfProfile && alreadyFollowing===false">
+                  <md-inline-list-icon class="fa fa-plus"></md-inline-list-icon>
+                  <span>Follow</span>
+                </md-button>
+                <md-button ng-controller="ChatsCtrl" class="md-primary md-raised no-true-margin" ng-click="message($event, profile)" ng-if="!selfProfile">
+                  <md-inline-list-icon class="fa fa-envelope"></md-inline-list-icon>
+                  <span>Message</span>
+                </md-button>
+                <md-button class=" no-true-margin" ng-click="unfollow()" ng-if="!selfProfile && alreadyFollowing===true">
+                  <md-inline-list-icon class="fa fa-minus-circle"></md-inline-list-icon>
+                  <span>Unfollow</span>
+                </md-button>
+                <md-button ng-click="editProfile()" ng-if="selfProfile && !editMode" class="no-true-margin">
+                  <md-inline-list-icon class="fa fa-pencil"></md-inline-list-icon>
+                  <span>Edit Profile</span>
+                </md-button>
+                <md-button ng-click="changePassword()" ng-if="selfProfile && !editMode" class="no-true-margin">
+                  <md-inline-list-icon class="fa fa-user-secret"></md-inline-list-icon>
+                  <span>Password</span>
+                </md-button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+    <md-content class="user-profile-details">
+      <md-tabs class="md-accent" md-dynamic-height>
+        <md-tab label="Timeline">
+          <md-content class="md-padding customized-tab">
+            <div ng-include="'/modules/posts/views/feed.html'" ng-init="isTimeline=true"></div>
+          </md-content>
+        </md-tab>
+        <md-tab label="Activity">
+          <md-card class="no-margin-top">
+            <md-card-content>
+              <div ng-include="'/modules/activities/views/activities.html'"></div>
+            <md-card-content>
+          </md-card>
+        </md-tab>
+        <md-tab label="Followers">
+          <md-card class="no-margin-top">
+            <md-card-content>
+              <md-list ng-if="followers.length">
+                <md-list-item ng-repeat="item in followers" class="user-profile-following button-listing">
+
+                  <md-button href="/profile/{{item.username}}" class="md-accent">
+                    <md-item-content layout="row">
+                      <img ng-src="{{item.face || '/images/user.jpg'}}" class="face" alt="{{item.name}}">
+                      <div class="md-tile-content unspaced-headings left-text">
+                        <h3 class="md-accent">{{item.name}}</h3>
+                        <p>@{{item.username}}</p>
+                        <p>{{item.designation}}</p>
+                      </div>
+                    </md-item-content>
+                  </md-button>
+                  
+                  
+                </md-list-item>
+              </md-list>
+              <p ng-if="!followers.length">No followers yet.</p>
+            </md-card-content>
+          </md-card>
+        </md-tab>
+        <md-tab label="Following">
+          <md-card class="no-margin-top">
+            <md-card-content>
+              <md-list ng-if="following.length">
+                <md-item ng-repeat="item in following" class="user-profile-following button-listing">
+                  
+                  <md-button href="/profile/{{item.username}}" class="md-accent">
+                    <md-item-content layout="row">
+                      <img ng-src="{{item.face || '/images/user.jpg'}}" class="face" alt="{{item.name}}">
+                      <div class="md-tile-content unspaced-headings left-text">
+                        <h3 class="md-accent">{{item.name}}</h3>
+                        <p>@{{item.username}}</p>
+                        <p>{{item.designation}}</p>
+                      </div>
+                    </md-item-content>
+                  </md-button>
+
+                </md-item>
+              </md-list>
+              <p ng-if="!following.length">Not following anyone yet.</p>
+            </md-card-content>
+          </md-card>
+        </md-tab>
+      </md-tabs
+    </md-content>
+  </div>
+<!-- </div>

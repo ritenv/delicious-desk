@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="delicious.main">
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <base href="/"></base>
+        <title ng-bind="systemSettings ? systemSettings.workplace : 'AtWork'"></title>
+    </head>
+    <body layout="row" ng-controller="AppCtrl">
+      <!-- new deployment: 25, May, 2015!! -->
+      <div class="preloader" ng-if="!appReady">
+        <div class="preloader-content">
+          <h1>Delicious Desk</h1>
+          <p>Now Cooking</p>
+        </div>
+      </div>
+      
+      <div layout="column" flex>
+
+          <div layout="column" flex id="content">
+            
+            <md-content flex class="md-padding greyed" md-scroll-y style="background: url('/images/wallpaper-default.png') no-repeat; background-size: cover;">
+              <div class="main-view" ng-view layout="row" layout-align="center" layout-fill></div>
+            </md-content>
+          </div>
+          
+      </div>
+
+      <!-- Angular Material Dependencies -->
+      <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/angular-aria/angular-aria.js"></script>
+      <script src="/bower_components/angular-animate/angular-animate.js"></script>
+      <script src="/bower_components/angular-material/angular-material.js"></script>
+      <script src="/bower_components/angular-route/angular-route.js"></script>
+      <script src="/bower_components/angular-messages/angular-messages.js"></script>
+      <script src="/bower_components/angular-resource/angular-resource.js"></script>
+      <script src="/bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+      <script src="/bower_components/lodash/lodash.min.js"></script>
+      
+      <!-- Other modules -->
+      <script src="/bower_components/q/q.js"></script>
+      <script src="/bower_components/ng-file-upload/angular-file-upload.js"></script>
+
+        
+      <!-- System -->
+      <script type="text/javascript" src="/system/utils.js"></script>
+      <script type="text/javascript" src="/system/index.js"></script>
+      <script type="text/javascript" src="/bower_components/socket.io-client/socket.io.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.routes.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.services.js"></script>
+      <script type="text/javascript" src="/system/settings/settings.controllers.js"></script>
+      
+      <!-- Modules -->
+      
+      <!-- Users Module -->
+      <script type="text/javascript" src="/modules/users/users.js"></script>
+      <script type="text/javascript" src="/modules/users/users.controllers.js"></script>
+      <script type="text/javascript" src="/modules/users/users.routes.js"></script>
+      <script type="text/javascript" src="/modules/users/users.services.js"></script>
+
+      <!-- Applets Module -->
+      <script type="text/javascript" src="/modules/applets/applets.js"></script>
+      <script type="text/javascript" src="/modules/applets/applets.controllers.js"></script>
+      <script type="text/javascript" src="/modules/applets/applets.routes.js"></script>
+      <script type="text/javascript" src="/modules/applets/applets.directives.js"></script>
+      <script type="text/javascript" src="/modules/applets/applets.services.js"></script>
+
+      <!-- Notifications Module -->
+      <script type="text/javascript" src="/modules/notifications/notifications.js"></script>
+      <script type="text/javascript" src="/modules/notifications/notifications.services.js"></script>
+      <script type="text/javascript" src="/modules/notifications/notifications.controllers.js"></script>
+
+      <!-- Main angular file -->
+      <script src="/app.js"></script>
+
+      <!-- Non-critical CSS -->
+      <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/bower_components/angular-loading-bar/build/loading-bar.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+    </body>
+</html>
+
