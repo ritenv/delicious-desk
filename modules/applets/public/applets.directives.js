@@ -4,7 +4,9 @@ angular.module('delicious.applets')
   .directive('appIcon', [
     '$sce',
     '$document',
-    function($sce, $document) {
+    '$timeout',
+    'appAppletsOpen',
+    function($sce, $document, $timeout, appAppletsOpen) {
       return {
         /**
          * The template path
@@ -36,6 +38,11 @@ angular.module('delicious.applets')
                * @type {Boolean}
                */
               setTimeout(function() {
+
+                if (!$scope.windowId) {
+                  $scope.windowId = 'WIN' + Math.round(Math.random() * 100000);
+                  appAppletsOpen.addWindow($scope.windowId);
+                }
                 $scope.almostReady = true;
                 /**
                  * Fire the iframe
@@ -47,7 +54,7 @@ angular.module('delicious.applets')
                  * Bring to front
                  */
                 $scope.activate();
-                
+
                 /**
                  * Update the isolated scope
                  */
@@ -62,8 +69,14 @@ angular.module('delicious.applets')
              * @return {Void}
              */
             $scope.activate = function() {
-              $rootScope.$emit('osWindow.deactivate');
-              $scope.active = true;
+              $rootScope.$emit('osWindow.deactivate'); //deactivate all
+
+              //activate self
+              $timeout(function() {
+                $scope.active = true;
+                $scope.minimized = false;
+                console.log('called')
+              }, 100);
             };
 
             /**
@@ -72,9 +85,10 @@ angular.module('delicious.applets')
              */
             $scope.close = function() {
               $scope.ready = false;
+              $rootScope.$emit('osWindow.close');
               ($scope.onclose || angular.noop)();
               $scope.almostReady = false;
-              $scope.maximized = $scope.minimized = false;
+              appAppletsOpen.removeWindow($scope.windowId);
             };
 
             /**
@@ -84,6 +98,7 @@ angular.module('delicious.applets')
             $scope.maximize = function() {
               $scope.maximized = !$scope.maximized;
               $scope.minimized = false;
+              $rootScope.$emit('osWindow.maximize');
             };
 
             /**
@@ -92,6 +107,10 @@ angular.module('delicious.applets')
              */
             $scope.minimize = $scope.unminimize = function() {
               $scope.minimized = !$scope.minimized;
+              $scope.maximized = false;
+              $scope.active = false;
+              $rootScope.$emit('osWindow.minimize');
+              updateTaskbarPositions();
             };
 
             /**
@@ -101,12 +120,36 @@ angular.module('delicious.applets')
               $scope.active = false;
             });
 
+            function updateTaskbarPositions() {
+              var minimizedCount = $('.os-window.minimized').length;
+              //get width of all minimized windows
+              var left = 0;
+
+              var indexOfMe = appAppletsOpen.openWindows.indexOf($scope.windowId);
+              _.each(appAppletsOpen.openWindows, function(openWindow, i) {
+                if (i < indexOfMe) {
+                  left += $('#' + openWindow).outerWidth() + 2;
+                }
+              });
+
+              $scope.data.cssLeft = left;
+            }
+
             function createDraggable() {
               /**
                * Get the window element
                * @type {Object}
                */
               var osWindow = angular.element('.os-window', $scope.element);
+
+              /**
+               * Ensure this runs only once
+               */
+              if ($scope.draggableCreated) {
+                return;
+              } else {
+                $scope.draggableCreated = true;
+              }
 
               /**
                * Get the dragger element
@@ -117,7 +160,6 @@ angular.module('delicious.applets')
               var startX = 0, startY = 0, x = 0, y = 0;
               
               osWindow.on('mousedown', function(event) {
-                console.log('dragging');
                 // Prevent default dragging of selected content
                 event.preventDefault();
                 startX = event.pageX - x;
@@ -127,6 +169,9 @@ angular.module('delicious.applets')
               });
 
               function mousemove(event) {
+                $timeout(function() {
+                  $scope.dragging = true;
+                });
                 y = event.pageY - startY;
                 x = event.pageX - startX;
                 osWindow.css({
@@ -136,6 +181,9 @@ angular.module('delicious.applets')
               }
 
               function mouseup() {
+                $timeout(function() {
+                  $scope.dragging = false;
+                });
                 $document.off('mousemove', mousemove);
                 $document.off('mouseup', mouseup);
               }
@@ -148,6 +196,12 @@ angular.module('delicious.applets')
            * @type {Object}
            */
           $scope.data = $attrs;
+
+          /**
+           * Check default states
+           * @type {Boolean}
+           */
+          $scope.maximized = $attrs.maximized !== undefined ? true : false;
 
           /**
            * Ensure URL is trusted

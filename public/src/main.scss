@@ -16,6 +16,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -93,6 +94,9 @@ a {
 /** ====== Sidenav Related END ====== */
 
 /** ====== General typo BEGIN ====== */
+.md-button.md-fab {
+  /*min-width: 56px;*/
+}
 .left-padd {
   padding-left: 15px;
 }
@@ -232,28 +236,70 @@ ul.unstyled {
 /** ====== General typo END ====== */
 
 /** ====== Applets BEGIN ====== */
-.os-icon {
-  display: inline-block;
-  margin: 30px;
+add-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+}
+app-icon {
+
+  &.color-1 md-icon {
+    color: #4ECDC4;
+  }
+  &.color-2 md-icon {
+    color: #FFFF8D;
+  }
+  &.color-3 md-icon  {
+    color: #5BD770;
+  }
+  &.color-9 md-icon  {
+    color: #FFFF8D;
+  }
+  &.color-8 md-icon  {
+    color: #FFF2DF;
+  }
+  &.color-4 md-icon  {
+    color: #FF8A80;
+  }
+  &.color-6 md-icon  {
+    color: #80D8FF;
+  }
+  &.color-7 md-icon  {
+    color: #FFFF8D;
+  }
+  &.color-10 md-icon  {
+    color: #AAE5FF;
+  }
+  &.color-11 md-icon  {
+    color: #FF8A80;
+  }
   
-  transition: all linear 0.1s;
-  -webkit-transition: all linear 0.1s;
-  -moz-transition: all linear 0.1s;
-  -ms-transition: all linear 0.1s;
+  .os-icon {
+    display: inline-block;
+    margin: 30px;
+    
+    transition: all linear 0.1s;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-  &:focus, &:active {
-    outline: none;
-  }
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:focus, &:active {
+      outline: none;
+    }
 
-  img {
-    width: 64px;
-  }
-  p {
-    color: $white;
-    text-align: center;
+    md-icon {
+      width: 64px;
+      height: 64px;
+    }
+    p {
+      color: $white;
+      text-align: center;
+    }
   }
 }
 .os-window {
@@ -265,6 +311,8 @@ ul.unstyled {
   z-index: 1;
   overflow: hidden;
   padding-bottom: 64px;
+
+
 
   &.active {
     z-index: 10;
@@ -288,6 +336,9 @@ ul.unstyled {
     height: auto;
     width: auto;
     padding-bottom: 0;
+    
+    top: 100% !important;
+    margin-top: -64px;
 
     os-window-content {
       display: none;
@@ -324,18 +375,20 @@ ul.unstyled {
 
   background: #fff;
   box-shadow: -3px 10px 20px rgba(0,0,0,0.2);
-
-  /*transition: all linear 0.2s;
-  -webkit-transition: all linear 0.2s;
-  -moz-transition: all linear 0.2s;
-  -ms-transition: all linear 0.2s;*/
+  
+  &:not(.dragging) {
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+  }
 
   &.ng-enter {
     transform: scale(0.2);
     opacity: 0;
   }
   &.ng-leave {
-    opacity: 0;
+    
   }
   .os-window-toolbar {
     .md-font {

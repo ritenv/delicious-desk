@@ -1,11 +1,12 @@
-<md-button ng-click="open()">
+<md-button ng-click="open()" layout="column">
   <os-icon class="os-icon">
-    <img ng-src="{{::data.icon}}" alt="{{::data.title}}">
+    <!-- <img ng-src="{{::data.icon}}" alt="{{::data.title}}"> -->
+    <md-icon md-svg-icon="{{::data.icon}}"></md-icon>
     <p>{{::data.title}}</p>
   </os-icon>
 </md-button>
 
-<div class="os-window" ng-if="almostReady" ng-class="{maximized: maximized, minimized: minimized, active: active}" ng-click="activate()">
+<div class="os-window" id="{{windowId}}" ng-if="almostReady" ng-class="{dragging: dragging, maximized: maximized, minimized: minimized, active: active}" style="{{data.cssLeft !== undefined && minimized ? 'left: ' + data.cssLeft + 'px !important;' : ''}}">
   <os-window-cover ng-click="activate()"></os-window-cover>
   <md-toolbar class="os-window-toolbar">
     <div class="md-toolbar-tools">

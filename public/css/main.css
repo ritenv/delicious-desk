@@ -5,7 +5,8 @@ html, body {
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  overflow: hidden; }
 
 a {
   text-decoration: none;
@@ -69,6 +70,9 @@ a {
 
 /** ====== Sidenav Related END ====== */
 /** ====== General typo BEGIN ====== */
+.md-button.md-fab {
+  /*min-width: 56px;*/ }
+
 .left-padd {
   padding-left: 15px; }
 
@@ -190,20 +194,48 @@ ul.unstyled {
 
 /** ====== General typo END ====== */
 /** ====== Applets BEGIN ====== */
-.os-icon {
+add-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px; }
+
+app-icon.color-1 md-icon {
+  color: #4ECDC4; }
+app-icon.color-2 md-icon {
+  color: #FFFF8D; }
+app-icon.color-3 md-icon {
+  color: #5BD770; }
+app-icon.color-9 md-icon {
+  color: #FFFF8D; }
+app-icon.color-8 md-icon {
+  color: #FFF2DF; }
+app-icon.color-4 md-icon {
+  color: #FF8A80; }
+app-icon.color-6 md-icon {
+  color: #80D8FF; }
+app-icon.color-7 md-icon {
+  color: #FFFF8D; }
+app-icon.color-10 md-icon {
+  color: #AAE5FF; }
+app-icon.color-11 md-icon {
+  color: #FF8A80; }
+app-icon .os-icon {
   display: inline-block;
   margin: 30px;
   transition: all linear 0.1s;
   -webkit-transition: all linear 0.1s;
   -moz-transition: all linear 0.1s;
   -ms-transition: all linear 0.1s; }
-  .os-icon:hover {
+  app-icon .os-icon:hover {
     transform: scale(1.1); }
-  .os-icon:focus, .os-icon:active {
+  app-icon .os-icon:focus, app-icon .os-icon:active {
     outline: none; }
-  .os-icon img {
-    width: 64px; }
-  .os-icon p {
+  app-icon .os-icon md-icon {
+    width: 64px;
+    height: 64px; }
+  app-icon .os-icon p {
     color: #fff;
     text-align: center; }
 
@@ -217,11 +249,7 @@ ul.unstyled {
   overflow: hidden;
   padding-bottom: 64px;
   background: #fff;
-  box-shadow: -3px 10px 20px rgba(0, 0, 0, 0.2);
-  /*transition: all linear 0.2s;
-  -webkit-transition: all linear 0.2s;
-  -moz-transition: all linear 0.2s;
-  -ms-transition: all linear 0.2s;*/ }
+  box-shadow: -3px 10px 20px rgba(0, 0, 0, 0.2); }
   .os-window.active {
     z-index: 10; }
     .os-window.active os-window-cover {
@@ -238,7 +266,9 @@ ul.unstyled {
     overflow: hidden;
     height: auto;
     width: auto;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    top: 100% !important;
+    margin-top: -64px; }
     .os-window.minimized os-window-content {
       display: none; }
   .os-window os-window-content {
@@ -262,10 +292,13 @@ ul.unstyled {
     text-align: center;
     padding: 40px 0;
     font-size: 40px; }
+  .os-window:not(.dragging) {
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s; }
   .os-window.ng-enter {
     transform: scale(0.2);
-    opacity: 0; }
-  .os-window.ng-leave {
     opacity: 0; }
   .os-window .os-window-toolbar .md-font {
     font-size: 22px; }
