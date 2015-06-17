@@ -11,7 +11,7 @@
 	/___,' \___||___/_|\_\                 
 	                                       
 
-**Delicious Desk** is a delicious looking desktop for all your bookmarks
+**Delicious Desk** is a delicious looking desktop interface.
 (Under development)
 
 ## Idea
