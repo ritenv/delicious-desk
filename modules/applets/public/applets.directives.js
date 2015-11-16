@@ -3,10 +3,11 @@
 angular.module('delicious.applets')
   .directive('appIcon', [
     '$sce',
+    '$controller',
     '$document',
     '$timeout',
     'appAppletsOpen',
-    function($sce, $document, $timeout, appAppletsOpen) {
+    function($sce, $controller, $document, $timeout, appAppletsOpen) {
       return {
         /**
          * The template path
@@ -208,6 +209,13 @@ angular.module('delicious.applets')
            * @type {Object}
            */
           $scope.data.url = $sce.trustAsResourceUrl($scope.data.url);
+
+          /**
+           * If there is a controller, inherit from it
+           */
+          if ($attrs.templateController) {
+            $controller($attrs.templateController, {$scope: $scope});
+          }
 
           /**
            * Save the element to scope

@@ -282,8 +282,13 @@ app-icon {
     .os-window.minimized os-window-content {
       display: none; }
   .os-window os-window-content {
-    background: rgba(0, 0, 0, 0.4);
-    position: relative; }
+    background: #556270;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; }
+    .os-window os-window-content.add-padding {
+      padding: 20px 30px; }
     .os-window os-window-content iframe {
       height: 100%;
       position: relative;
@@ -472,13 +477,11 @@ app-icon {
       font-size: 30px;
     }*/ }
     .preloader .preloader-content h1, .preloader .preloader-content p {
-      text-transform: uppercase;
       font-weight: normal;
       margin: 0;
       padding: 0; }
     .preloader .preloader-content h1 {
-      font-size: 43px;
-      letter-spacing: -1px; }
+      font-size: 43px; }
 
 .intro-text p {
   line-height: 26px;

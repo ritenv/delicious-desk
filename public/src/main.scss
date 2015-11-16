@@ -362,8 +362,15 @@ app-icon {
   }
   
   os-window-content {
-    background: rgba(0,0,0,0.4);
+    background: #556270;
+    display: inline-block;
     position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    
+    &.add-padding {
+      padding: 20px 30px;
+    }
     iframe {
       height: 100%;
       position: relative;
@@ -623,14 +630,12 @@ app-icon {
     text-align: center;
     color: $white;
     h1, p {
-      text-transform: uppercase;
       font-weight: normal;
       margin: 0;
       padding: 0;
     }
     h1 {
       font-size: 43px;
-      letter-spacing: -1px;
     }
     /*
     p {
