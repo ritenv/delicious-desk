@@ -430,6 +430,11 @@ app-icon {
 
 /** ====== Users END ====== */
 /** ====== Misc BEGIN ====== */
+#logo {
+  position: fixed;
+  bottom: 80px;
+  left: 80px; }
+
 #loading-bar-spinner {
   top: 24px !important;
   left: 24px !important; }
