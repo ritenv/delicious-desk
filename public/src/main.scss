@@ -244,7 +244,7 @@ add-icon {
   height: 100px;
 }
 app-icon {
-
+  display: inline-block;
   &.color-1 md-icon {
     color: #4ECDC4;
   }
@@ -276,6 +276,16 @@ app-icon {
     color: #FF8A80;
   }
   
+  &.os-no-close {
+    .os-close-button {
+      display: none;
+    }
+  }
+  &.os-icon-hidden {
+    .os-icon-button {
+      display: none !important;
+    }
+  }
   .os-icon {
     display: inline-block;
     margin: 30px;
@@ -311,8 +321,6 @@ app-icon {
   z-index: 1;
   overflow: hidden;
   padding-bottom: 64px;
-
-
 
   &.active {
     z-index: 10;
@@ -397,6 +405,15 @@ app-icon {
     .md-icon-button {
       width: 36px;
     }
+  }
+}
+
+.os-window-offset {
+  .os-window.active:not(.maximized) {
+    top: auto !important;
+    left: auto !important;
+    bottom: 0 !important;
+    right: 0 !important;
   }
 }
 /** ====== Applets END ====== */
@@ -607,6 +624,15 @@ app-icon {
       letter-spacing: 3px;
       font-size: 30px;
     }*/
+  }
+}
+
+.intro-text {
+  p {
+    line-height: 26px;
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #fff;
   }
 }
 

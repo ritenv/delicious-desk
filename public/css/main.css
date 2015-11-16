@@ -201,43 +201,49 @@ add-icon {
   width: 100px;
   height: 100px; }
 
-app-icon.color-1 md-icon {
-  color: #4ECDC4; }
-app-icon.color-2 md-icon {
-  color: #FFFF8D; }
-app-icon.color-3 md-icon {
-  color: #5BD770; }
-app-icon.color-9 md-icon {
-  color: #FFFF8D; }
-app-icon.color-8 md-icon {
-  color: #FFF2DF; }
-app-icon.color-4 md-icon {
-  color: #FF8A80; }
-app-icon.color-6 md-icon {
-  color: #80D8FF; }
-app-icon.color-7 md-icon {
-  color: #FFFF8D; }
-app-icon.color-10 md-icon {
-  color: #AAE5FF; }
-app-icon.color-11 md-icon {
-  color: #FF8A80; }
-app-icon .os-icon {
-  display: inline-block;
-  margin: 30px;
-  transition: all linear 0.1s;
-  -webkit-transition: all linear 0.1s;
-  -moz-transition: all linear 0.1s;
-  -ms-transition: all linear 0.1s; }
-  app-icon .os-icon:hover {
-    transform: scale(1.1); }
-  app-icon .os-icon:focus, app-icon .os-icon:active {
-    outline: none; }
-  app-icon .os-icon md-icon {
-    width: 64px;
-    height: 64px; }
-  app-icon .os-icon p {
-    color: #fff;
-    text-align: center; }
+app-icon {
+  display: inline-block; }
+  app-icon.color-1 md-icon {
+    color: #4ECDC4; }
+  app-icon.color-2 md-icon {
+    color: #FFFF8D; }
+  app-icon.color-3 md-icon {
+    color: #5BD770; }
+  app-icon.color-9 md-icon {
+    color: #FFFF8D; }
+  app-icon.color-8 md-icon {
+    color: #FFF2DF; }
+  app-icon.color-4 md-icon {
+    color: #FF8A80; }
+  app-icon.color-6 md-icon {
+    color: #80D8FF; }
+  app-icon.color-7 md-icon {
+    color: #FFFF8D; }
+  app-icon.color-10 md-icon {
+    color: #AAE5FF; }
+  app-icon.color-11 md-icon {
+    color: #FF8A80; }
+  app-icon.os-no-close .os-close-button {
+    display: none; }
+  app-icon.os-icon-hidden .os-icon-button {
+    display: none !important; }
+  app-icon .os-icon {
+    display: inline-block;
+    margin: 30px;
+    transition: all linear 0.1s;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s; }
+    app-icon .os-icon:hover {
+      transform: scale(1.1); }
+    app-icon .os-icon:focus, app-icon .os-icon:active {
+      outline: none; }
+    app-icon .os-icon md-icon {
+      width: 64px;
+      height: 64px; }
+    app-icon .os-icon p {
+      color: #fff;
+      text-align: center; }
 
 .os-window {
   position: fixed;
@@ -304,6 +310,12 @@ app-icon .os-icon {
     font-size: 22px; }
   .os-window .os-window-toolbar .md-icon-button {
     width: 36px; }
+
+.os-window-offset .os-window.active:not(.maximized) {
+  top: auto !important;
+  left: auto !important;
+  bottom: 0 !important;
+  right: 0 !important; }
 
 /** ====== Applets END ====== */
 /** ====== Users BEGIN ====== */
@@ -458,6 +470,12 @@ app-icon .os-icon {
     .preloader .preloader-content h1 {
       font-size: 43px;
       letter-spacing: 2px; }
+
+.intro-text p {
+  line-height: 26px;
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #fff; }
 
 /** ====== Misc END ====== */
 /** All view animations */

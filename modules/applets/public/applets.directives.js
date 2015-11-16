@@ -214,6 +214,12 @@ angular.module('delicious.applets')
            * @type {Object}
            */
           $scope.element = $element;
+
+          if ($attrs.autoOpen === 'true') {
+            $timeout(function() {
+              $scope.open();
+            }, 2000);
+          }
         }
       }
     }

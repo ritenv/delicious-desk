@@ -1,4 +1,4 @@
-<md-button ng-click="open()" layout="column">
+<md-button ng-click="open()" layout="column" class="os-icon-button">
   <os-icon class="os-icon">
     <!-- <img ng-src="{{::data.icon}}" alt="{{::data.title}}"> -->
     <md-icon md-svg-icon="{{::data.icon}}"></md-icon>
@@ -10,7 +10,7 @@
   <os-window-cover ng-click="activate()"></os-window-cover>
   <md-toolbar class="os-window-toolbar">
     <div class="md-toolbar-tools">
-      <md-button class="md-icon-button" aria-label="Close" ng-click="close()">
+      <md-button class="md-icon-button os-close-button" aria-label="Close" ng-click="close()">
         <md-icon md-font-icon="fa fa-close"></md-icon>
       </md-button>
       <h2>
