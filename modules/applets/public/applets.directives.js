@@ -218,7 +218,7 @@ angular.module('delicious.applets')
           if ($attrs.autoOpen === 'true') {
             $timeout(function() {
               $scope.open();
-            }, 2000);
+            }, 1200);
           }
         }
       }

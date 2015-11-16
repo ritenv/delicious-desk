@@ -23,6 +23,10 @@ app.controller('AppCtrl', [
     $scope.barTitle = '';
     $scope.search = '';
 
+    $rootScope.setModifierClass = function(clsName) {
+      $rootScope.modifierClass = clsName;
+    }
+
     $scope.updateLoginStatus = function() {
       $scope.isLoggedIn = appAuth.isLoggedIn();
       $scope.user = appAuth.getUser();

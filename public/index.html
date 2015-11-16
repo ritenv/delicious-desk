@@ -9,12 +9,12 @@
         <base href="/"></base>
         <title ng-bind="systemSettings ? systemSettings.workplace : 'Loading...'"></title>
     </head>
-    <body layout="row" ng-controller="AppCtrl">
+    <body class="{{modifierClass}}" layout="row" ng-controller="AppCtrl">
       <!-- new deployment: 25, May, 2015!! -->
       <div class="preloader" ng-if="!appReady">
         <div class="preloader-content">
-          <h1>Delicious Desk</h1>
-          <p>Now Cooking</p>
+          <h1>Climbing Dots</h1>
+          <p>Loading...</p>
         </div>
       </div>
       
@@ -22,7 +22,7 @@
 
           <div layout="column" flex id="content">
             
-            <md-content flex class="md-padding greyed" md-scroll-y style="background: url('/images/wallpaper-default.png') no-repeat; background-size: cover;">
+            <md-content flex class="md-padding greyed main-container" md-scroll-y style="background: url('/images/wallpaper-default.png') no-repeat; background-size: cover;">
               <div class="main-view" ng-view layout="row" layout-align="center" layout-fill></div>
             </md-content>
           </div>

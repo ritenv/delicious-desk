@@ -11,6 +11,14 @@ angular.module('delicious.applets')
         templateUrl: '/modules/applets/views/intro.html',
         controller: 'IntroCtrl'
       })
+      .when('/critical', {
+        templateUrl: '/modules/applets/views/intro.html',
+        controller: 'CriticalCtrl'
+      })
+      .when('/coming-soon', {
+        templateUrl: '/modules/applets/views/intro.html',
+        controller: 'SoonCtrl'
+      })
       ;
     $locationProvider.html5Mode(true);
   }]);

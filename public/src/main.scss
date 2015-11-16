@@ -17,6 +17,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow: hidden;
+  &.plain {
+    .main-container {
+      background: #556270 !important;
+    }
+  }
 }
 a {
   text-decoration: none;
@@ -263,6 +268,9 @@ app-icon {
   &.color-4 md-icon  {
     color: #FF8A80;
   }
+  &.color-5 md-icon  {
+    color: #8DFDFF;
+  }
   &.color-6 md-icon  {
     color: #80D8FF;
   }
@@ -409,7 +417,7 @@ app-icon {
 }
 
 .os-window-offset {
-  .os-window.active:not(.maximized) {
+  .os-window:not(.maximized) {
     top: auto !important;
     left: auto !important;
     bottom: 0 !important;
@@ -602,7 +610,7 @@ app-icon {
   right: 0;
   bottom: 0;
 
-  background: $primaryColor;
+  background: #556270;
   z-index: 1000;
   .preloader-content {
     margin-top: 200px;
@@ -617,7 +625,7 @@ app-icon {
     }
     h1 {
       font-size: 43px;
-      letter-spacing: 2px;
+      letter-spacing: -1px;
     }
     /*
     p {
