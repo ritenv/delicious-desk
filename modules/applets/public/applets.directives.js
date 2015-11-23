@@ -116,6 +116,7 @@ angular.module('delicious.applets')
 
               $rootScope.$on('os.openBrowser', function() {
                 if ($scope.data.iconType === 'browser') {
+                  $scope.ready = false;
                   $scope.open();
                 }
               });
