@@ -1,4 +1,4 @@
-<div layout="column">
+<div layout="column" flex>
   <div layout="row">
     <div flex="70" flex-lg="70" flex-md="70" flex-sm="100">
       <div class="os-icons">
@@ -7,6 +7,7 @@
           title="How-To Guides" 
           icon="/images/icons/material/help18.svg" 
           class="color-1"
+          auto-open="true"
           template-controller="SoonCtrl"
           template-path="/modules/applets/views/intro.html">
         </app-icon>
@@ -37,6 +38,13 @@
           template-path="/modules/applets/views/intro.html">
         </app-icon>
 
+        <app-icon 
+          title="{{globalUrl}}"
+          icon-type="browser"
+          maximized
+          url="{{globalUrl}}">
+        </app-icon>
+
         <!-- <app-icon 
           title="Introduction"
           icon="/images/icons/material/good4.svg" 
@@ -56,7 +64,7 @@
         <img src="/images/logo-main.png" class="logo" hide-sm hide-xs>
       </div>
     </div>
-    <div flex="30" flex-gt-md="10" flex-md="30" flex-sm="0" hide-sm hide-xs>
+    <div flex="30" flex-gt-md="30" flex-md="30" flex-sm="0" hide-sm hide-xs style="position: relative;">
       <div ng-include="'/modules/applets/views/descriptions.html'"></div>
     </div>
   </div>

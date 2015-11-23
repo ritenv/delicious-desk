@@ -28,7 +28,7 @@ html, body {
   }
 }
 md-content {
-  background-color: #FFFFFF !important;
+  background-color: #F5F5F5 !important;
 }
 a {
   text-decoration: none;
@@ -441,13 +441,16 @@ app-icon {
     position: relative;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+
+    max-height: 100%;
+    overflow: auto;
     
     &.add-padding {
       padding: 20px 30px;
     }
     iframe {
       height: 100%;
-      position: relative;
+      position: absolute;
       z-index: 1;
     }
   }
@@ -669,12 +672,13 @@ app-icon {
   position: fixed;
   bottom: 80px;
   left: 80px;
+  width: 250px;
 
   @media (max-width: 768px) {
     position: static;
     width: 200px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 #loading-bar-spinner {
@@ -796,7 +800,37 @@ md-dialog {
 .scrollable {
   @media (min-width: 768px) {
     position: absolute;
-    height: 80%;
+    height: auto;
     overflow: scroll;
+  }
+}
+.link-items {
+  padding-left: 21px;
+  .link-item {
+    .title a {
+      font-size: 110%;
+      font-weight: bold;
+      color: #EE3B33;
+      &:hover {
+        border-bottom: 1px dashed #aaa;
+      }
+    }
+    .open-here {
+      color: #aaa !important;
+      margin-left: 10px;
+      .text {
+        display: none;
+      }
+      &:hover {
+        border: none !important;
+        .text {
+          display: inline;
+          font-weight: normal;
+        }
+      }
+    }
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
   }
 }

@@ -74,6 +74,10 @@ angular.module('delicious.applets')
     'appUsersSearch',
     function($sce, $scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch) {
       $scope.introText = $sce.trustAsHtml('<p>Coming soon.</p>');
+      $scope.openWindow = function(params) {
+        $rootScope.globalUrl = params.url;
+        $rootScope.$broadcast('os.openBrowser');
+      };
     }
   ])
 

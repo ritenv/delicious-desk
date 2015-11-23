@@ -114,6 +114,12 @@ angular.module('delicious.applets')
               updateTaskbarPositions();
             };
 
+              $rootScope.$on('os.openBrowser', function() {
+                if ($scope.data.iconType === 'browser') {
+                  $scope.open();
+                }
+              });
+
             /**
              * Listen to the deactive event
              */
