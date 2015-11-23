@@ -7,6 +7,7 @@ $white: #fff;
 $green: #95D055;
 $weirdRandomColor: #77AAB3;
 $badgeRed: #CB5757;
+$pinkishColor: #FF8A80;
 
 html, body {
   font-size: 14px;
@@ -17,11 +18,17 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow: hidden;
+  @media (max-width: 768px) {
+    overflow: auto;
+  }
   &.plain {
     .main-container {
       background: #556270 !important;
     }
   }
+}
+md-content {
+  background-color: #FFFFFF !important;
 }
 a {
   text-decoration: none;
@@ -29,9 +36,13 @@ a {
   &.btn.md-button {
     display: inline-block;
   }
+  color: $primaryColor;
 }
 .primaryColor {
   color: $primaryColor;
+}
+.pinkishColor {
+  color: $pinkishColor;
 }
 .primaryColors {
   a {
@@ -249,6 +260,9 @@ add-icon {
   height: 100px;
 }
 app-icon {
+  @media (max-width: 768px) {
+    width: 49%;
+  }
   display: inline-block;
   &.color-1 md-icon {
     color: #4ECDC4;
@@ -283,6 +297,41 @@ app-icon {
   &.color-11 md-icon  {
     color: #FF8A80;
   }
+
+
+  &.color-1 md-icon {
+    color: #F0913E;
+  }
+  &.color-2 md-icon {
+    color: #3EC7F0;
+  }
+  &.color-3 md-icon  {
+    color: #5BD7A9;
+  }
+  &.color-9 md-icon  {
+    color: #FFFF8D;
+  }
+  &.color-8 md-icon  {
+    color: #FFF2DF;
+  }
+  &.color-4 md-icon  {
+    color: #FF8A80;
+  }
+  &.color-5 md-icon  {
+    color: #8DFDFF;
+  }
+  &.color-6 md-icon  {
+    color: #80D8FF;
+  }
+  &.color-7 md-icon  {
+    color: #FFFF8D;
+  }
+  &.color-10 md-icon  {
+    color: #6D96A9;
+  }
+  &.color-11 md-icon  {
+    color: #FF8A80;
+  }
   
   &.os-no-close {
     .os-close-button {
@@ -294,9 +343,20 @@ app-icon {
       display: none !important;
     }
   }
+  .os-icon-button {
+    @media (max-width: 768px) {
+
+    }
+  }
   .os-icon {
     display: inline-block;
-    margin: 30px;
+    margin: 20px;
+    width: 107px;
+    height: 92px;
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
     
     transition: all linear 0.1s;
     -webkit-transition: all linear 0.1s;
@@ -313,10 +373,17 @@ app-icon {
     md-icon {
       width: 64px;
       height: 64px;
+      @media (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+      }
     }
     p {
-      color: $white;
+      color: #737272;
       text-align: center;
+      @media (max-width: 768px) {
+        font-size: 90%;
+      }
     }
   }
 }
@@ -329,6 +396,13 @@ app-icon {
   z-index: 1;
   overflow: hidden;
   padding-bottom: 64px;
+
+  @media (max-width: 768px) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   &.active {
     z-index: 10;
@@ -362,7 +436,7 @@ app-icon {
   }
   
   os-window-content {
-    background: #556270;
+    background: $white;
     display: inline-block;
     position: relative;
     box-sizing: border-box;
@@ -591,10 +665,17 @@ app-icon {
 /** ====== Users END ====== */
 
 /** ====== Misc BEGIN ====== */
-#logo {
+.logo {
   position: fixed;
   bottom: 80px;
   left: 80px;
+
+  @media (max-width: 768px) {
+    position: static;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 }
 #loading-bar-spinner {
   top: 24px !important;
@@ -650,7 +731,7 @@ app-icon {
     line-height: 26px;
     font-size: 18px;
     margin: 0 0 10px;
-    color: #fff;
+    color: #444;
   }
 }
 
@@ -690,5 +771,32 @@ md-dialog {
     background: #eee;
     margin: 0;
     text-transform: uppercase;
+  }
+}
+.margin-bottom {
+  margin-bottom: 30px;
+}
+.app-description {
+  border-radius: 6px;
+  background-color: #fff;
+  p {
+    line-height: 18px;
+    margin-bottom: 6px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+.scrollable {
+  @media (min-width: 768px) {
+    position: absolute;
+    height: 80%;
+    overflow: scroll;
   }
 }
