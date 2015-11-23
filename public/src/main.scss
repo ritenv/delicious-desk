@@ -373,10 +373,10 @@ app-icon {
     md-icon {
       width: 64px;
       height: 64px;
-      @media (max-width: 768px) {
+      /*@media (max-width: 768px) {
         width: 48px;
         height: 48px;
-      }
+      }*/
     }
     p {
       color: #737272;
@@ -707,13 +707,13 @@ app-icon {
   right: 0;
   bottom: 0;
 
-  background: #556270;
+  background: #fff;
   z-index: 1000;
   .preloader-content {
     margin-top: 200px;
     font-size: 20px;
     text-align: center;
-    color: $white;
+    color: $darkgray;
     h1, p {
       font-weight: normal;
       margin: 0;

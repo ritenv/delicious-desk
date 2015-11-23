@@ -284,11 +284,11 @@ app-icon {
       outline: none; }
     app-icon .os-icon md-icon {
       width: 64px;
-      height: 64px; }
-      @media (max-width: 768px) {
-        app-icon .os-icon md-icon {
-          width: 48px;
-          height: 48px; } }
+      height: 64px;
+      /*@media (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+      }*/ }
     app-icon .os-icon p {
       color: #737272;
       text-align: center; }
@@ -526,13 +526,13 @@ app-icon {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #556270;
+  background: #fff;
   z-index: 1000; }
   .preloader .preloader-content {
     margin-top: 200px;
     font-size: 20px;
     text-align: center;
-    color: #fff;
+    color: #bbb;
     /*
     p {
       letter-spacing: 3px;
