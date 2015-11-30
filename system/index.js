@@ -13,6 +13,7 @@ var multer = require('multer');
 var morgan = require('morgan');
 var path = require('path');
 var nodemailer = require('nodemailer');
+var _ = require('lodash');
 
 /**
  * Load the settings model
@@ -33,6 +34,7 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
+
 var options = {
   dotfiles: 'ignore',
   etag: false,
@@ -333,3 +335,398 @@ module.exports = {
   }
 
 };
+var varTimeout;
+
+io.on('disconnection', function (socket) {
+  clearTimeout(varTimeout);
+});
+
+io.on('connection', function (socket) {
+
+  var initialDataa = [
+    {
+      id: '420000',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: null,
+      status: 'pending',
+      progress: {
+        percent: 0,
+        checkpoints: {
+          build: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          unit: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          }
+        }
+      }
+    }, {
+      id: '420001',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: null,
+      status: 'pending',
+      progress: {
+        percent: 0,
+        checkpoints: {
+          build: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          unit: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          }
+        }
+      }
+    }, {
+      id: '420002',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: null,
+      status: 'pending',
+      progress: {
+        percent: 0,
+        checkpoints: {
+          build: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          unit: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          }
+        }
+      }
+    }, {
+      id: '420003',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: null,
+      status: 'pending',
+      progress: {
+        percent: 0,
+        checkpoints: {
+          build: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          unit: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          }
+        }
+      }
+    }
+  ];
+
+  var data = [
+    {
+      id: '420000',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: null,
+      status: 'pending',
+      progress: {
+        percent: 0,
+        checkpoints: {
+          build: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          unit: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          }
+        }
+      }
+    }, {
+      id: '420001',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: '2015-11-29T14:27:06.208Z',
+      status: 'running',
+      progress: {
+        percent: 65,
+        checkpoints: {
+          build: {
+            started: true,
+            completed: true,
+            success: true,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {
+              debug: {
+                linkUrl: 'http://google.com',
+                success: true
+              },
+              release: {
+                linkUrl: 'http://google.com',
+                success: true
+              }
+            },
+            status: 'ok'
+          },
+          unit: {
+            started: true,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: null,
+            details: {},
+            status: 'pending'
+          }
+        }
+      }
+    }, {
+      id: '420002',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: '2015-11-29T14:27:06.208Z',
+      status: 'passed',
+      progress: {
+        percent: 100,
+        checkpoints: {
+          build: {
+            started: true,
+            completed: true,
+            success: true,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {
+              debug: {
+                linkUrl: 'http://google.com',
+                success: true
+              },
+              release: {
+                linkUrl: 'http://google.com',
+                success: true
+              }
+            },
+            status: 'ok'
+          },
+          unit: {
+            started: true,
+            completed: true,
+            success: true,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {
+              coveragePercent: {
+                covered: 58,
+                notCovered: 42
+              }
+            },
+            status: 'ok'
+          },
+          functional: {
+            started: true,
+            completed: true,
+            success: true,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {
+              coveragePercent: {
+                covered: 80,
+                notCovered: 20
+              }
+            },
+            status: 'ok'
+          }
+        }
+      }
+    }, {
+      id: '420003',
+      owner: {
+        username: 'jtuck',
+        name: 'jTuck'
+      },
+      timeStarted: '2015-11-29T14:27:06.208Z',
+      status: 'failed',
+      progress: {
+        percent: 0,
+        checkpoints: {
+          build: {
+            started: true,
+            completed: true,
+            success: false,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {
+              debug: {
+                linkUrl: 'http://google.com',
+                success: true
+              },
+              release: {
+                linkUrl: 'http://google.com',
+                success: false,
+                logsUrl: 'http://google.com'
+              }
+            }
+          },
+          unit: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {},
+            status: 'na'
+          },
+          functional: {
+            started: false,
+            completed: false,
+            success: false,
+            timeCompleted: '2015-11-29T14:27:06.208Z',
+            details: {},
+            status: 'na'
+          }
+        }
+      }
+    }
+  ];
+  
+  // io.emit('ci-data', data);
+  var initialData = [_.clone(initialDataa[0]), _.clone(initialDataa[1]), _.clone(initialDataa[2]), _.clone(initialDataa[3])];
+  update1();
+  update2();
+
+  function update1() {
+    var elem = initialData[2];
+    var elemTo = data[2];
+    elem.progress.percent = Math.min(100, elem.progress.percent+(Math.round(Math.random()*10)));
+    socket.emit('ci-data', initialData);
+
+    if (elem.progress.percent) {
+      elem.timeStarted = Date.now();
+      elem.progress.checkpoints.build = _.extend(elem.progress.checkpoints.build, elemTo.progress.checkpoints.build);
+
+      elem.progress.checkpoints.unit.started = true;
+      elem.status = 'running';
+    }
+
+    if (elem.progress.percent >= 45) {
+      _.extend(elem.progress.checkpoints.unit, elemTo.progress.checkpoints.unit);
+      elem.progress.checkpoints.unit.timeCompleted = Date.now();
+    }
+
+    if (elem.progress.percent >= 99) {
+      _.extend(elem.progress.checkpoints.functional, elemTo.progress.checkpoints.functional);
+      elem.status = 'passed';
+    }
+
+    if (elem.progress.percent <= 100) {
+      varTimeout = setTimeout(function() {
+        update1();
+      }, 1000);
+    }
+  }
+
+  function update2() {
+    var elem2 = initialData[3];
+    var elemTo2 = data[3];
+    setTimeout(function() {
+      _.extend(elem2, elemTo2);
+      elem2.timeStarted = Date.now();
+      socket.emit('ci-data', initialData);
+    }, 5000);
+  }
+});
