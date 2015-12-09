@@ -64,7 +64,7 @@ angular.module('delicious.utils', ['ngRoute', 'ngMaterial'])
         .content(message)
         .action('OK')
         .highlightAction(false)
-        .position('top right');
+        .position('bottom right');
       $mdToast.show(toast);
     }
   }

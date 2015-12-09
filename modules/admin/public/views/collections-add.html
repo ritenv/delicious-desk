@@ -1,0 +1,99 @@
+  <md-content flex layout="column">
+    <div ng-include="'/modules/admin/views/header.html'"></div>
+    <md-card>
+      <md-card-content>
+        <h2 ng-if="!record._id">Add New Collection</h2>
+        <h2 ng-if="record._id">
+          Edit Collection <a target="_blank" ng-href="/app/{{record.identifier}}"><span class="fl-right tiny">{{record.identifier}}</span></a>
+        </h2>
+
+        <form name="addForm" ng-submit="create(addForm.$valid)">
+          
+          <div layout="column">
+            <md-input-container>
+              <label>Title</label>
+              <input name="title" ng-model="record.title" required md-maxlength="100" minlength="5">
+              <div ng-messages="addForm.title.$error" ng-show="addForm.$submitted">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout="column">
+            <md-input-container>
+              <label>Password</label>
+              <input name="password" ng-model="record.password" required md-maxlength="100" minlength="5">
+              <div ng-messages="addForm.password.$error" ng-show="addForm.$submitted">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout="column">
+            <md-input-container>
+              <p>Intro Text</p>
+              
+              <div ckeditor="options" ng-model="record.introText" ready="onReady()"></div>
+
+              <!-- <textarea name="introText" ng-model="record.introText" cols="30" rows="2" md-maxlength="255"></textarea> -->
+              <div ng-messages="addForm.introText.$error" ng-show="addForm.$submitted">
+                <div ng-message="md-maxlength">That's too long!</div>
+              </div>
+            </md-input-container>
+
+          </div>
+
+          <div layout="column">  
+            <md-input-container>
+              <p>Critical Text</p>
+              <!-- <textarea name="introText" ng-model="record.introText" cols="30" rows="2" md-maxlength="255"></textarea> -->
+              <div ckeditor="options" ng-model="record.criticalText" ready="onReady()"></div>
+              <div ng-messages="addForm.introText.$error" ng-show="addForm.$submitted">
+                <div ng-message="md-maxlength">That's too long!</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout="column" ng-if="record._id">
+            <br>
+              <h3>Attachments in this Collection (Add more from <a href="/admin/links">here</a>)</h3>
+              <md-list class="collections-list">
+                <md-list-item class="md-3-line" ng-repeat="item in record.attachments">
+                  <!-- <md-checkbox ng-model="item.selected" ng-change="updateSelection()">
+                      
+                  </md-checkbox> -->
+                  <md-button type="button" flex="10" class="md-primary" ng-click="removeAttachment(item)">
+                    <span class="fa fa-times-circle"> Remove</span>
+                  </md-button>
+                  <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
+                  <md-button target="_blank" class="no-text-transform no-margin admin-list-button" layout="row" ng-href="/admin/links/edit/{{item._id}}">
+                    <div class="md-list-item-text" layout="column">
+                      <h3>{{ item.title }} <span class="mute tiny fa fa-pencil fl-right"> Edit</span></h3>
+                      <h4>{{ item.creator.name }} created on {{ item.created | date:'short' }}</h4>
+                      <p>{{item.url}} ({{item.linkType}})</p>
+                    </div>
+                  </md-button>
+                </md-list-item>
+                <!-- <md-divider ></md-divider> -->
+              </md-list>
+          </div>
+
+          <div layout="row">
+            <md-button type="button" ng-click="delete()" ng-if="record._id" class="md-danger md-raised">Delete</md-button>
+            <span flex></span>
+            <md-button type="reset" class="md-primary" ng-click="goBack()">
+              Cancel
+            </md-button>
+            <md-button type="submit" class="md-primary md-raised">
+              Save
+            </md-button>
+          </div>
+
+        </form>
+      </md-card-content>
+    </md-card>
+  </md-content>

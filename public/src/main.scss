@@ -18,6 +18,10 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow: hidden;
+  min-height: 100%;
+  &.allow-scroll {
+    overflow: auto;
+  }
   @media (max-width: 768px) {
     overflow: auto;
   }
@@ -26,6 +30,43 @@ html, body {
       background: #556270 !important;
     }
   }
+  .main-container {
+    min-height: 100%;
+  }
+}
+.full-height {
+  min-height: 100%;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.md-menu.no-margin {
+  padding: 0 !important;
+}
+button, .md-button {
+  /*&.md-button {
+    background-color: #fff;
+  }*/
+  &.no-text-transform {
+    text-transform: none;
+  }
+  &.no-margin {
+    margin: 0;
+  }
+  &.admin-list-button {
+    /*border-bottom: 2px dashed #ccc;*/
+    margin-bottom: 5px;
+    padding: 15px;
+  }
+}
+.more-content {
+  background-color: #dedede;
+}
+.no-margin {
+  margin: 0;
+}
+.margin-bottom-half {
+  margin-bottom: 15px !important;
 }
 md-content {
   background-color: #F5F5F5 !important;
@@ -57,7 +98,6 @@ a {
 }
 .fa.yellow {
   color: darkorange;
-  font-size: 19px;
 }
 .secondaryColors {
   color: $secondaryColor;
@@ -764,8 +804,8 @@ app-icon {
 .md-padding {
   padding: 24px;
 }
-md-toolbar.md-default-theme {
-  background-color: #494749;
+md-toolbar {
+  background-color: #494749 !important;
 }
 md-dialog {
   md-dialog-content {
@@ -833,4 +873,34 @@ md-dialog {
     margin-bottom: 10px;
     border-bottom: 1px dashed #ccc;
   }
+}
+
+.collections-list {
+  md-list-item {
+    border-bottom: 1px dashed #ccc;
+  }
+}
+.cke_top, .cke_bottom {
+  background: #fff !important;
+  border: none !important;
+}
+.cke_toolgroup {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.cke_chrome {
+  border: none !important;
+}
+.fl-right {
+  float: right;
+}
+.admin-header {
+  margin: 8px;
+  margin-right: 0;
+}
+
+.form-info {
+  margin-top: 2px;
+  font-size: 80%;
 }

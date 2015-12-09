@@ -14,12 +14,22 @@ angular.module('delicious.applets')
     'appLocation',
     'appWebSocket',
     'appUsersSearch',
-    function($scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch) {
+    'appCollections',
+    function($scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appCollections) {
       $scope.showWindow = false;
 
-      $timeout(function() {
-        $scope.showWindow = true;
-      }, 2000);
+      if ($routeParams.identifier) {
+        appCollections.single.get({identifier: $routeParams.identifier}, function(res) {
+          if (res.success && res.res.records.length) {
+            $scope.appData = res.res.records[0];
+            $scope.showWindow = true;
+          }
+        });
+      }
+
+      // $timeout(function() {
+        
+      // }, 2000);
     }
   ])
   .controller('IntroCtrl', [

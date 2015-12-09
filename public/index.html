@@ -9,7 +9,7 @@
         <base href="/"></base>
         <title ng-bind="systemSettings ? systemSettings.workplace : 'Loading...'"></title>
     </head>
-    <body class="{{modifierClass}}" layout="row" ng-controller="AppCtrl">
+    <body class="{{modifierClass}}" layout="row" ng-controller="AppCtrl" ng-class="{'allow-scroll': isAdmin()}">
       <!-- new deployment: 25, May, 2015!! -->
       <div class="preloader" ng-if="!appReady">
         <div class="preloader-content">
@@ -18,7 +18,7 @@
         </div>
       </div>
       
-      <div layout="column" flex>
+      <div layout="column" flex class="full-height">
 
           <div layout="column" flex id="content">
             
@@ -38,8 +38,11 @@
       <script src="/bower_components/angular-route/angular-route.js"></script>
       <script src="/bower_components/angular-messages/angular-messages.js"></script>
       <script src="/bower_components/angular-resource/angular-resource.js"></script>
+      <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
       <script src="/bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
       <script src="/bower_components/lodash/lodash.min.js"></script>
+      <script src="/bower_components/ckeditor/ckeditor.js"></script>
+      <script src="/bower_components/angular-ckeditor/angular-ckeditor.min.js"></script>
       
       <!-- Other modules -->
       <script src="/bower_components/q/q.js"></script>
@@ -70,6 +73,22 @@
       <script type="text/javascript" src="/modules/applets/applets.directives.js"></script>
       <script type="text/javascript" src="/modules/applets/applets.services.js"></script>
 
+      <!-- Collections Module -->
+      <script type="text/javascript" src="/modules/collections/collections.js"></script>
+      <script type="text/javascript" src="/modules/collections/collections.controllers.js"></script>
+      <script type="text/javascript" src="/modules/collections/collections.services.js"></script>
+
+      <!-- Links Module -->
+      <script type="text/javascript" src="/modules/links/links.js"></script>
+      <script type="text/javascript" src="/modules/links/links.controllers.js"></script>
+      <script type="text/javascript" src="/modules/links/links.services.js"></script>
+
+      <!-- Admin Module -->
+      <script type="text/javascript" src="/modules/admin/admin.js"></script>
+      <script type="text/javascript" src="/modules/admin/admin.collections.controllers.js"></script>
+      <script type="text/javascript" src="/modules/admin/admin.links.controllers.js"></script>
+      <script type="text/javascript" src="/modules/admin/admin.routes.js"></script>
+
       <!-- Notifications Module -->
       <script type="text/javascript" src="/modules/notifications/notifications.js"></script>
       <script type="text/javascript" src="/modules/notifications/notifications.services.js"></script>
@@ -81,7 +100,7 @@
       <!-- Non-critical CSS -->
       <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
       <link rel="stylesheet" href="/bower_components/angular-loading-bar/build/loading-bar.min.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"> -->
 
     </body>
 </html>

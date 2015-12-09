@@ -3,6 +3,10 @@ var app = angular.module('delicious.main', [
   'delicious.users',
   'delicious.applets',
   'delicious.settings',
+  'delicious.collections',
+  'delicious.links',
+  'delicious.admin',
+  'ckeditor',
   'ngMaterial'
 ]);
 
@@ -32,9 +36,17 @@ app.controller('AppCtrl', [
     $scope.barTitle = '';
     $scope.search = '';
 
+    $rootScope.isAdmin = function() {
+      return $route.current && $route.current.loadedTemplateUrl.indexOf('/admin') !== -1;
+    };
+
+    $rootScope.goBack = function() {
+      history.go(-1);
+    };
+
     $rootScope.setModifierClass = function(clsName) {
       $rootScope.modifierClass = clsName;
-    }
+    };
 
     $scope.updateLoginStatus = function() {
       $scope.isLoggedIn = appAuth.isLoggedIn();

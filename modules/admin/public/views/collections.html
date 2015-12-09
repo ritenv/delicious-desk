@@ -1,0 +1,56 @@
+  <md-content flex layout="column">
+  	<div ng-include="'/modules/admin/views/header.html'"></div>
+  	<md-card>
+  	  <md-card-content>
+  	  	<div layout="row">
+  	  		<h2 class="no-margin">
+	      		Collections
+	      	</h2>
+
+	      	<span flex></span>
+	      	<md-button href="/admin/collections/add" class="md-primary md-raised no-margin">
+	  		  Add New
+	      	</md-button>
+
+  	  	</div>
+  	  	<!-- <h2>
+	      	Collections
+	      	<md-button href="/admin/collections/add" class="md-primary md-raised fl-right">
+	  		  Add New
+	      	</md-button>
+	     </h2> -->
+	     
+	     <md-input-container>
+	       <label>Filter</label>
+	       <input name="title" ng-model="filterKeyword" required md-maxlength="100" minlength="2">
+	       <div ng-messages="addForm.title.$error" ng-show="addForm.$submitted">
+	         <div ng-message="required">This is required!</div>
+	         <div ng-message="md-maxlength">That's too long!</div>
+	         <div ng-message="minlength">That's too short!</div>
+	       </div>
+	     </md-input-container>
+
+	    <md-list class="collections-list">
+	      <!-- <md-subheader class="md-no-sticky no-margin margin-bottom-half">Collections</md-subheader> -->
+	      <!-- <md-list-item class="md-2-line">
+	        <md-button href="/admin/collections/add" class="no-text-transform no-margin admin-list-button" layout="row">
+	        	<div class="md-list-item-text" layout="column">
+	        	  <h3>+ Add New</h3>
+	        	</div>
+	        </md-button>
+	      </md-list-item> -->
+	      <md-list-item class="md-3-line" ng-repeat="item in records | filter:filterKeyword">
+	        <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
+	        <md-button class="no-text-transform no-margin admin-list-button" layout="row" ng-href="/admin/collections/edit/{{item._id}}">
+	        	<div class="md-list-item-text" layout="column">
+	        	  <h3>{{ item.title }} <span class="mute tiny fa fa-pencil fl-right"> Edit</span></h3>
+	        	  <h4>{{ item.creator.name }} created on {{ item.created | date:'short' }}</h4>
+	        	  <p>http://accent.re/{{item.identifier}}</p>
+	        	</div>
+	        </md-button>
+	      </md-list-item>
+	      <!-- <md-divider ></md-divider> -->
+	    </md-list>
+	   </md-card-content>
+	  </md-card>
+  </md-content>

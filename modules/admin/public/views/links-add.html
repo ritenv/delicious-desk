@@ -1,0 +1,105 @@
+  <md-content flex layout="column">
+    <div ng-include="'/modules/admin/views/header.html'"></div>
+    <md-card>
+      <md-card-content>
+        <h2 ng-if="!record._id">Add New Link</h2>
+        <h2 ng-if="record._id">
+          Edit Link
+        </h2>
+
+        <form name="addForm" ng-submit="create(addForm.$valid)">
+          
+          <div layout="column">
+            <md-input-container>
+              <label>Title</label>
+              <input name="title" ng-model="record.title" required md-maxlength="100" minlength="5">
+              <div ng-messages="addForm.title.$error" ng-show="addForm.$submitted">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout="column">
+            <div layout="row">
+              <md-input-container flex="50">
+                <label>Link Type</label>
+                <md-select ng-model="record.linkType">
+                  <md-option ng-selected="linkType === record.linkType" ng-repeat="linkType in ['HowToGuide', 'Video', 'SafetyInfo', 'Document']" value="{{linkType}}"> {{linkType}}</md-option>
+                </md-select>
+                <div ng-messages="addForm.linkType.$error" ng-show="addForm.$submitted">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                  <div ng-message="minlength">That's too short!</div>
+                </div>
+              </md-input-container>
+
+              <md-input-container flex="50">
+                <label>Attach to new collections, by default?</label>
+                <md-select ng-model="record.defaultInAll">
+                  <md-option ng-selected="linkType === record.defaultInAll" ng-repeat="linkType in [{display: 'Yes', value: true}, {display: 'No', value: false}]" value="{{linkType.value}}"> {{linkType.display}}</md-option>
+                </md-select>
+                <div ng-messages="addForm.defaultInAll.$error" ng-show="addForm.$submitted">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                  <div ng-message="minlength">That's too short!</div>
+                </div>
+                <!-- <span class="form-info">If yes, every new collection will have this link added to it, by default. It can always be removed by manually editing that resource.</span> -->
+              </md-input-container>
+            </div>
+          </div>
+
+          <div layout="column" ng-if="record.linkType !== 'Document'">
+            <md-input-container>
+              <label>URL</label>
+              <input name="password" ng-model="record.url" required md-maxlength="100" minlength="5">
+              <div ng-messages="addForm.url.$error" ng-show="addForm.$submitted">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout="column">
+            <md-input-container>
+              <label>Tags - comma separated (spaces will be removed)</label>
+              <input name="password" ng-model="record.tags" required md-maxlength="100" minlength="3">
+              <div ng-messages="addForm.tags.$error" ng-show="addForm.$submitted">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout="column">
+            <md-input-container>
+              <p>Description</p>
+              
+              <div ckeditor="options" ng-model="record.description" ready="onReady()"></div>
+
+              <!-- <textarea name="introText" ng-model="record.introText" cols="30" rows="2" md-maxlength="255"></textarea> -->
+              <div ng-messages="addForm.introText.$error" ng-show="addForm.$submitted">
+                <div ng-message="md-maxlength">That's too long!</div>
+              </div>
+            </md-input-container>
+
+          </div>
+
+          <div layout="row">
+            <md-button type="button" ng-click="delete()" ng-if="record._id" class="md-danger md-raised">Delete</md-button>
+            <span flex></span>
+            <md-button type="reset" class="md-primary" ng-click="goBack()">
+              Cancel
+            </md-button>
+            <md-button type="submit" class="md-primary md-raised">
+              Save
+            </md-button>
+          </div>
+
+        </form>
+      </md-card-content>
+    </md-card>
+  </md-content>

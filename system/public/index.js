@@ -4,6 +4,7 @@ angular.module('delicious.system', [
   'ngRoute', 
   'ngMessages', 
   'ngResource', 
+  'ngSanitize',
   'angularFileUpload', 
   'delicious.utils',
   'angular-loading-bar', 

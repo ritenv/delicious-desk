@@ -1,0 +1,56 @@
+  <md-content flex layout="column">
+  	<div ng-include="'/modules/admin/views/header.html'"></div>
+  	<md-card>
+  	  <md-card-content>
+  	  	<div layout="row">
+  	  		<h2 class="no-margin">
+	      		Links
+	      	</h2>
+
+	      	<span flex></span>
+	      	<md-menu class=" no-margin" ng-if="selectedIds.length">
+				<md-button class="md-primary no-margin no-case" ng-mouseover="$mdOpenMenu($event)">Add {{selectedIds.length}} links to collection...</md-button>
+				<md-menu-content width="4">
+					<md-menu-item ng-repeat="collection in collections">
+			          <md-button ng-click="attach(collection)">
+			            {{collection.title}} ({{collection.identifier}})
+			          </md-button>
+			        </md-menu-item>
+				</md-menu-content>
+	      	</md-menu>
+	      	<span flex="5"></span>
+	      	<md-button href="/admin/links/add" class="md-primary md-raised no-margin">
+	  		  Add New
+	      	</md-button>
+
+  	  	</div>
+
+  	  	<md-input-container>
+  	  	  <label>Filter (will not lose your selection)</label>
+  	  	  <input name="title" ng-model="filterKeyword" required md-maxlength="100" minlength="2">
+  	  	  <div ng-messages="addForm.title.$error" ng-show="addForm.$submitted">
+  	  	    <div ng-message="required">This is required!</div>
+  	  	    <div ng-message="md-maxlength">That's too long!</div>
+  	  	    <div ng-message="minlength">That's too short!</div>
+  	  	  </div>
+  	  	</md-input-container>
+  	  	
+	    <md-list class="collections-list">
+	      <md-list-item class="md-3-line" ng-repeat="item in records | filter:filterKeyword">
+	      	<md-checkbox ng-model="item.selected" ng-change="updateSelection()">
+  	          
+  	        </md-checkbox>
+	        <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
+	        <md-button class="no-text-transform no-margin admin-list-button" layout="row" ng-href="/admin/links/edit/{{item._id}}">
+	        	<div class="md-list-item-text" layout="column">
+	        	  <h3>{{ item.title }} <span title="Will be attached by default in all new collections" class="tiny yellow fa fa-star" ng-if="item.defaultInAll"></span> <span class="mute tiny fa fa-pencil fl-right"> Edit</span></h3>
+	        	  <h4>{{ item.creator.name }} created on {{ item.created | date:'short' }}</h4>
+	        	  <p>{{item.url}} ({{item.linkType}})</p>
+	        	</div>
+	        </md-button>
+	      </md-list-item>
+	      <!-- <md-divider ></md-divider> -->
+	    </md-list>
+	   </md-card-content>
+	  </md-card>
+  </md-content>

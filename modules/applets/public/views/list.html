@@ -4,6 +4,7 @@
       <div class="os-icons">
       
         <app-icon 
+          ang-if="appData.guideLinks.length"
           title="How-To Guides" 
           icon="/images/icons/material/help18.svg" 
           class="color-1"
@@ -12,6 +13,7 @@
         </app-icon>
 
         <app-icon 
+          ang-if="appData.documentLinks.length"
           title="Documents"
           icon="/images/icons/material/folder215.svg"
           class="color-2"
@@ -20,6 +22,7 @@
         </app-icon>
 
         <app-icon 
+          ang-if="appData.videoLinks.length"
           title="Videos"
           icon="/images/icons/material/youtube35.svg" 
           maximized
@@ -29,6 +32,7 @@
         </app-icon>
 
         <app-icon 
+          ang-if="appData.safetyLinks.length"
           title="Safety Info"
           icon="/images/icons/material/man460.svg" 
           maximized

@@ -1,0 +1,43 @@
+<md-button ng-click="open()" layout="column" class="os-icon-button" ng-if="!iconLess">
+  <os-icon class="os-icon">
+    <!-- <img ng-src="{{::data.icon}}" alt="{{::data.title}}"> -->
+    <md-icon md-svg-icon="{{::data.icon}}"></md-icon>
+    <p>{{::data.title}}</p>
+  </os-icon>
+</md-button>
+
+<div class="os-window" id="{{windowId}}" ng-if="almostReady" ng-class="{dragging: dragging, maximized: maximized, minimized: minimized, active: active}" style="{{data.cssLeft !== undefined && minimized ? 'left: ' + data.cssLeft + 'px !important;' : ''}}">
+  <os-window-cover ng-click="activate()"></os-window-cover>
+  <md-toolbar class="os-window-toolbar">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button os-close-button" aria-label="Close" ng-click="close()">
+        <md-icon md-font-icon="fa fa-close"></md-icon>
+      </md-button>
+      <h2>
+        <span>{{data.title}}</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Minimize" ng-click="minimize()" hide-sm>
+        <md-icon md-font-icon="fa fa-minus"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Maximize" ng-click="maximize()" hide-sm>
+        <md-icon md-font-icon="fa fa-square-o"></md-icon>
+      </md-button>
+      <!-- <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="/images/assets/more_vert.svg"></md-icon>
+      </md-button> -->
+    </div>
+  </md-toolbar>
+  <!-- http://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai -->
+  <!-- http://cburgdorf.github.io/angular-todo-app/ -->
+  <!-- <md-content> -->
+  <div class="loading">
+    <md-icon ng-if="data.url" md-font-icon="fa fa-spinner fa-spin"></md-icon>
+  </div>
+  
+  <os-window-content layout-fill ng-class="{'add-padding': data.templatePath}">
+    <iframe ng-if="ready && data.url" layout="row" layout-fill ng-src="{{data.url}}" width="100%" height="100%" frameborder="0"></iframe>
+    <div ng-if="data.templatePath" ng-include src="data.templatePath"></div>
+  </os-window-content>
+  <!-- </md-content> -->
+</div>
