@@ -121,50 +121,54 @@ module.exports = function(System) {
 
       Links.find({defaultInAll: true}).exec(function(err, links) {
         if (err) {
-          return saveRecord();
+          return getBitLy(record, saveRecord);
         }
         record.attachments = _.pluck(links, '_id');
-        return saveRecord();
+        return getBitLy(record, saveRecord);
       });
 
       function saveRecord() {
-        var prefix = 'https://api-ssl.bitly.com/v3/shorten?access_token=763781537e904088f23699660e33fac1a2561835&longUrl=';
-        var url = prefix + escape(System.config.baseURL + '/app/' + record.identifier);
-        console.log(url);
-        unirest
-          .get(url)
-          .header('Accept', 'application/json')
-          .end(function(response) {
-            console.log(response.body);
-            if (response.body && response.body.status_code === 200) {
-              record.shortUrl = response.body.data.url;
-              record.shortUrlHash = response.body.data.hash;
-            }
-            record.save(function(err) {
-              if (err) {
-                return json.unhappy(err, res);
-              }
-              return json.happy(record, res);
-            });
-          });
+        record.save(function(err) {
+          if (err) {
+            return json.unhappy(err, res);
+          }
+          return json.happy(record, res);
+        });
       }
 
     //editing
     } else {
-      var updates = {
-        title: req.body.title,
-        introText: req.body.introText,
-        password: req.body.password,
-        attachments: _.pluck(req.body.attachments, '_id'),
-        criticalText: req.body.criticalText
-      };
-
-      Collections.update({_id: req.body._id}, updates, function(err) {
+      Collections.findOne({_id: req.body._id}, function(err, record) {
         if (err) {
           return json.unhappy(err, res);
         }
-        return json.happy(req.body, res);
+
+        if (!record.shortUrl) {
+          return getBitLy(record, function() {
+            return updateRecord(record);
+          });
+        } else {
+          return updateRecord(record);
+        }
       });
+      function updateRecord(record) {
+        var updates = {
+          title: req.body.title,
+          introText: req.body.introText,
+          password: req.body.password,
+          attachments: _.pluck(req.body.attachments, '_id'),
+          criticalText: req.body.criticalText,
+          shortUrl: record.shortUrl,
+          shortUrlHash: record.shortUrlHash
+        };
+
+        Collections.update({_id: req.body._id}, updates, function(err) {
+          if (err) {
+            return json.unhappy(err, res);
+          }
+          return json.happy(req.body, res);
+        });
+      }
       // Collections.findOne({_id: req.body._id}, function(err, record) {
       //   if (err || !record) {
       //     return json.unhappy({error: err, record: record}, res);
@@ -181,6 +185,24 @@ module.exports = function(System) {
       //     return json.happy(record, res);
       //   })
       // })
+    }
+
+    function getBitLy(record, cb) {
+      var prefix = 'https://api-ssl.bitly.com/v3/shorten?access_token=763781537e904088f23699660e33fac1a2561835&longUrl=';
+      var url = prefix + escape(System.config.baseURL + '/app/' + record.identifier);
+      unirest
+        .get(url)
+        .header('Accept', 'application/json')
+        .end(function(response) {
+
+          if (response.body && response.body.status_code === 200) {
+            record.shortUrl = response.body.data.url;
+            record.shortUrlHash = response.body.data.hash;
+          } else {
+            console.log(response);
+          }
+          cb && cb();
+        });
     }
 
     function randomAlphaNum() {
