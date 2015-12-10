@@ -704,3 +704,10 @@ md-dialog .md-subheader.md-default-theme {
   color: #000; }
   .file-uploader.dragover {
     background-color: rgba(78, 204, 195, 0.26); }
+
+.green {
+  color: #95D055; }
+
+.user-list-item {
+  font-size: 50px;
+  padding: 12px; }

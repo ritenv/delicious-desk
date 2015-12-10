@@ -46,6 +46,29 @@ angular.module('delicious.admin')
         	ensureLogin: ['appAuth', 'appLocation', ensureLogin]
         }
       })
+
+
+      .when('/admin/users', {
+        templateUrl: '/modules/admin/views/users.html',
+        controller: 'AdminUserCtrl',
+        resolve: {
+        	ensureLogin: ['appAuth', 'appLocation', ensureLogin]
+        }
+      })
+      .when('/admin/users/add', {
+        templateUrl: '/modules/admin/views/users-add.html',
+        controller: 'AdminUserAddCtrl',
+        resolve: {
+        	ensureLogin: ['appAuth', 'appLocation', ensureLogin]
+        }
+      })
+      .when('/admin/users/edit/:recordId', {
+        templateUrl: '/modules/admin/views/users-add.html',
+        controller: 'AdminUserAddCtrl',
+        resolve: {
+        	ensureLogin: ['appAuth', 'appLocation', ensureLogin]
+        }
+      })
       ;
     $locationProvider.html5Mode(true);
   }]);

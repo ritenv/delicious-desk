@@ -55,7 +55,7 @@ angular.module('delicious.utils', ['ngRoute', 'ngMaterial'])
         this.conn.close();
       }
     };
-    // obj.connect();
+    obj.connect();
     return obj;
   }
 ])

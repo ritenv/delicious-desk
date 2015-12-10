@@ -55,6 +55,20 @@ module.exports = function(System) {
   });
 
   routes.push({
+    method: 'delete',
+    path: '/',
+    handler: users.delete,
+    authorized: true
+  });
+
+  routes.push({
+    method: 'post',
+    path: '/:userId',
+    handler: users.modify,
+    authorized: true
+  });
+
+  routes.push({
     method: 'post',
     path: '/:userId/invite',
     handler: users.invite,

@@ -108,30 +108,32 @@ module.exports = function(System) {
        */
       var domains = System.settings.domains;
 
-      if (domains) {
-        /**
-         * Convert to array
-         * @type {Array}
-         */
-        domains = domains.split(',');
+      // if (domains) {
+      //   /**
+      //    * Convert to array
+      //    * @type {Array}
+      //    */
+      //   domains = domains.split(',');
 
-        /**
-         * Loop through all and check if it matches any one
-         */
-        domains.map(function(domain) {
-          domain = domain.trim();
-          var valid = new RegExp(domain + '$', 'i');
-          if (valid.test(email)) {
-            isValidEmail = true;
-          }
-        });
-      } else {
-        /**
-         * Probably the first user of the system, allow to register
-         * @type {Boolean}
-         */
-        isValidEmail = true;
-      }
+      //   /**
+      //    * Loop through all and check if it matches any one
+      //    */
+      //   domains.map(function(domain) {
+      //     domain = domain.trim();
+      //     var valid = new RegExp(domain + '$', 'i');
+      //     if (valid.test(email)) {
+      //       isValidEmail = true;
+      //     }
+      //   });
+      // } else {
+      //   /**
+      //    * Probably the first user of the system, allow to register
+      //    * @type {Boolean}
+      //    */
+      //   isValidEmail = true;
+      // }
+
+      isValidEmail = true;
 
       /**
        * So if invalid email, return a friendly message
@@ -196,11 +198,17 @@ module.exports = function(System) {
   obj.modify = function (req, res) {
     var user = req.user;
     user.name = req.body.name;
-    user.designation = req.body.designation;
     if (req.body.password) {
       user.password = req.body.password;
     }
-    user.save(function(err) {
+    var updates = {
+      name: req.body.name
+    };
+    if (req.body.password) {
+      updates.password = req.body.password;
+    }
+
+    User.update({_id: req.params.userId}, updates, function(err) {
       if (err) {
         return json.unhappy(err, res);
       }
@@ -263,7 +271,13 @@ module.exports = function(System) {
    */
   obj.list = function(req, res) {
     //TODO: pagination
-    User.find({}, function(err, users) {
+    var criteria = {};
+
+    if (req.query._id) {
+      criteria._id = req.query._id;
+    }
+
+    User.find(criteria, function(err, users) {
       if (err) {
         json.unhappy(err, res);
       } else {
@@ -645,6 +659,35 @@ module.exports = function(System) {
         token: req.token
       }, res);
     }
+  };
+
+  obj.delete = function (req, res) {
+    var user = req.user;
+
+    var criteria = {
+      // creator: req.user
+    };
+
+    if (req.query._id) {
+      criteria._id = req.query._id;
+    }
+
+    User.findOne(criteria, null, {sort: {title: 1}})
+    .populate('creator')
+    .exec(function(err, record) {
+      if (err) {
+        return json.unhappy(err, res);
+      } else {
+        record.remove(function(err, record) {
+          if (err) {
+            return json.unhappy(err, res);
+          }
+          return json.happy({
+            record: record
+          }, res);
+        });
+      }
+    });
   };
 
   /**
