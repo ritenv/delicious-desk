@@ -33,7 +33,7 @@ angular.module('delicious.users')
         appStorage.set('user', serializedUser);
         appStorage.set('userToken', token);
         $rootScope.$broadcast('loggedIn');
-        appLocation.url('/');
+        appLocation.url('/admin');
       };
 
     }
@@ -571,7 +571,7 @@ angular.module('delicious.users')
         appStorage.set('user', serializedUser);
         appStorage.set('userToken', token);
         $rootScope.$broadcast('loggedIn');
-        appLocation.url('/');
+        appLocation.url('/admin');
       };
 
       /**

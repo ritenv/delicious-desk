@@ -1,22 +1,32 @@
-  <md-card flex-sm="95" flex-gt-sm="90" flex-gt-md="50">
+  <md-card flex-sm="95" flex-gt-sm="90" flex-gt-md="80">
     <md-card-content>
       <h2>{{systemSettings.workplace}}</h2>
-      <p>{{systemSettings.tagline}}</p>
-      <form name="loginForm" ng-submit="login(loginForm.$valid)" novalidate>
-        <md-input-container>
-          <label>Password</label>
-          <input name="password" ng-model="password" type="password" required>
-          <div ng-messages="loginForm.password.$error" ng-show="loginForm.bio.$dirty">
-            <div ng-message="required">This is required!</div>
-            <div ng-message="md-maxlength">That's too long!</div>
-            <div ng-message="minlength">That's too short!</div>
-          </div>
-        </md-input-container>
+      <p>Login to continue.</p>
+          <form name="loginForm" ng-submit="login(loginForm.$valid)" novalidate>
+            <md-input-container>
+              <label>Email Address</label>
+              <input type="email" name="email" ng-model="email" required>
+              <div ng-messages="loginForm.email.$error" ng-show="loginForm.bio.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
 
-        <md-button class="md-primary md-raised">
-          Login
-        </md-button>
-      </form>
-      <md-button ng-click="forgotPwd($event)">Forgot Password?</md-button>
+            <md-input-container>
+              <label>Password</label>
+              <input name="password" ng-model="password" type="password" required>
+              <div ng-messages="loginForm.password.$error" ng-show="loginForm.bio.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div>
+            </md-input-container>
+
+            <md-button class="md-primary md-raised">
+              Login
+            </md-button>
+          </form>
+          <md-button ng-click="forgotPwd($event)">Forgot Password?</md-button>
     </md-card-content>
   </md-card>
