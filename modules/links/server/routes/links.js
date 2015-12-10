@@ -18,13 +18,20 @@ module.exports = function(System) {
     method: 'get',
     path: '/',
     handler: ctrl.list,
-    authorized: true
+    authorized: false
   });
 
   routes.push({
     method: 'delete',
     path: '/',
     handler: ctrl.delete,
+    authorized: true
+  });
+
+  routes.push({
+    method: 'post',
+    path: '/upload-document',
+    handler: ctrl.uploadDocument,
     authorized: true
   });
 

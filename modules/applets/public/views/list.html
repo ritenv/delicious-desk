@@ -30,40 +30,38 @@
       <div class="os-icons">
       
         <app-icon 
-          ang-if="appData.guideLinks.length"
           title="How-To Guides" 
           icon="/images/icons/material/help18.svg" 
           class="color-1"
-          template-controller="SoonCtrl"
+          link-type="HowToGuide"
+          template-controller="IconCtrl"
           template-path="/modules/applets/views/intro.html">
         </app-icon>
 
         <app-icon 
-          ang-if="appData.documentLinks.length"
           title="Documents"
           icon="/images/icons/material/folder215.svg"
           class="color-2"
-          template-controller="SoonCtrl"
+          link-type="Document"
+          template-controller="IconCtrl"
           template-path="/modules/applets/views/intro.html">
         </app-icon>
 
         <app-icon 
-          ang-if="appData.videoLinks.length"
           title="Videos"
           icon="/images/icons/material/youtube35.svg" 
-          maximized
           class="color-3"
-          template-controller="SoonCtrl"
+          link-type="Video"
+          template-controller="IconCtrl"
           template-path="/modules/applets/views/intro.html">
         </app-icon>
 
         <app-icon 
-          ang-if="appData.safetyLinks.length"
           title="Safety Info"
           icon="/images/icons/material/man460.svg" 
-          maximized
           class="color-10"
-          template-controller="SoonCtrl"
+          link-type="SafetyInfo"
+          template-controller="IconCtrl"
           template-path="/modules/applets/views/intro.html">
         </app-icon>
 

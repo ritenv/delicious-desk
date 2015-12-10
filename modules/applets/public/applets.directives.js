@@ -44,7 +44,16 @@ angular.module('delicious.applets')
                   $scope.windowId = 'WIN' + Math.round(Math.random() * 100000);
                   appAppletsOpen.addWindow($scope.windowId);
                 }
+
                 $scope.almostReady = true;
+
+                /**
+                 * If there is an inherited onIconOpen function, run it
+                 */
+                if ($scope.onIconOpen) {
+                  $scope.onIconOpen();
+                }
+
                 /**
                  * Fire the iframe
                  * @type {Boolean}
@@ -216,6 +225,15 @@ angular.module('delicious.applets')
            * @type {Object}
            */
           $scope.data.url = $sce.trustAsResourceUrl($scope.data.url);
+
+          $scope.shouldLoad = 100;
+
+          /**
+           * Assign linkType to scope
+           */
+          if ($attrs.linkType) {
+            $scope.linkType = $attrs.linkType;
+          }
 
           /**
            * If there is a controller, inherit from it

@@ -50,9 +50,17 @@
             </div>
           </div>
 
-          <div layout="column" ng-if="record.linkType !== 'Document'">
+          <div layout="column" ng-if="record.linkType === 'Document' && record.url">
+            <a href="#" class="file-uploader" ng-click="deleteDocument(record.url)"> <span class="fa fa-times-circle"></span> Remove Attachment </a>
+          </div>
+
+          <div layout="column" ng-if="record.linkType === 'Document' && !record.url">
+            <a href="#" class="file-uploader" ngf-select="uploadDocument($file)" ngf-drop="uploadDocument($files[0])" ngf-multiple="false" ngf-drag-over-class="'dragover'"> <span class="fa fa-file"></span> Upload / drop files here</a>
+          </div>
+
+          <div layout="column">
             <md-input-container>
-              <label>URL</label>
+              <label>URL (will be filled automatically if you upload a document)</label>
               <input name="password" ng-model="record.url" required md-maxlength="100" minlength="5">
               <div ng-messages="addForm.url.$error" ng-show="addForm.$submitted">
                 <div ng-message="required">This is required!</div>

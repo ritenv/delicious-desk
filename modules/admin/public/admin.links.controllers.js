@@ -48,12 +48,13 @@ angular.module('delicious.admin')
     '$rootScope',
     '$scope',
     '$routeParams',
+    'Upload',
     'appUsers',
     'appToast',
     'appStorage',
     'appLocation',
     'appLinks',
-    function($rootScope, $scope, $routeParams, appUsers, appToast, appStorage, appLocation, appLinks) {
+    function($rootScope, $scope, $routeParams, Upload, appUsers, appToast, appStorage, appLocation, appLinks) {
       $scope.options = {
         language: 'en',
         allowedContent: true,
@@ -65,6 +66,28 @@ angular.module('delicious.admin')
           if (res.success && res.res.records.length) {
             $scope.record = res.res.records[0];
           }
+        });
+      }
+
+      $scope.deleteDocument = function(url) {
+        $scope.record.url = null;
+        // alert('For now, the file is not deleted from AWS, but the attachment is removed. AWS deletion coming soon. You can now upload another file.');
+      };
+
+      $scope.uploadDocument = function(file) {
+        Upload.upload({
+          url: '/links/upload-document',
+          data: {file: file}
+        }).then(function (resp) {
+            console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+            if (resp.data && resp.data.success) {
+              $scope.record.url = resp.data.res.url;
+            }
+        }, function (resp) {
+            console.log('Error status: ' + resp.status);
+        }, function (evt) {
+            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
         });
       }
 

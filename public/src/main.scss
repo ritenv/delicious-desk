@@ -913,3 +913,9 @@ md-dialog {
     color: red;
   }
 }
+.file-uploader {
+  display: block; background: #eee; border: 1px dashed #ccc; padding: 50px 0; text-align: center; margin: 20px 0; color: #000;
+  &.dragover {
+    background-color: rgba(78,204,195,0.26);
+  }
+}

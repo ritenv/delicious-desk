@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Links = mongoose.model('Link');
+var Collections = mongoose.model('Collection');
 var _ = require('lodash');
 
 module.exports = function(System) {
@@ -21,12 +22,32 @@ module.exports = function(System) {
       // creator: req.user
     };
 
-    if (req.query.identifier) {
-      criteria.identifier = req.query.identifier;
+    if (req.query.linkType) {
+      criteria.linkType = req.query.linkType;
     }
 
     if (req.query._id) {
       criteria._id = req.query._id;
+    }
+
+    if (req.query.collectionIdentifier) {
+      return Collections
+        .findOne({identifier: req.query.collectionIdentifier})
+        .populate('attachments')
+        .exec(function(err, collection) {
+          if (err || !collection) {
+            return json.unhappy({error: err, collection: collection}, res);
+          }
+
+          var attachments = collection.attachments;
+
+          attachments = _.filter(attachments, function(attachment) {
+            return attachment.linkType == criteria.linkType;
+          });
+          return json.happy({
+            records: attachments
+          }, res);
+        });
     }
 
     Links.find(criteria, null, {sort: {title: 1}})
@@ -71,6 +92,70 @@ module.exports = function(System) {
     });
   };
 
+  /**
+   * Upload a user's face
+   * @param  {Object} req Request
+   * @param  {Object} res Response
+   * @return {Void}     
+   */
+  obj.uploadDocument = function(req, res) {
+    var file = req.files.file;
+
+    /**
+     * Check extension
+     */
+    // if (['png', 'jpg', 'jpeg', 'gif', 'doc', 'docx'].indexOf(file.extension) === -1) {
+    //   return json.unhappy({message: 'Only specific formats allowed.'}, res);
+    // }
+
+    /**
+     * Get file name
+     * @type {String}
+     */
+    var filename = file.path.substr(file.path.lastIndexOf('/')+1);
+
+    var fs = require('fs');
+    var AWS = require('aws-sdk');
+    
+    /**
+     * Config params stored in the environment
+     * @type {String}
+     */
+    AWS.config.accessKeyId = System.config.aws.accessKeyId;
+    AWS.config.secretAccessKey = System.config.aws.secretAccessKey;
+    var bucket = System.config.aws.bucket;
+
+    /**
+     * Set bucket and other params
+     * @type {Object}
+     */
+    var params = {
+      Bucket: bucket, 
+      Key: filename,
+      Body: fs.readFileSync(file.path),
+      ContentType: 'application/image',
+      ACL: 'public-read'
+    };
+
+    var s3 = new AWS.S3();
+
+    /**
+     * Upload to s3
+     */
+    s3.putObject(params, function(error, data) {
+      if (error) {
+        throw error;
+      }
+    });
+
+    var url = 'https://s3.amazonaws.com/' + bucket + '/' + filename;
+
+    return json.happy({
+      url: url
+    }, res);
+
+  };
+
 
   /**
    * Create
@@ -111,22 +196,6 @@ module.exports = function(System) {
         }
         return json.happy(req.body, res);
       });
-      // Collections.findOne({_id: req.body._id}, function(err, record) {
-      //   if (err || !record) {
-      //     return json.unhappy({error: err, record: record}, res);
-      //   }
-        
-      //   // record.introText = req.body.introText;
-
-      //   return record.update(function(err, record) {
-      //     if (err || !record) {
-      //       return json.unhappy({error: err, record: record}, res);
-      //     }
-
-      //     console.log(arguments);
-      //     return json.happy(record, res);
-      //   })
-      // })
     }
 
     function randomAlphaNum() {

@@ -693,3 +693,14 @@ md-dialog .md-subheader.md-default-theme {
   padding: 10px 15px; }
   .invalid a {
     color: red; }
+
+.file-uploader {
+  display: block;
+  background: #eee;
+  border: 1px dashed #ccc;
+  padding: 50px 0;
+  text-align: center;
+  margin: 20px 0;
+  color: #000; }
+  .file-uploader.dragover {
+    background-color: rgba(78, 204, 195, 0.26); }
