@@ -1,4 +1,30 @@
+<md-card flex-sm="95" flex-gt-sm="90" flex-gt-md="50" ng-show="!showWindow">
+  <md-card-content>
+    <h2>{{systemSettings.workplace}}</h2>
+    <p>{{systemSettings.tagline}}</p>
+    <form name="loginForm" ng-submit="login(loginForm.$valid)" novalidate>
+      <md-input-container>
+        <label>Password</label>
+        <input name="password" ng-model="collectionPassword" type="password" required>
+        <div ng-messages="loginForm.password.$error" ng-show="loginForm.bio.$dirty">
+          <div ng-message="required">This is required!</div>
+          <div ng-message="md-maxlength">That's too long!</div>
+          <div ng-message="minlength">That's too short!</div>
+        </div>
+      </md-input-container>
+
+      <md-button class="md-primary md-raised">
+        Login
+      </md-button>
+    </form>
+    <!-- <md-button ng-click="forgotPwd($event)">Forgot Password?</md-button> -->
+  </md-card-content>
+</md-card>
+<!-- 
 <div layout="column" flex>
+  asd
+</div> -->
+<div layout="column" flex ng-if="showWindow">
   <div layout="row">
     <div flex="70" flex-lg="70" flex-md="70" flex-sm="100">
       <div class="os-icons">
@@ -44,10 +70,18 @@
         <app-icon 
           title="{{globalUrl}}"
           icon-type="browser"
-          maximized
           class="os-icon-hidden"
           url="{{globalUrl}}">
         </app-icon>
+
+        <app-icon 
+          ng-if="appData.password"
+          title="Logout"
+          icon="/images/icons/material/stop46.svg" 
+          class="color-1"
+          ng-click="logout()">
+        </app-icon>
+  <!-- <md-button>Logout</md-button> -->
 
         <!-- <app-icon 
           title="Introduction"

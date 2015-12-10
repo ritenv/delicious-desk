@@ -904,3 +904,12 @@ md-dialog {
   margin-top: 2px;
   font-size: 80%;
 }
+.invalid {
+  margin-top: 15px;
+  background-color: rgba(255, 205, 205, 0.54);
+  border: 1px solid rgb(255, 205, 205);
+  padding: 10px 15px;
+  a {
+    color: red;
+  }
+}

@@ -32,7 +32,10 @@ angular.module('delicious.utils', ['ngRoute', 'ngMaterial'])
 .factory('appWebSocket', [
   function($location) {
     var obj = {
-      conn: {},
+      conn: {
+        on: angular.noop,
+        emit: angular.noop
+      },
       connect: function() {
         var $this = this;
         var socket = window.io();
@@ -52,7 +55,7 @@ angular.module('delicious.utils', ['ngRoute', 'ngMaterial'])
         this.conn.close();
       }
     };
-    obj.connect();
+    // obj.connect();
     return obj;
   }
 ])

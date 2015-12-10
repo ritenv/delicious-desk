@@ -140,6 +140,7 @@ module.exports = function(System) {
       var updates = {
         title: req.body.title,
         introText: req.body.introText,
+        password: req.body.password,
         attachments: _.pluck(req.body.attachments, '_id'),
         criticalText: req.body.criticalText
       };

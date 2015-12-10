@@ -1,0 +1,19 @@
+<div layout="column" flex>
+  <div layout="row">
+    <md-card flex="40" flex-sm="100">
+      <md-card-content>
+        <h2>Welcome!</h2>
+        <p>If you know the link to your application, enter it in the browser now. If you have lost it, please contact <strong>abc@example.com</strong> to get your customized link.</p>
+        <p class="invalid" ng-if="params.incorrect">
+          <span class="fa fa-times-circle"></span> That was an invalid password. <a ng-click="goBack()">Try again?</a>
+        </p>
+      </md-card-content>
+    </md-card>
+  </div>
+  <!-- <add-icon>
+    <md-button class="md-fab" aria-label="Add Icon">
+        <md-icon md-svg-src="/images/icons/material/square181.svg"></md-icon>
+    </md-button>
+  </add-icon> -->
+</div>
+<img src="/images/logo-main.png" class="logo" hide-sm hide-xs style="width: 200px !important;">

@@ -25,7 +25,7 @@ module.exports = function(System) {
     method: 'get',
     path: '/',
     handler: ctrl.list,
-    authorized: true
+    authorized: false
   });
 
   routes.push({

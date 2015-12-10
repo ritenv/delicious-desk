@@ -17,14 +17,46 @@ angular.module('delicious.applets')
     'appCollections',
     function($scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appCollections) {
       $scope.showWindow = false;
+      $scope.collectionPassword = '';
 
       if ($routeParams.identifier) {
         appCollections.single.get({identifier: $routeParams.identifier}, function(res) {
           if (res.success && res.res.records.length) {
-            $scope.appData = res.res.records[0];
-            $scope.showWindow = true;
+            var record = res.res.records[0];
+            $scope.record = record;
+            
+            if (record.password) {
+              /**
+               * Check if pwd is in storage
+               */
+              var storedPwd = appStorage.get($scope.record.identifier);
+              if ($scope.record.password === storedPwd) {
+                $scope.appData = $scope.record;
+                $scope.showWindow = true;
+              }
+
+            } else {
+              $scope.appData = $scope.record;
+              $scope.showWindow = true;
+            }
           }
         });
+      }
+
+      $scope.logout = function() {
+        appStorage.remove($scope.record.identifier);
+        $scope.showWindow = false;
+        $scope.collectionPassword = null;
+      };
+
+      $scope.login = function(isValid) {
+        if ($scope.record.password === $scope.collectionPassword) {
+          appStorage.set($scope.record.identifier, $scope.collectionPassword);
+          $scope.appData = $scope.record;
+          $scope.showWindow = true;
+        } else {
+          appLocation.url('/?incorrect=true');
+        }
       }
 
       // $timeout(function() {

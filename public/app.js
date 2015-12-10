@@ -122,9 +122,9 @@ app.controller('AppCtrl', [
     $scope.updateLoginStatus();
     $timeout(function() {
       if (!appAuth.isLoggedIn()) {
-        if (window.location.href.indexOf('/activate/') == -1 && window.location.href.indexOf('/changePassword/') == -1) {
-          appLocation.url('/login');
-        }
+        // if (window.location.href.indexOf('/activate/') == -1 && window.location.href.indexOf('/changePassword/') == -1) {
+        //   appLocation.url('/login');
+        // }
         initiateSettings();
         $scope.appReady = true;
       } else {

@@ -685,3 +685,11 @@ md-dialog .md-subheader.md-default-theme {
 .form-info {
   margin-top: 2px;
   font-size: 80%; }
+
+.invalid {
+  margin-top: 15px;
+  background-color: rgba(255, 205, 205, 0.54);
+  border: 1px solid #ffcdcd;
+  padding: 10px 15px; }
+  .invalid a {
+    color: red; }

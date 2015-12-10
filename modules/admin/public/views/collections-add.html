@@ -24,7 +24,7 @@
           <div layout="column">
             <md-input-container>
               <label>Password</label>
-              <input name="password" ng-model="record.password" required md-maxlength="100" minlength="5">
+              <input type="password" name="password" ng-model="record.password" md-maxlength="100" minlength="5">
               <div ng-messages="addForm.password.$error" ng-show="addForm.$submitted">
                 <div ng-message="required">This is required!</div>
                 <div ng-message="md-maxlength">That's too long!</div>
