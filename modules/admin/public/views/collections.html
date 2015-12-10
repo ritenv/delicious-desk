@@ -45,7 +45,7 @@
 	        	<div class="md-list-item-text" layout="column">
 	        	  <h3>{{ item.title }} <span class="mute tiny fa fa-pencil fl-right"> Edit</span></h3>
 	        	  <h4>{{ item.creator.name }} created on {{ item.created | date:'short' }}</h4>
-	        	  <p>http://accent.re/{{item.identifier}}</p>
+	        	  <p>{{item.shortUrl}}</p>
 	        	</div>
 	        </md-button>
 	      </md-list-item>

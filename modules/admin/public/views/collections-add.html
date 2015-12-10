@@ -4,7 +4,7 @@
       <md-card-content>
         <h2 ng-if="!record._id">Add New Collection</h2>
         <h2 ng-if="record._id">
-          Edit Collection <a target="_blank" ng-href="/app/{{record.identifier}}"><span class="fl-right tiny">{{record.identifier}}</span></a>
+          Edit Collection <a target="_blank" ng-href="{{record.shortUrl}}"><span class="fl-right tiny">{{record.shortUrl}}</span></a>
         </h2>
 
         <form name="addForm" ng-submit="create(addForm.$valid)">
