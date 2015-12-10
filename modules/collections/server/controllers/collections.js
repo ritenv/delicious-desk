@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Collections = mongoose.model('Collection');
 var _ = require('lodash');
+var unirest = require('unirest');
 
 module.exports = function(System) {
   var obj = {};
@@ -127,12 +128,25 @@ module.exports = function(System) {
       });
 
       function saveRecord() {
-        record.save(function(err) {
-          if (err) {
-            return json.unhappy(err, res);
-          }
-          return json.happy(record, res);
-        });
+        var prefix = 'https://api-ssl.bitly.com/v3/shorten?access_token=763781537e904088f23699660e33fac1a2561835&longUrl=';
+        var url = prefix + escape(System.config.baseURL + '/app/' + record.identifier);
+        console.log(url);
+        unirest
+          .get(url)
+          .header('Accept', 'application/json')
+          .end(function(response) {
+            console.log(response.body);
+            if (response.body && response.body.status_code === 200) {
+              record.shortUrl = response.body.data.url;
+              record.shortUrlHash = response.body.data.hash;
+            }
+            record.save(function(err) {
+              if (err) {
+                return json.unhappy(err, res);
+              }
+              return json.happy(record, res);
+            });
+          });
       }
 
     //editing

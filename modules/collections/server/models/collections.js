@@ -64,7 +64,9 @@ var CollectionsSchema = new Schema({
     documentLinks: [String],
     videoLinks: [String],
     safetyLinks: [String]
-  }
+  },
+  shortUrl: String,
+  shortUrlHash: String
 });
 
 /**
