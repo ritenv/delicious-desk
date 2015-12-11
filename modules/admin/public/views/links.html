@@ -43,7 +43,7 @@
 	        <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
 	        <md-button class="no-text-transform no-margin admin-list-button" layout="row" ng-href="/admin/links/edit/{{item._id}}">
 	        	<div class="md-list-item-text" layout="column">
-	        	  <h3>{{ item.title }} <span title="Will be attached by default in all new collections" class="tiny yellow fa fa-star" ng-if="item.defaultInAll"></span> <span class="mute tiny fa fa-pencil fl-right"> Edit</span></h3>
+	        	  <h3>{{ item.title }} <span title="Will be attached by default in all new collections" class="tiny yellow fa fa-star" ng-if="item.defaultInAll"></span> <span title="Skipped Diigo" class="tiny green fa fa-minus-circle" ng-if="item.skipDiigo"></span> <span class="mute tiny fa fa-pencil fl-right"> Edit</span></h3>
 	        	  <h4>{{ item.creator.name }} created on {{ item.created | date:'short' }}</h4>
 	        	  <p>{{item.url}} ({{item.linkType}})</p>
 	        	</div>

@@ -188,7 +188,7 @@ module.exports = function(System) {
     }
 
     function getBitLy(record, cb) {
-      var prefix = 'https://api-ssl.bitly.com/v3/shorten?access_token=763781537e904088f23699660e33fac1a2561835&longUrl=';
+      var prefix = 'https://api-ssl.bitly.com/v3/shorten?access_token=' + System.config.bitly.token + '&longUrl=';
       var url = prefix + escape(System.config.baseURL + '/app/' + record.identifier);
       unirest
         .get(url)
@@ -209,7 +209,7 @@ module.exports = function(System) {
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        for( var i=0; i < 5; i++ )
+        for( var i=0; i < 7; i++ )
             text += possible.charAt(Math.floor(Math.random() * possible.length));
 
         return text;

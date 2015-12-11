@@ -56,6 +56,13 @@ var LinksSchema = new Schema({
   tags: {
     type: [String],
     required: false
+  },
+  skipDiigo: {
+    type: Boolean,
+    default: false
+  },
+  diigoRecord: {
+    type: Object
   }
 });
 

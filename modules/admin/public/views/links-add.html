@@ -23,24 +23,35 @@
 
           <div layout="column">
             <div layout="row">
-              <md-input-container flex="50">
+              <md-input-container flex="33">
                 <label>Link Type</label>
-                <md-select ng-model="record.linkType">
+                <md-select ng-model="record.linkType" required>
                   <md-option ng-selected="linkType === record.linkType" ng-repeat="linkType in ['HowToGuide', 'Video', 'SafetyInfo', 'Document']" value="{{linkType}}"> {{linkType}}</md-option>
                 </md-select>
                 <div ng-messages="addForm.linkType.$error" ng-show="addForm.$submitted">
                   <div ng-message="required">This is required!</div>
-                  <div ng-message="md-maxlength">That's too long!</div>
-                  <div ng-message="minlength">That's too short!</div>
                 </div>
               </md-input-container>
 
-              <md-input-container flex="50">
-                <label>Attach to new collections, by default?</label>
+              <md-input-container flex="33">
+                <label>Attach to new collections, by default? (Default: No)</label>
                 <md-select ng-model="record.defaultInAll">
                   <md-option ng-selected="linkType === record.defaultInAll" ng-repeat="linkType in [{display: 'Yes', value: true}, {display: 'No', value: false}]" value="{{linkType.value}}"> {{linkType.display}}</md-option>
                 </md-select>
                 <div ng-messages="addForm.defaultInAll.$error" ng-show="addForm.$submitted">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                  <div ng-message="minlength">That's too short!</div>
+                </div>
+                <!-- <span class="form-info">If yes, every new collection will have this link added to it, by default. It can always be removed by manually editing that resource.</span> -->
+              </md-input-container>
+
+              <md-input-container flex="33" ng-if="!record._id">
+                <label>Skip Diigo? (Default: No)</label>
+                <md-select ng-model="record.skipDiigo">
+                  <md-option ng-selected="linkType === record.skipDiigo" ng-repeat="linkType in [{display: 'Yes', value: true}, {display: 'No', value: false}]" value="{{linkType.value}}"> {{linkType.display}}</md-option>
+                </md-select>
+                <div ng-messages="addForm.skipDiigo.$error" ng-show="addForm.$submitted">
                   <div ng-message="required">This is required!</div>
                   <div ng-message="md-maxlength">That's too long!</div>
                   <div ng-message="minlength">That's too short!</div>

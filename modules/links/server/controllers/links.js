@@ -1,7 +1,10 @@
 var mongoose = require('mongoose');
 var Links = mongoose.model('Link');
 var Collections = mongoose.model('Collection');
+var unirest = require('Unirest');
 var _ = require('lodash');
+var S = require('string');
+var querystring = require('querystring');
 
 module.exports = function(System) {
   var obj = {};
@@ -173,6 +176,27 @@ module.exports = function(System) {
       record.creator = req.user._id;
       record.identifier = randomAlphaNum();
       record.save(function(err) {
+        if (!record.skipDiigo) {
+          var encoded = new Buffer(System.config.diigo.username + ':' + System.config.diigo.password).toString('base64');
+          var description = record.description ? record.description.replace(/\&lt;/g, '<').replace(/\&gt;/g, '>') : '';
+          description = S(description).stripTags().s;
+          var tags = [record.linkType].concat(record.tags ? record.tags : []).join(',')
+          unirest
+            .post('https://secure.diigo.com/api/v2/bookmarks')
+            .header('Accept', 'application/json')
+            .header('Authorization', 'Basic ' + encoded)
+            .field('key', System.config.diigo.apiKey)
+            .field('title', record.title)
+            .field('url', record.url)
+            .field('shared', true)
+            .field('tags', tags)
+            .field('desc', description ? description.substr(0, 250) : '')
+            .end(function(response) {
+              record.diigoRecord = response.body;
+              record.save();
+            });
+        }
+
         if (err) {
           return json.unhappy(err, res);
         }
