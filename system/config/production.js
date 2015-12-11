@@ -25,6 +25,8 @@ module.exports = {
     token: process.env.BITLY_TOKEN
   },
   diigo: {
-    apiKey: process.env.DIIGO_API_KEY
+    apiKey: process.env.DIIGO_API_KEY,
+    username: process.env.DIIGO_USERNAME,
+    password: process.env.DIIGO_PASSWORD
   }
 };
