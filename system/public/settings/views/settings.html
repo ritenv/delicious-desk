@@ -5,28 +5,28 @@
     <form name="settingsForm" ng-submit="save(settingsForm.$valid)" novalidate>
       
       <md-input-container>
-        <label>Workplace Name</label>
+        <label>App Name (use: Climbing Dots)</label>
         <input type="text" name="workplace" ng-model="systemSettings.workplace" required>
         <div ng-messages="" class="tiny">
-          <div>The name of your company, team, office or branch (e.g. Back Seat Boys)</div>
+          <div>The name of your company, app, team, office or branch (e.g. Back Seat Boys)</div>
         </div>
       </md-input-container>
 
       <md-input-container>
-        <label>Tagline</label>
+        <label>Lock Message (use: Your access is locked.)</label>
         <input type="text" name="tagline" ng-model="systemSettings.tagline" required>
         <div ng-messages="" class="tiny">
-          <div>Anything that inspires your team (e.g. Onward and upward!)</div>
+          <div>Anything that you want to show for locked collections</div>
         </div>
       </md-input-container>
 
-      <md-input-container>
+      <!-- <md-input-container>
         <label>Allowed Email Domains (use comma for more)</label>
         <input type="text" name="domains" ng-model="systemSettings.domains" required>
         <div ng-messages="" class="tiny">
           <div>The email domains that you want to allow for registrations (e.g. @best-company.com, @best-branch.com)</div>
         </div>
-      </md-input-container>
+      </md-input-container> -->
 
       <md-input-container>
         <label>System Email Address</label>
@@ -40,11 +40,11 @@
         <label>System Email Password</label>
         <input type="password" name="emailPassword" ng-model="systemSettings.emailPassword" required>
         <div ng-messages="" class="tiny">
-          <div>The email the system connects to, for sending notifications and stuff</div>
+          <div>The password for connecting to that email address</div>
         </div>
       </md-input-container>
 
-      <md-button class="md-primary md-raised" ng-if="systemSettings.email && systemSettings.workplace && systemSettings.domains">
+      <md-button class="md-primary md-raised" ng-if="systemSettings.email && systemSettings.workplace">
         Save Settings
       </md-button>
     </form>

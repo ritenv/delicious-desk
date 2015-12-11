@@ -118,8 +118,8 @@ function loadSettings(System, cb) {
     System.mailer = nodemailer.createTransport({
       service: Config.settings.email.service,
       auth: {
-        user: System.settings.email,
-        pass: System.settings.emailPassword
+        user: Config.settings.email.emailAddress,
+        pass: Config.settings.email.emailPassword
       }
     });
     cb();

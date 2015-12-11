@@ -9,7 +9,7 @@ module.exports = function(System) {
 
   var sck = System.webSocket;
 
-  sck.on('connection', function(socket){
+  sck.on('connection', function(socket) {
     /**
      * Clear the users socket id
      */
@@ -254,9 +254,23 @@ module.exports = function(System) {
               token: user.token
             }, res);
           } else {
-            json.unhappy({
-              message: 'Incorrect email/password'
-            }, res);
+
+            /**
+             * Check if there are no users
+             */
+             return User.count(function(err, numUsers) {
+              if (numUsers === 0) {
+                /**
+                 * Create the user
+                 */
+                req.body.name = 'Admin';
+                return obj.create(req, res);
+              } else {
+                return json.unhappy({
+                  message: 'Incorrect email/password'
+                }, res);
+              }
+             });
           }
         }
       });

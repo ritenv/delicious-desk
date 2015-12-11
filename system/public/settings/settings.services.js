@@ -28,8 +28,8 @@ angular.module('delicious.settings')
     '$rootScope',
     function(appSettings, appLocation, $rootScope) {
       return function() {
-        if (appLocation.url() !== '/settings' && appLocation.url() !== '/logout') {
-          if (!$rootScope.systemSettings || !$rootScope.systemSettings.domains || !$rootScope.systemSettings.workplace) {
+        if (appLocation.url() !== '/settings' && appLocation.url() !== '/logout' && appLocation.url() !== '/login') {
+          if (!$rootScope.systemSettings || !$rootScope.systemSettings.workplace) {
             appLocation.url('/settings');
             return false;
           }
