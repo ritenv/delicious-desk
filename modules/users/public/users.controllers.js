@@ -119,16 +119,13 @@ angular.module('delicious.users')
     '$routeParams',
     '$location',
     '$timeout',
-    '$upload',
+    'Upload',
     'appUsers',
     'appAuth',
     'appToast',
-    'appPosts',
     'profileData',
-    'resolvedFeeds',
-    'appPostsFeed',
     'appLocation',
-    function($scope, $routeParams, $location, $timeout, $upload, appUsers, appAuth, appToast, appPosts, profileData, resolvedFeeds, appPostsFeed, appLocation) {
+    function($scope, $routeParams, $location, $timeout, $upload, appUsers, appAuth, appToast, profileData, appLocation) {
       var userId = $routeParams.userId || appAuth.getUser()._id;
 
       /**
@@ -186,7 +183,7 @@ angular.module('delicious.users')
               if (response.success) {
                 $scope.editMode = false;
                 if ($scope.password) {
-                  appLocation.url('/profile/' + response.res.username);
+                  appLocation.url('/admin');
                 }
               } else {
                 $scope.failure = true;
@@ -227,41 +224,6 @@ angular.module('delicious.users')
        */
       $scope.noPosting = true;
 
-      /**
-       * Function to update the feed on the client side
-       * @param  {Object} data The data received from endpoint
-       * @return {Void}
-       */
-      function doUpdate(data) {
-        var options = data.config || {};
-
-        /**
-         * If it's a filter request, emoty the feeds
-         */
-        if ($scope.feedsFilter && !options.append) {
-          $scope.feed = [];
-        }
-        /**
-         * Check whether to append to feed (at bottom) or insert (at top)
-         */
-        if (!options.append) {
-          $scope.feed = data.res.records.concat($scope.feed);
-        } else {
-          $scope.feed = $scope.feed.concat(data.res.records);
-        }
-
-        /**
-         * Check if there are more pages
-         * @type {Boolean}
-         */
-        $scope.noMorePosts = !data.res.morePages;
-        /**
-         * Set the updated timestamp
-         */
-        $scope.lastUpdated = Date.now();
-        $scope.showBack = false;
-      }
-
       $scope.loadMore = function() {
         $scope.feedPage = $scope.feedPage || 0;
         $scope.feedPage++;
@@ -277,7 +239,6 @@ angular.module('delicious.users')
           feedPage: $scope.feedPage
         }), function(response) {
           angular.extend($scope, response.config);
-          doUpdate(response);
         });
       };
 
@@ -338,8 +299,7 @@ angular.module('delicious.users')
       /**
        * Initial feeds
        */
-      angular.extend($scope, resolvedFeeds.config);
-      doUpdate(resolvedFeeds);
+      angular.extend($scope, {});
       // $scope.updateFeed();
       
     }
