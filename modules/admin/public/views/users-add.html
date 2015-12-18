@@ -21,7 +21,7 @@
             </md-input-container>
           </div>
 
-          <div layout="column" ng-if="!record._id">
+          <div layout="column" ng-show="!record._id">
             <md-input-container>
               <label>Email Address</label>
               <input name="email" type="email" ng-model="record.email" required md-maxlength="100" minlength="5">
