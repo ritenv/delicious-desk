@@ -13,7 +13,9 @@ module.exports = {
   settings: {
   	perPage: 10,
   	email: {
-  		service: 'Gmail'
+  		service: 'Gmail',
+      emailAddress: process.env.EMAILADD,
+      emailPassword: process.env.EMAILPASS
   	}
   },
   aws: {
