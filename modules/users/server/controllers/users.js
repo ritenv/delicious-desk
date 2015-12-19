@@ -201,14 +201,8 @@ module.exports = function(System) {
     if (req.body.password) {
       user.password = req.body.password;
     }
-    var updates = {
-      name: req.body.name
-    };
-    if (req.body.password) {
-      updates.password = req.body.password;
-    }
 
-    User.update({_id: req.params.userId}, updates, function(err) {
+    return user.save(function(err) {
       if (err) {
         return json.unhappy(err, res);
       }
@@ -347,7 +341,7 @@ module.exports = function(System) {
     var email = req.query.email;
     User.findOne({email: email}, function(err, user) {
       if (err || !user) {
-
+        return json.unhappy({message: 'Email not found'}, res);
       } else {
         /**
          * Send activation email
@@ -569,7 +563,7 @@ module.exports = function(System) {
     /**
      * Can accept user's username
      */
-    criteria.username = req.params.userId;
+    criteria._id = req.params.userId;
 
     User.findOne(criteria).populate('following').exec(function(err, user) {
       if (err) {

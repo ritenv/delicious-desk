@@ -4,7 +4,7 @@ module.exports = {
   REQUESTS_DELAY: 0,
   REQUESTS_DELAY_SYSTEM: 0,
   baseURL: 'http://localhost:8000',
-  db: process.env.MONGOHQ_URL || 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/delicious-desk',
+  db: process.env.MONGOHQ_URL || 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/climbing-dots',
   server: {
     host: 'localhost',
     port: 8000

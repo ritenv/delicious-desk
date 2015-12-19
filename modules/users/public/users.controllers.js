@@ -70,7 +70,7 @@ angular.module('delicious.users')
         appStorage.set('user', serializedUser);
         appStorage.set('userToken', token);
         $rootScope.$broadcast('loggedIn');
-        appLocation.url('/profile/' + user.username + '/change-password');
+        appLocation.url('/profile/' + user._id + '/change-password');
       };
 
     }
@@ -505,7 +505,7 @@ angular.module('delicious.users')
       $scope.login = function(isValid) {
         if (isValid) {
           var auth = new appUsers.auth({
-            email: 'ritensv@gmail.com', //hardcode for now, later, there will be no user
+            email: this.email,
             password: this.password
           });
           auth.$save(function(response) {
