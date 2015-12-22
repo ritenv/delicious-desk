@@ -56,11 +56,6 @@ app.controller('AppCtrl', [
       $rootScope.headerBgClass = str;
     };
 
-    $timeout(function() {
-      $rootScope.doRipple();
-      $rootScope.setRippleColor('regular');
-    });
-
     $rootScope.openMenu = function($mdOpenMenu, ev) {
       originatorEv = ev;
       $mdOpenMenu(ev);
@@ -162,6 +157,11 @@ app.controller('AppCtrl', [
         $scope.$broadcast('loggedIn');
       }
       
+    });
+
+    $timeout(function() {
+      $rootScope.doRipple();
+      $rootScope.setRippleColor('regular');
     });
   }
 ]);
