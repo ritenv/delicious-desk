@@ -9,6 +9,16 @@ $weirdRandomColor: #77AAB3;
 $badgeRed: #CB5757;
 $pinkishColor: #FF8A80;
 
+
+$default-prefixes: webkit moz ms o;
+
+@mixin prefixes($property, $value, $prefixes: $default-prefixes) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: #{$value};
+    }
+    #{$property}: #{$value};
+} 
+
 html, body {
   font-size: 14px;
   color: #444;
@@ -1018,4 +1028,26 @@ md-dialog {
 }
 .dark-color {
   background-color: #443B34 !important;
+}
+
+.default-ng-transition-vertical {
+  @include prefixes('transition', all 0.2s);
+  &.ng-enter {
+    @include prefixes('transform', translateY(30px));
+    @include prefixes('opacity', 0);
+  }
+  &.ng-enter.ng-enter-active {
+    @include prefixes('transform', translateY(0px));
+    @include prefixes('opacity', 1);
+  }
+  &.ng-leave.ng-leave-active {
+    position: absolute;
+    @include prefixes('transform', translateY(30px));
+    @include prefixes('opacity', 0);
+  }
+  &.ng-leave {
+    position: absolute;
+    @include prefixes('transform', translateY(0px));
+    @include prefixes('opacity', 1);
+  }
 }
