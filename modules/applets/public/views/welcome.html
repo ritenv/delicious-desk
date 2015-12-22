@@ -1,4 +1,75 @@
 <div layout="column" flex>
+  <div class="intro-head {{headerBgClass}}">
+
+    <section layout="row" layout-sm="column" layout-align="left" class="search-menu">
+      <md-input-container flex="50">
+        <label><span class="fa fa-search"></span> Search</label>
+        <input ng-model="app.searchString">
+      </md-input-container>
+      <div class="flex"></div>
+
+      <div>
+        <md-button class="groupX {{headerBgClass === 'regular' ? 'active' : ''}}" ng-click="setRippleColor('regular')">All</md-button>
+        <md-button class="groupX {{headerBgClass === 'cyan' ? 'active' : ''}}" ng-click="setRippleColor('cyan')">Books</md-button>
+        <md-button class="groupX {{headerBgClass === 'red' ? 'active' : ''}}" ng-click="setRippleColor('red')">Articles</md-button>
+        <md-button class="groupX {{headerBgClass === 'green' ? 'active' : ''}}" ng-click="setRippleColor('green')">Links</md-button>
+      </div>
+      <div>
+        <md-menu>
+          <md-button class="md-fab md-primary" ng-mouseover="openMenu($mdOpenMenu, $event)">
+            <md-icon md-svg-icon="/images/icons/material/underline6.svg"></md-icon>
+          </md-button>
+          <md-menu-content width="4" class="search-options">
+            <md-menu-item>
+              <div class="md-padding-horiz">
+                <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+                  Tag
+                </md-checkbox>
+              </div>
+            </md-menu-item>
+            <md-menu-item>
+              <div class="md-padding-horiz">
+                <md-checkbox ng-model="data.cb2" aria-label="Checkbox 1">
+                  Title / Description
+                </md-checkbox>
+              </div>
+            </md-menu-item>
+            <md-menu-item>
+              <div class="md-padding-horiz">
+                <md-checkbox ng-model="data.cb3" aria-label="Checkbox 1">
+                  Author
+                </md-checkbox>
+              </div>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </section>
+
+    <div layout="row" layout-align="center" layout-fill>
+      <div class="main-view-content">
+        <div class="heading-container">
+          <h1 class="md-display-2 white">23 result(s) found</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative" layout="row" layout-align="center" layout-fill>
+    <md-card class="main-view-content">
+      <md-card-content class="md-subhead">
+        <div class="md-padding">
+          <p>
+            Google I/O is an annual developer conference with inspirational talks, hands-on learning, and a chance to hear more about Google's latest developer products.
+          </p>
+          <p>
+            Google I/O is an annual developer conference with inspirational talks, hands-on learning, and a chance to hear more about Google's latest developer products.
+          </p>
+        </md-content>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+<!-- <div layout="column" flex>
   <div layout="row">
     <md-card flex="40" flex-sm="100">
       <md-card-content>
@@ -10,10 +81,6 @@
       </md-card-content>
     </md-card>
   </div>
-  <!-- <add-icon>
-    <md-button class="md-fab" aria-label="Add Icon">
-        <md-icon md-svg-src="/images/icons/material/square181.svg"></md-icon>
-    </md-button>
-  </add-icon> -->
 </div>
 <img src="/images/logo-main.png" class="logo" hide-sm hide-xs style="width: 200px !important;">
+ -->

@@ -19,6 +19,7 @@ html, body {
   text-rendering: optimizeLegibility;
   overflow: hidden;
   min-height: 100%;
+  background-color: #455A64;
   &.allow-scroll {
     overflow: auto;
   }
@@ -747,7 +748,7 @@ app-icon {
   right: 0;
   bottom: 0;
 
-  background: #fff;
+  background: #455A64;
   z-index: 1000;
   .preloader-content {
     margin-top: 200px;
@@ -925,4 +926,83 @@ md-dialog {
 .user-list-item {
   font-size: 50px;
   padding: 12px;
+}
+
+.groupX {
+  color: #fff;
+  min-width: 0;
+  padding: 5px 6px;
+  background: none !important;
+  border-radius: 0;
+  &:hover {
+    
+  }
+  &.active {
+    border-bottom: 2px solid #fff;
+  }
+  .md-ripple-container {
+    display: none;
+  }
+}
+.intro-head {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    margin-bottom: -115px;
+    background: #455A64;
+    transition: all linear 0.2s;
+    &.cyan {
+      background-color: #21909E;
+    }
+    &.red {
+      background-color: #A53434;
+    }
+    &.green {
+      background-color: #37751E;
+    }
+    &.regular {
+      background-color: #455A64;
+    }
+}
+.heading-container {
+  margin-top: 211px;
+}
+.white {
+  color: #fff;
+}
+.relative {
+  position: relative;
+}
+.main-view-content {
+  max-width: 1024px;
+  width: 100%;
+}
+.search-menu {
+  md-input-container.md-default-theme label, md-input-container label, md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder {
+    color: #fff;
+  }
+  md-input-container.md-default-theme .md-input, md-input-container .md-input {
+    border-color: transparent;
+  }
+  md-input-container {
+    font-size: 130%;
+    label {
+      text-transform: uppercase;
+    }
+    input {
+      color: #fff;
+    }
+  }
+}
+.search-menu {
+  padding: 10px 30px;
+}
+.search-options {
+  md-checkbox {
+    margin: 16px 0;
+    width: 100%;
+  }
+}
+.md-padding-horiz {
+  padding: 0 24px;
 }

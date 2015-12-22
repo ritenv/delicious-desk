@@ -19,6 +19,17 @@ app.config(function($sceDelegateProvider) {
   ]);
 });
 
+app.factory('$myElementInkRipple', function($mdInkRipple) {
+  return {
+    attach: function (scope, element, options) {
+      return $mdInkRipple.attach(scope, element, angular.extend({
+        center: false,
+        dimBackground: true
+      }, options));
+    }
+  };
+});
+
 app.controller('AppCtrl', [
   '$scope', 
   '$route',
@@ -26,15 +37,34 @@ app.controller('AppCtrl', [
   '$mdBottomSheet',
   '$location',
   '$timeout',
+  '$myElementInkRipple',
   'appLocation',
   'appAuth',
   'appWebSocket',
   'appSettings',
   'appSettingsValid',
   'appToast',
-  function($scope, $route, $rootScope, $mdBottomSheet, $location, $timeout, appLocation, appAuth, appWebSocket, appSettings, appSettingsValid, appToast) {
+  function($scope, $route, $rootScope, $mdBottomSheet, $location, $timeout, $myElementInkRipple, appLocation, appAuth, appWebSocket, appSettings, appSettingsValid, appToast) {
     $scope.barTitle = '';
     $scope.search = '';
+
+    $rootScope.doRipple = function(ev) {
+      $myElementInkRipple.attach($scope, $('.intro-head'), { center: false, fitRipple: false, colorElement: $($rootScope.rippleColorElement) });
+    };
+
+    $rootScope.setRippleColor = function(str) {
+      $rootScope.headerBgClass = str;
+    };
+
+    $timeout(function() {
+      $rootScope.doRipple();
+      $rootScope.setRippleColor('regular');
+    });
+
+    $rootScope.openMenu = function($mdOpenMenu, ev) {
+      originatorEv = ev;
+      $mdOpenMenu(ev);
+    };
 
     $rootScope.isAdmin = function() {
       return $route.current && $route.current.loadedTemplateUrl.indexOf('/admin') !== -1;
