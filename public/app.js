@@ -160,8 +160,15 @@ app.controller('AppCtrl', [
     });
 
     $timeout(function() {
-      $rootScope.doRipple();
       $rootScope.setRippleColor('regular');
-    });
+      $rootScope.doRipple();
+      console.log('a');
+    }, 5000);
+
+    $timeout(function() {
+      $rootScope.setRippleColor('regular');
+      $rootScope.doRipple();
+      console.log('a');
+    }, 15000);
   }
 ]);
