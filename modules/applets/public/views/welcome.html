@@ -1,10 +1,10 @@
 <div layout="column" flex>
-  <div class="intro-head {{headerBgClass}}">
+  <div class="intro-head {{headerBgClass}}" ng-class="{'full-height': !appData.searchString}">
 
     <section layout="row" layout-sm="column" layout-align="left" class="search-menu">
       <md-input-container flex="50">
         <label><span class="fa fa-search"></span> Search</label>
-        <input ng-model="app.searchString">
+        <input ng-model="appData.searchString" ng-model-options="{debounce: 1000}">
       </md-input-container>
       <div class="flex"></div>
 
@@ -16,7 +16,7 @@
       </div>
       <div>
         <md-menu>
-          <md-button class="md-fab md-primary" ng-mouseover="openMenu($mdOpenMenu, $event)">
+          <md-button class="md-fab md-primary dark-color" ng-mouseover="openMenu($mdOpenMenu, $event)">
             <md-icon md-svg-icon="/images/icons/material/underline6.svg"></md-icon>
           </md-button>
           <md-menu-content width="4" class="search-options">
@@ -49,26 +49,33 @@
     <div layout="row" layout-align="center" layout-fill>
       <div class="main-view-content">
         <div class="heading-container">
-          <h1 class="md-display-2 white">23 result(s) found</h1>
+          <h1 ng-if="appData.searchString" class="md-display-2 white">23 result(s) for <strong>{{appData.searchString}}</strong></h1>
+          <h1 ng-if="!appData.searchString" class="md-display-2 white">A really simple search engine.</h1>
         </div>
       </div>
     </div>
   </div>
-  <div class="relative" layout="row" layout-align="center" layout-fill>
+  <div class="relative" layout="row" layout-align="center" layout-fill ng-if="appData.searchString">
     <md-card class="main-view-content">
       <md-card-content class="md-subhead">
         <div class="md-padding">
-          <p>
-            Google I/O is an annual developer conference with inspirational talks, hands-on learning, and a chance to hear more about Google's latest developer products.
-          </p>
-          <p>
-            Google I/O is an annual developer conference with inspirational talks, hands-on learning, and a chance to hear more about Google's latest developer products.
-          </p>
+          <div class="link-items">
+            <div ng-repeat="i in [1,2,3,4,5]" class="link-item">
+              <p class="title">
+                <a href="#">Results template design pending</a>
+              </p>
+              <p>
+                Each three services have an API of sorts. These are a little limited to do full-text searching so I created some scripts to export the data from each including any attachments and...
+              </p>
+            </div>
+          </div>
         </md-content>
       </md-card-content>
     </md-card>
   </div>
 </div>
+<img src="/images/logo-main.png" class="logo" hide-sm hide-xs>
+
 <!-- <div layout="column" flex>
   <div layout="row">
     <md-card flex="40" flex-sm="100">
