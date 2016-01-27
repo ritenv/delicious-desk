@@ -23,12 +23,8 @@ module.exports = {
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     bucket: 'atwork'
   },
-  bitly: {
-    token: process.env.BITLY_TOKEN
-  },
-  diigo: {
-    apiKey: process.env.DIIGO_API_KEY,
-    username: process.env.DIIGO_USERNAME,
-    password: process.env.DIIGO_PASSWORD
+  elastic: {
+    server: 'localhost:9200',
+    db: 'aceresources'
   }
 };

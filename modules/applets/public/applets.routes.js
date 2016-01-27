@@ -5,13 +5,7 @@ angular.module('delicious.applets')
     $routeProvider
       .when('/', {
         templateUrl: '/modules/applets/views/welcome.html',
-        controller: [
-          '$routeParams',
-          '$scope',
-          function($routeParams, $scope) {
-            $scope.params = $routeParams;
-          }
-        ]
+        controller: 'AppletsCtrl'
       })
       .when('/intro', {
         templateUrl: '/modules/applets/views/intro.html',

@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var _ = require('lodash');
 var Applet = mongoose.model('Applet');
 
 module.exports = function(System) {
@@ -33,6 +34,24 @@ module.exports = function(System) {
     });
   };
 
+  /**
+   * Expose the elastic API
+   * @param  {Object} req The request object
+   * @param  {Object} res The response object
+   * @return {Void}
+   */
+  obj.elastic = function(req, res) {
+    var elastic = System.plugins.elastic;
+    var params = _.extend({}, req.query);
+
+    elastic.search(params, function(err, response) {
+      if (err) {
+        return json.unhappy(err, res);
+      }
+
+      return json.happy({query: params, data: response}, res);
+    })
+  };
 
   /**
    * Create

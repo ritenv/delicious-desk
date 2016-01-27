@@ -21,6 +21,12 @@ module.exports = function(System) {
     authorized: true
   });
 
+  routes.push({
+    method: 'get',
+    path: '/resources',
+    handler: ctrl.elastic,
+    authorized: false
+  });
 
   return routes;
 };

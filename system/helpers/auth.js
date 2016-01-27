@@ -41,6 +41,8 @@ var justGetUser = function(req, res, next) {
       }
       next();
     });
+  } else {
+    next();
   }
 };
 
