@@ -42,7 +42,37 @@ module.exports = function(System) {
    */
   obj.elastic = function(req, res) {
     var elastic = System.plugins.elastic;
-    var params = _.extend({}, req.query);
+    var params = {}; //_.extend({}, req.query);
+
+    if (req.params.documentType) {
+      params.type = req.params.documentType;
+    }
+
+    // if (req.query.fields) {
+    params.body = {
+      query: {
+        filtered: {
+          query: {}
+        }
+      }
+    };
+    if (!req.query.fields) {
+      params.body.query.filtered.query = {
+        match: {
+          // match the query agains all of
+          // the fields
+          _all: req.query.q
+        }
+      };
+    } else {
+      params.body.query.filtered.query = {
+        multi_match: {
+          query: req.query.q,
+          fields: req.query.fields.split(',')
+        }
+      };
+    }
+    // }
 
     elastic.search(params, function(err, response) {
       if (err) {

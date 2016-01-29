@@ -28,5 +28,12 @@ module.exports = function(System) {
     authorized: false
   });
 
+  routes.push({
+    method: 'get',
+    path: '/resources/:documentType',
+    handler: ctrl.elastic,
+    authorized: false
+  });
+
   return routes;
 };

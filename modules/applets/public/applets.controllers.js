@@ -16,52 +16,34 @@ angular.module('delicious.applets')
     'appUsersSearch',
     'appCollections',
     function($scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appCollections) {
-      $scope.showWindow = false;
-      $scope.collectionPassword = '';
+      $scope.params = $routeParams;
+      $scope.data = {};
+      $scope.data.fields = {};
+      $scope.keyword = '';
 
-      if ($routeParams.identifier) {
-        appCollections.single.get({identifier: $routeParams.identifier}, function(res) {
-          if (res.success && res.res.records.length) {
-            var record = res.res.records[0];
-            $scope.record = record;
-            
-            if (record.password) {
-              /**
-               * Check if pwd is in storage
-               */
-              var storedPwd = appStorage.get($scope.record.identifier);
-              if ($scope.record.password === storedPwd) {
-                $scope.appData = $scope.record;
-                $scope.showWindow = true;
-              }
-
-            } else {
-              $scope.appData = $scope.record;
-              $scope.showWindow = true;
-            }
-          }
-        });
+      $scope.setSearchType = function(searchType) {
+        $rootScope.searchCriteria.type = searchType;
       }
 
-      $scope.logout = function() {
-        appStorage.remove($scope.record.identifier);
-        $scope.showWindow = false;
-        $scope.collectionPassword = null;
-      };
+      $scope.$watch('data.keyword', function(newVal, oldVal) {
+        $rootScope.searchCriteria.keyword = newVal;
+      });
 
-      $scope.login = function(isValid) {
-        if ($scope.record.password === $scope.collectionPassword) {
-          appStorage.set($scope.record.identifier, $scope.collectionPassword);
-          $scope.appData = $scope.record;
-          $scope.showWindow = true;
-        } else {
-          appLocation.url('/?incorrect=true');
+      $scope.$watch('data.fields', function(newVal, oldVal) {
+        $rootScope.searchCriteria.fields = [];
+        if (newVal.tags) {
+          $rootScope.searchCriteria.fields.push('tags');
         }
-      }
+        if (newVal.title) {
+          $rootScope.searchCriteria.fields.push('title');
+          $rootScope.searchCriteria.fields.push('description');
+          $rootScope.searchCriteria.fields.push('abstract');
+        }
+        if (newVal.authors) {
+          $rootScope.searchCriteria.fields.push('authors');
+        }
 
-      // $timeout(function() {
-        
-      // }, 2000);
+      }, true);
     }
   ])
   .controller('IntroCtrl', [

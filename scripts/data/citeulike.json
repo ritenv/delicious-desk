@@ -1,5 +1,928 @@
 [
 {
+"article_id": "13859113",
+"user_article_id": "11187535",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-12-08 20:44:43",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13859113",
+"type": "MTHES",
+"title": "Low-Tech, Eye-Movement-Accessible AAC and Typical Adults",
+"abstract": "Low-tech, eye-gaze-accessible augmentative and alternative communication (AAC) options are important for individuals with motor impairments which result in limited voluntary movement, including many diagnosed with amyotrophic lateral sclerosis (ALS). Available devices include EyeLink, partner-assisted scanning (PAS), and E-tran. The purpose of this study was to examine the rates of use for these devices, the user preferences related to them, and changes in rates and preferences over time. In another ongoing study component, Roman, Quach, Coggiola, and Moore (2010) investigated these devices with pairs of participants that included persons with ALS (PALS) and their communication partners. In this component, seven pairs of typical adults aged 45 or older participated. Over the course of five sessions with each pair, participants were taught to use and practiced use of these three devices. The quickest communication was accomplished through the use of EyeLink, but its rate of use did not differ significantly from that of E-tran. Use of PAS resulted in the slowest communication throughout the sessions. E-tran was the device most preferred by participants overall, and PAS was the least preferred. Through comparison of these results to those of the other study component, which included PALS as participants, the researchers hope to increase the generalizability of the study results and to better understand the ways a diagnosis of ALS may influence results.",
+"priority": "0",
+"school": "San Jose State University",
+"is_unchecked": "Y",
+"published": ["2012","05"],
+"authors": [ "Sarah M. Swift" ],
+"linkouts": [
+	{"type": "URL", "url": "http:\/\/scholarworks.sjsu.edu\/cgi\/viewcontent.cgi?article=7706&#38;context=etd_theses"}
+],
+"citation": "(May 2012)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1045672, "name" : "Low-Tech_Eye-Movement-Accessible_AAC_and_Typical_Adults.pdf", "sha1": "41fd72b126bbed68e6f81d5b612057f79dfda6d0", "path": "/pdf/user/acecentre/article/13859113/1045672/Low-Tech_Eye-Movement-Accessible_AAC_and_Typical_Adults.pdf"}
+],
+"tags": ["aac", "adults", "comparison", "low-cost", "low_tech"],
+"citation_keys": ["citeulike:13859113", "Swift2012LowTech", null]
+},
+{
+"article_id": "13829046",
+"user_article_id": "11155329",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 16:57:04",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13829046",
+"type": "JOUR",
+"title": "Augmentative and Alternative Communication: Literature Review",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1997","09","08"],
+"authors": [ "Erica Warren", "Julia Hisock" ],
+"citation": "(8 September 1997)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041899, "name" : "Literature_review.pdf", "sha1": "d75cba0daaf6b7fd3b189a7397d69b9d576a32a2", "path": "/pdf/user/acecentre/article/13829046/1041899/Literature_review.pdf"},
+	{"fileId" : 1041898, "name" : "Literature_review.pdf", "sha1": "d75cba0daaf6b7fd3b189a7397d69b9d576a32a2", "path": "/pdf/user/acecentre/article/13829046/1041898/Literature_review.pdf"}
+],
+"citation_keys": ["citeulike:13829046", "Warren1997Augmentative", null]
+},
+{
+"article_id": "13829042",
+"user_article_id": "11155327",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 16:55:53",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13829042",
+"type": "JOUR",
+"title": "Communication Aids for Children, Guidelines to Good Practice",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994"],
+"authors": [ "P. Marshall", "M. Bone" ],
+"citation": "(1994)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041897, "name" : "comm_4_children_myths_models.pdf", "sha1": "90b6d49b673f70fa988ee68889442e70506e5d71", "path": "/pdf/user/acecentre/article/13829042/1041897/comm_4_children_myths_models.pdf"}
+],
+"citation_keys": ["citeulike:13829042", "Marshall1994Communication", null]
+},
+{
+"article_id": "13829038",
+"user_article_id": "11155318",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 16:51:08",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13829038",
+"type": "JOUR",
+"title": "A Team Approach to Supporting a Non-Speaking Child in Primary School",
+"journal": "CALL Centre; Augmentative Communication in Practice",
+"priority": "2",
+"chapter": "5",
+"is_unchecked": "Y",
+"published": ["1994"],
+"authors": [ "Jane English", "Helen Robertson", "Margaret McLeod", "Sheena Davidson" ],
+"citation": "CALL Centre; Augmentative Communication in Practice (1994)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041895, "name" : "A_Team_Approach.pdf", "sha1": "bc29254d428badf495a1d93a5f6b4ae9f7e3e665", "path": "/pdf/user/acecentre/article/13829038/1041895/A_Team_Approach.pdf"}
+],
+"citation_keys": ["citeulike:13829038", "English1994Team", null]
+},
+{
+"article_id": "13829028",
+"user_article_id": "11155317",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 16:50:59",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13829028",
+"type": "JOUR",
+"title": "Using the Participation Model to Support the Inclusion of an AAC user in a Regular Classroom",
+"start_page": "1",
+"end_page": "15",
+"journal": "ISAAC",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996"],
+"authors": [ "Donna McGhie-Richmond", "Susie Blackstien-Adler", "Jackie McGinnis" ],
+"citation": "ISAAC (1996), pp. 1-15",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041894, "name" : "Using_the_Participation.pdf", "sha1": "55e462dbf93eaa3a66b66bbbf55dc9491e0aa47f", "path": "/pdf/user/acecentre/article/13829028/1041894/Using_the_Participation.pdf"}
+],
+"citation_keys": ["citeulike:13829028", "McGhieRichmond1996Using", null]
+},
+{
+"article_id": "13829016",
+"user_article_id": "11155299",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 16:26:57",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13829016",
+"type": "JOUR",
+"title": "\"When I First Got It, I Wanted to Throw It Off a Cliff\": The Challenges and Benefits of Learning AAC Technologies as Described by Adults who use AAC",
+"journal": "Augmentative and Alternative Communication",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["2005"],
+"authors": [ "Tracy Rackensperger" ],
+"citation": "Augmentative and Alternative Communication (2005)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041889, "name" : "the_challenges_and_benefits_of_learning_AAC_technologies.pdf", "sha1": "262ee9c5a1f0515b3b097a7ba1b259f87ad7182f", "path": "/pdf/user/acecentre/article/13829016/1041889/the_challenges_and_benefits_of_learning_AAC_technologies.pdf"}
+],
+"citation_keys": ["citeulike:13829016", "Rackensperger2005When", null]
+},
+{
+"article_id": "13828979",
+"user_article_id": "11155233",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 15:12:23",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828979",
+"type": "JOUR",
+"title": "Assessing Word Processing Capability of the Nonvocal, Nonwriting",
+"start_page": "56",
+"end_page": "63",
+"journal": "AAC Augmentative and Alternative Communication",
+"abstract": "Issues in clinical assessment of nonvocal, nonwriting individuals (school-aged or adult) for prognosis for learning to read and spell and this for using computers for linguistics communication are discussed. Specific tests of visual skills (for whole word or word-like patterns and for embedded symbol or symbol sequence) and of linguistic skills (for phonemic analysis and vocabulary knowledge) are recommended because they were shown to concurrent validity for achievement in word decoding and encoding for a disabled sample of beginning readers before and after a year of formal reading instruction; these tests can be administered in the same way to nonvocal, nonwriting individuals as to nondisabled individuals on whom the tests were normed. Tests are also recommended for monitoring text comprehension, once reading instruction is implemented that is adapted to the response capabilities of the nonvocal, nonwriting individual. Professionals in the field of augmentative and alternative communication are urged to advocate for the services of qualified reading specialists for severely communicatively handicapped individuals who are appropriate candidates for formal reading and spelling instructions.",
+"priority": "2",
+"school": "Tufts University School of Medicene",
+"is_unchecked": "Y",
+"authors": [ "Virignia Berninger", "Bruce M. Gans" ],
+"citation": "AAC Augmentative and Alternative Communication, pp. 56-63",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041872, "name" : "Assessing_word.pdf", "sha1": "75d7365cf2f5e9d3ca489ab4dce3daf9cddbe06a", "path": "/pdf/user/acecentre/article/13828979/1041872/Assessing_word.pdf"}
+],
+"citation_keys": ["citeulike:13828979", "BerningerAssessing", null]
+},
+{
+"article_id": "13828959",
+"user_article_id": "11155209",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:52:38",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828959",
+"type": "INCONF",
+"title": "Literacy Intervention for Children who use AAC: From Shared Storybook Readings to Word Level Literacy Instruction",
+"abstract": "This presentation will provide information on how to improve the early literacy experiences of children who use AAC. Specifically, the presentation will review methods for using shared storybook reading as a context for participation and language learning. The presentation will also provide information on instruction and activities to improve the conventional literacy skills of children Information on how assessment can be used to create a tailored approach to literacy intervention will be discussed. The long term goals of literacy activities and instruction for children who use AAC will be reviewed.",
+"booktitle": "NSLHA Convention",
+"location": "Kearney, Nebraska",
+"priority": "2",
+"school": "Missouri State University",
+"is_unchecked": "Y",
+"authors": [ "Lisa A. Wood" ],
+"citation": "In NSLHA Convention",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041867, "name" : "Literacy_intervention.pdf", "sha1": "04a58371e140aca457ccd24939594e7743efd3fc", "path": "/pdf/user/acecentre/article/13828959/1041867/Literacy_intervention.pdf"}
+],
+"citation_keys": ["citeulike:13828959", "WoodLiteracy", null]
+},
+{
+"article_id": "13828956",
+"user_article_id": "11155204",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:44:10",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828956",
+"type": "INCONF",
+"title": "Developing a Communication policy for Adults with a Severe Communication Impairment",
+"booktitle": "ISSAC",
+"location": "Vancouver, Canada",
+"priority": "2",
+"is_unchecked": "Y",
+"authors": [ "Hilary Johnson" ],
+"citation": "In ISSAC",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041865, "name" : "Devloping_a_communication.pdf", "sha1": "491b9d3b2d99d7605fcf76654bfb5bab832b840d", "path": "/pdf/user/acecentre/article/13828956/1041865/Devloping_a_communication.pdf"}
+],
+"citation_keys": ["citeulike:13828956", "JohnsonDeveloping", null]
+},
+{
+"article_id": "13828947",
+"user_article_id": "11155194",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:37:08",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828947",
+"type": "JOUR",
+"title": "Toward Identification of Factors Within and Around the Family that Affect Acceptance and Use of AAC",
+"journal": "Acceptance of Assisstive Technology",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996"],
+"authors": [ "Lynn A. Sweeney" ],
+"citation": "Acceptance of Assisstive Technology (1996)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041861, "name" : "Toward_identification_of_factors_within_and_around_the_family.pdf", "sha1": "8492d3d496e8d8a13b8706bf250b9cfb7849db53", "path": "/pdf/user/acecentre/article/13828947/1041861/Toward_identification_of_factors_within_and_around_the_family.pdf"}
+],
+"citation_keys": ["citeulike:13828947", "Sweeney1996Toward", null]
+},
+{
+"article_id": "13828946",
+"user_article_id": "11155191",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:36:14",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828946",
+"type": "INCONF",
+"title": "A Comparison of Words Strategy and Traditional Orthography",
+"abstract": "Word Strategy is a relatively new software programme designed for use with the Prentke Romich Touchtalker. It is generally targeted for use by speech-impaired or non-speaking adults who have, however, intact language skills and at least rudimentary knowledge of grammar. This study was designed to develop a learning curve for Word Strategy, and to compare TouchTalker with traditional orthography. An additional goal was to determine if, as Light (3) has suggested, increasing the number of associations per icon also increases the number of confusions. Results indicated that after approximately 15 hours of training, sentence input speed for Words Strategy surpassed that of traditional orthography. Furthermore, the data did not support Light's contention. Results also indicated some recommended changes to both the software and the traditional Minspeak overlay.",
+"booktitle": "Resna 12th Annual Conference",
+"location": "New Orleans, Louisiana",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1989"],
+"authors": [ "Daryle Gardner-Bonneau" ],
+"citation": "In Resna 12th Annual Conference (1989)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041860, "name" : "A_Comparison_of_Word.pdf", "sha1": "d021a57e464a0f8f93b56deecd3bf9f74f9a2906", "path": "/pdf/user/acecentre/article/13828946/1041860/A_Comparison_of_Word.pdf"}
+],
+"citation_keys": ["citeulike:13828946", "GardnerBonneau1989Comparison", null]
+},
+{
+"article_id": "13828944",
+"user_article_id": "11155189",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:33:07",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828944",
+"type": "JOUR",
+"title": "Neuropsychiatry of Movement disorders",
+"journal": "Neuropsychiatry",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1992"],
+"authors": [ "Daniel Rogers" ],
+"citation": "Neuropsychiatry (1992)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041859, "name" : "Neuropsychiatry_of_movement_disorders.pdf", "sha1": "809118b623ce89776e66d4a0a24d68bbac404183", "path": "/pdf/user/acecentre/article/13828944/1041859/Neuropsychiatry_of_movement_disorders.pdf"}
+],
+"citation_keys": ["citeulike:13828944", "Rogers1992Neuropsychiatry", null]
+},
+{
+"article_id": "13828930",
+"user_article_id": "11155175",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:21:06",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828930",
+"type": "JOUR",
+"title": "Obtaining a Correspondence between Requesting and Selecting Preferred Objects",
+"journal": "Obtaining a Correspondence",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1992"],
+"authors": [ "Jeff Sigafoos", "Fred Schonell", "Eleanor Schonell" ],
+"citation": "Obtaining a Correspondence (1992)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041857, "name" : "obtaining_a_correspondence.pdf", "sha1": "52354cc48e693d92aa8f0baa8a33d25995c48c72", "path": "/pdf/user/acecentre/article/13828930/1041857/obtaining_a_correspondence.pdf"}
+],
+"citation_keys": ["citeulike:13828930", "Sigafoos1992Obtaining", null]
+},
+{
+"article_id": "13828928",
+"user_article_id": "11155172",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 14:15:48",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828928",
+"type": "JOUR",
+"title": "Psychiatric Consequences of Basal Ganglia Disease",
+"volume": "10",
+"issue": "3",
+"journal": "Seminars in Neurology",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1990","09"],
+"authors": [ "Daniel Rogers" ],
+"citation": "Seminars in Neurology, Vol. 10, No. 3. (September 1990)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041856, "name" : "Psychiatric_consequences.pdf", "sha1": "4eaa937a3764df246821a4cccd3ebbdcc82da18a", "path": "/pdf/user/acecentre/article/13828928/1041856/Psychiatric_consequences.pdf"}
+],
+"citation_keys": ["citeulike:13828928", "Rogers1990Psychiatric", null]
+},
+{
+"article_id": "13828886",
+"user_article_id": "11155100",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:53:19",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828886",
+"type": "JOUR",
+"title": "Preliminary Validation of Facilitated Communication",
+"start_page": "1",
+"end_page": "31",
+"journal": "Topics in Language Disorders",
+"priority": "2",
+"school": "University of New Hampshire",
+"is_unchecked": "Y",
+"authors": [ "Stephen N. Calculator", "Karen M. Singer" ],
+"citation": "Topics in Language Disorders, pp. 1-31",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041845, "name" : "Preliminary_Validation.pdf", "sha1": "932c3077a446c42e89f041fc4e8a86d0d0e9cac2", "path": "/pdf/user/acecentre/article/13828886/1041845/Preliminary_Validation.pdf"}
+],
+"citation_keys": ["citeulike:13828886", "CalculatorPreliminary", null]
+},
+{
+"article_id": "13828884",
+"user_article_id": "11155098",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:51:11",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828884",
+"type": "JOUR",
+"title": "Assessing Choice Making of a Person With Profound Disabilities: A Preliminary Analysis",
+"journal": "Institute for Development Research",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1995"],
+"authors": [ "Kazuko Nozaki", "Akira Mochizuki" ],
+"citation": "Institute for Development Research (1995)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041844, "name" : "assessing_choice_making_of_a_person.pdf", "sha1": "df2b24bca8e4605da4ae0bd54bbc314b59f4bf46", "path": "/pdf/user/acecentre/article/13828884/1041844/assessing_choice_making_of_a_person.pdf"},
+	{"fileId" : 1041843, "name" : "assessing_choice_making_of_a_person.pdf", "sha1": "df2b24bca8e4605da4ae0bd54bbc314b59f4bf46", "path": "/pdf/user/acecentre/article/13828884/1041843/assessing_choice_making_of_a_person.pdf"}
+],
+"citation_keys": ["citeulike:13828884", "Nozaki1995Assessing", null]
+},
+{
+"article_id": "13828882",
+"user_article_id": "11155095",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:42:58",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828882",
+"type": "JOUR",
+"title": "Populations and Practices in AAC. Augmentative Communication News 3 1 3.",
+"journal": "Augmentative Communication News",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1990"],
+"authors": [ "S. Blackstone" ],
+"citation": "Augmentative Communication News (1990)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041842, "name" : "populations_and_practices_in_AAC.pdf", "sha1": "f6be0f18961f30c5a667ad907ef77e1ec7313014", "path": "/pdf/user/acecentre/article/13828882/1041842/populations_and_practices_in_AAC.pdf"}
+],
+"citation_keys": ["citeulike:13828882", "Blackstone1990Populations", null]
+},
+{
+"article_id": "13828879",
+"user_article_id": "11155093",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:42:49",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828879",
+"type": "JOUR",
+"title": "Vibrotactile Stimulation",
+"volume": "53",
+"issue": "6",
+"start_page": "220",
+"end_page": "224",
+"journal": "British Journal of Occupatonal Therapy",
+"abstract": "Many occupational therapists appear to tbe struggling to provide a holistic treatment programme for people with multiple handicaps. A number of the accepted methods of therapy or intervention techniques for mental handicap facilitate the individual to learn by handling and manipulation and are thus not so readily accessible to those with multiple handicaps because of physical disabilities. This article is intended to show how vibration can be incorporated into therapy programmes for people with mental, multiple and sensory handicaps to obtain an optimum level of function and therefore enhance their quality of life.",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1990","06"],
+"authors": [ "Moura Boakes" ],
+"citation": "British Journal of Occupatonal Therapy, Vol. 53, No. 6. (June 1990), pp. 220-224",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041841, "name" : "Vibrotactile_Stimulation.pdf", "sha1": "55b2645a4959d5ea36b976c9d01d340603223384", "path": "/pdf/user/acecentre/article/13828879/1041841/Vibrotactile_Stimulation.pdf"}
+],
+"citation_keys": ["citeulike:13828879", "Boakes1990Vibrotactile", null]
+},
+{
+"article_id": "13828881",
+"user_article_id": "11155090",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:41:01",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828881",
+"type": "JOUR",
+"title": "Talking Together: A Model of Training to Encourage More Effective Use of AAC Systems.",
+"journal": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994"],
+"authors": [ "J. Scott", "J. Murphy" ],
+"citation": "Communication Matters (1994)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041840, "name" : "talking_together_a_model_of_training.pdf", "sha1": "e018f3d10f778e84e2262fb4c2ff0a75a4d959b3", "path": "/pdf/user/acecentre/article/13828881/1041840/talking_together_a_model_of_training.pdf"}
+],
+"citation_keys": ["citeulike:13828881", "Scott1994Talking", null]
+},
+{
+"article_id": "13828877",
+"user_article_id": "11155084",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:37:48",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828877",
+"type": "JOUR",
+"title": "Technology for People with Tetraplegia, Part 2: Environmental Control Units",
+"journal": "Environmental Control Units",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994"],
+"authors": [ "Michael Curtin" ],
+"citation": "Environmental Control Units (1994)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041837, "name" : "technology_for_people_with_tetraplegia_Part_2_Environmental_Control_Units.pdf", "sha1": "ea59b017596d5c029a77c3afa4fb15e7674454de", "path": "/pdf/user/acecentre/article/13828877/1041837/technology_for_people_with_tetraplegia_Part_2_Environmental_Control_Units.pdf"}
+],
+"citation_keys": ["citeulike:13828877", "Curtin1994Technology", null]
+},
+{
+"article_id": "13828873",
+"user_article_id": "11155080",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:31:49",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828873",
+"type": "JOUR",
+"title": "Some Thoughts on the Relationship Between Speech and Language Therapy and Clients' Everyday Environments",
+"volume": "9",
+"issue": "2",
+"start_page": "6",
+"end_page": "9",
+"journal": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1995","08"],
+"authors": [ "M. Lester-Cribb", "F. McCall", "J. Murphy" ],
+"citation": "Communication Matters, Vol. 9, No. 2. (August 1995), pp. 6-9",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041835, "name" : "Some_thoughts_on_the.pdf", "sha1": "447a3ef2163c2e352b22f220d27561eae444ea35", "path": "/pdf/user/acecentre/article/13828873/1041835/Some_thoughts_on_the.pdf"}
+],
+"citation_keys": ["citeulike:13828873", "LesterCribb1995Some", null]
+},
+{
+"article_id": "13828868",
+"user_article_id": "11155074",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:22:38",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828868",
+"type": "JOUR",
+"title": "Fostering Self-Advocacy not Dependence for People with Communication Difficulties",
+"journal": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996"],
+"authors": [ "Warrington Mavis" ],
+"citation": "Communication Matters (1996)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041833, "name" : "fostering_self-advocacy_not_dependence.pdf", "sha1": "3bfdffb1a44d8bd7f79824bde1f63951bc5e1c87", "path": "/pdf/user/acecentre/article/13828868/1041833/fostering_self-advocacy_not_dependence.pdf"}
+],
+"citation_keys": ["citeulike:13828868", "Mavis1996Fostering", null]
+},
+{
+"article_id": "13828864",
+"user_article_id": "11155070",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:20:44",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828864",
+"type": "JOUR",
+"title": "The Limited Use of AAC Systems: Why The Current Situation is Problematic and How it Can Be Improved.",
+"volume": "8",
+"issue": "3",
+"start_page": "9",
+"end_page": "12",
+"journal": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994","12"],
+"authors": [ "J. Murphy", "S. Collins", "E. Moodie" ],
+"citation": "Communication Matters, Vol. 8, No. 3. (December 1994), pp. 9-12",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041831, "name" : "the_limited_use.pdf", "sha1": "821e33dd05a45e1349692822b2713ab4785022f6", "path": "/pdf/user/acecentre/article/13828864/1041831/the_limited_use.pdf"}
+],
+"citation_keys": ["citeulike:13828864", "Murphy1994Limited", null]
+},
+{
+"article_id": "13828866",
+"user_article_id": "11155067",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:19:59",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828866",
+"type": "JOUR",
+"title": "AAC for People with CP. Augmentative Communication News 6: 4-5.",
+"journal": "AAC for People with CP",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1993"],
+"authors": [ "S. Blackstone" ],
+"citation": "AAC for People with CP (1993)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041830, "name" : "aug_comm_news_6_4_5.pdf", "sha1": "f41b82c3a795cfdc0ec3eecac095ce8fe5811d00", "path": "/pdf/user/acecentre/article/13828866/1041830/aug_comm_news_6_4_5.pdf"}
+],
+"citation_keys": ["citeulike:13828866", "Blackstone1993AAC", null]
+},
+{
+"article_id": "13828843",
+"user_article_id": "11155064",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 12:15:46",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828843",
+"type": "JOUR",
+"title": "Augmentative Communication News 6: 1-3. Culture in the AAC Community. S. Blackstone",
+"journal": "Culture in the AAC Community",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1993"],
+"authors": [ " Blackstone" ],
+"citation": "Culture in the AAC Community (1993)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041829, "name" : "aug_com_news_culture_in_AAc_community.pdf", "sha1": "530c1b424899f398d84bd1f57c75ec77eeb3f7a6", "path": "/pdf/user/acecentre/article/13828843/1041829/aug_com_news_culture_in_AAc_community.pdf"}
+],
+"citation_keys": ["citeulike:13828843", "Blackstone1993Augmentative", null]
+},
+{
+"article_id": "13828827",
+"user_article_id": "11155031",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:53:46",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828827",
+"type": "JOUR",
+"title": "An Integrated Approach to Research",
+"volume": "8",
+"issue": "3",
+"start_page": "3",
+"end_page": "4",
+"journal": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994","12"],
+"authors": [ "Ivana Markova" ],
+"citation": "Communication Matters, Vol. 8, No. 3. (December 1994), pp. 3-4",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041823, "name" : "An_Integrated_Approach.pdf", "sha1": "709a17eaa29a10086e851ad9361a694a40a58837", "path": "/pdf/user/acecentre/article/13828827/1041823/An_Integrated_Approach.pdf"}
+],
+"citation_keys": ["citeulike:13828827", "Markova1994Integrated", null]
+},
+{
+"article_id": "13828828",
+"user_article_id": "11155023",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:51:59",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828828",
+"type": "JOUR",
+"title": "Augmentative Communication News. The Missing Research Agenda 7: 6-7",
+"journal": "Augmentative Communication News",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994"],
+"authors": [ " Blackstone" ],
+"citation": "Augmentative Communication News (1994)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041822, "name" : "aug_comm_news.pdf", "sha1": "3b7bb96065c5995da02a985f01338a52b0d12389", "path": "/pdf/user/acecentre/article/13828828/1041822/aug_comm_news.pdf"}
+],
+"citation_keys": ["citeulike:13828828", "Blackstone1994Augmentative", null]
+},
+{
+"article_id": "13828815",
+"user_article_id": "11155018",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:48:59",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828815",
+"type": "JOUR",
+"title": "Developing Prelanguage Communication in the severely handicapped: An Interpretation of the Van Dijk Method",
+"journal": "Seminars in Speech and Language",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996"],
+"authors": [ "Robert D. Stillman", "Christy W. Battle" ],
+"citation": "Seminars in Speech and Language (1996)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041821, "name" : "developing_prelanguage_comm_in_the_severely_handicapped.pdf", "sha1": "7feee4e42ccd81ce44ffe8b048e96d82b1b6935d", "path": "/pdf/user/acecentre/article/13828815/1041821/developing_prelanguage_comm_in_the_severely_handicapped.pdf"}
+],
+"citation_keys": ["citeulike:13828815", "Stillman1996Developing", null]
+},
+{
+"article_id": "13828812",
+"user_article_id": "11155016",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:48:16",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828812",
+"type": "JOUR",
+"title": "Creating Opportunities for Choice for Adults with Learning Disabilities in a Group Home",
+"volume": "8",
+"issue": "2",
+"start_page": "11",
+"end_page": "14",
+"journal": "Communication Matters",
+"abstract": "The aims of this programme included: allowing tenants to have an increase in opportunities for choice, and allowing tenants to develop their skills in making choices.",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1994","08"],
+"authors": [ "Aydan Suphi" ],
+"citation": "Communication Matters, Vol. 8, No. 2. (August 1994), pp. 11-14",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041820, "name" : "Creating_opportunities.pdf", "sha1": "92a97819b90596ecb5ea36cda45ffab574e1d597", "path": "/pdf/user/acecentre/article/13828812/1041820/Creating_opportunities.pdf"}
+],
+"citation_keys": ["citeulike:13828812", "Suphi1994Creating", null]
+},
+{
+"article_id": "13828808",
+"user_article_id": "11155013",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:44:56",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828808",
+"type": "JOUR",
+"title": "Slings, Springs, and other Silly Things: Basic Motor Control Assessment Techniques.",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996"],
+"authors": [ "Drynan Donna", "Jackie McGinnis" ],
+"citation": "(1996)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041819, "name" : "slings_springs_and_other_silly_things.pdf", "sha1": "a72cb7da8f7f38bb05eb09deb76f85fe5eaffa60", "path": "/pdf/user/acecentre/article/13828808/1041819/slings_springs_and_other_silly_things.pdf"}
+],
+"citation_keys": ["citeulike:13828808", "Donna1996Slings", null]
+},
+{
+"article_id": "13828804",
+"user_article_id": "11155004",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:37:10",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828804",
+"type": "JOUR",
+"title": "Pathways to Advocacy: a Training Package",
+"volume": "10",
+"issue": "2",
+"start_page": "17",
+"end_page": "19",
+"journal": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996","09"],
+"authors": [ " Communication Matters Advocacy Steering Group" ],
+"citation": "Communication Matters, Vol. 10, No. 2. (September 1996), pp. 17-19",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041818, "name" : "Pathways_to_advocacy.pdf", "sha1": "10c0eda45ef8d2c1ad03d72fe036b2e04ccb86a0", "path": "/pdf/user/acecentre/article/13828804/1041818/Pathways_to_advocacy.pdf"}
+],
+"citation_keys": ["citeulike:13828804", "CommunicationMattersAdvocacySteeringGroup1996Pathways", null]
+},
+{
+"article_id": "13828797",
+"user_article_id": "11154993",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 11:27:18",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828797",
+"type": "INCONF",
+"title": "Does Augmentative Communication Improve Communication and Reduce Frustration?",
+"volume": "9",
+"issue": "2",
+"booktitle": "Communication Matters",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1995","08"],
+"authors": [ "Elaine Parkinson", "Liz Royall", "Gill Darvil" ],
+"citation": "In Communication Matters, Vol. 9, No. 2. (August 1995)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041817, "name" : "Does_Augmentative_comm.pdf", "sha1": "fb92aacc84d7c44870d3f9595349c36292f93eed", "path": "/pdf/user/acecentre/article/13828797/1041817/Does_Augmentative_comm.pdf"}
+],
+"citation_keys": ["citeulike:13828797", "Parkinson1995Does", null]
+},
+{
+"article_id": "13828768",
+"user_article_id": "11154935",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 10:39:12",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828768",
+"type": "INCONF",
+"title": "Supporting People with Challenging Behaviour Through AAC",
+"booktitle": "The 7th Biennial Conference of the International Society for Augmentative and Alternative Communication",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996","08","09"],
+"authors": [ "Pat Mirenda" ],
+"citation": "In The 7th Biennial Conference of the International Society for Augmentative and Alternative Communication (9 August 1996)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041808, "name" : "Supporting_people.pdf", "sha1": "d72c3f80679b2f8ae0cbefbe0fdc2e4eb1a2f7b6", "path": "/pdf/user/acecentre/article/13828768/1041808/Supporting_people.pdf"}
+],
+"citation_keys": ["citeulike:13828768", "Mirenda1996Supporting", null]
+},
+{
+"article_id": "13828769",
+"user_article_id": "11154934",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 10:37:13",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828769",
+"type": "JOUR",
+"title": "Measurement Methods for Quality of Life Outcomes for AAC Treatment. Draft for Proceedings of ISAAC Research Conference",
+"journal": "Communication disorders",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1996","07"],
+"authors": [ "Bernard M. O'Keefe", "Susan E. Pletsch", "Wendy L. Sherk", "Sandra J. Sokol" ],
+"citation": "Communication disorders (July 1996)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041807, "name" : "measurement_methods.pdf", "sha1": "cacd6c65e050e03c148421d66abb9c18f7ad1510", "path": "/pdf/user/acecentre/article/13828769/1041807/measurement_methods.pdf"}
+],
+"citation_keys": ["citeulike:13828769", "OKeefe1996Measurement", null]
+},
+{
+"article_id": "13828750",
+"user_article_id": "11154923",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-05 10:20:32",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13828750",
+"type": "JOUR",
+"title": "Enhancing the Nonsymbolic Communicative Behaviour of Children with Multiple Impairments",
+"start_page": "338",
+"end_page": "348",
+"journal": "Language, Speech and Hearing Services in Schools",
+"abstract": "Communication intervention for children who do not make use of speech of other symbolic means is a critical concern for educators and therapists responsible for programming. This article addresses the need to identify the unconventional, nonsymbolic behaviours of children with severe, multiple disabilities. Suggestions are provided to improve the frequency and quality of communicative interactions by building on the current behavioural repertoire of the individual. Emphasis is placed on the dyadic nature of communication exchanges and the need for both communicative partners, the child and the professional, to modify their communication behaviours to improve interactions.",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["1988","10"],
+"authors": [ "June E. Downing", "Ellin Siegel-Causey" ],
+"citation": "Language, Speech and Hearing Services in Schools (October 1988), pp. 338-348",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041799, "name" : "Enhancing_the_nonsymbolic.pdf", "sha1": "540605814c3865186d2ccf48aff8a7d006376f05", "path": "/pdf/user/acecentre/article/13828750/1041799/Enhancing_the_nonsymbolic.pdf"}
+],
+"citation_keys": ["citeulike:13828750", "Downing1988Enhancing", null]
+},
+{
+"article_id": "13827969",
+"user_article_id": "11154089",
+"privacy": "public",
+"username": "acecentre",
+"date": "2015-11-04 16:46:12",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13827969",
+"type": "JOUR",
+"title": "Research Priorities in Augmentative and Alternative Communication.",
+"journal": "Augmentative and Alternative Communication",
+"priority": "2",
+"chapter": "131-134",
+"is_unchecked": "Y",
+"published": ["1995"],
+"authors": [ "David R. Beukelman", "Beth M. Ansel" ],
+"citation": "Augmentative and Alternative Communication (1995)",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041614, "name" : "research_priorities_in_aug_n_alt_comm.pdf", "sha1": "1e908d128d90dbc4c9cce695eadacae3ee2b717e", "path": "/pdf/user/acecentre/article/13827969/1041614/research_priorities_in_aug_n_alt_comm.pdf"}
+],
+"tags": ["acecentre"],
+"citation_keys": ["citeulike:13827969", "Beukelman1995Research", null]
+},
+{
+"article_id": "1179787",
+"user_article_id": "10737802",
+"privacy": "public",
+"username": "acecentre",
+"date": "2014-12-01 08:54:16",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/1179787",
+"type": "JOUR",
+"title": "Anatomical Traces of Vocabulary Acquisition in the Adolescent Brain",
+"volume": "27",
+"issue": "5",
+"start_page": "1184",
+"end_page": "1189",
+"journal": "The Journal of Neuroscience",
+"abstract": "A surprising discovery in recent years is that the structure of the adult human brain changes when a new cognitive or motor skill is learned. This effect is seen as a change in local gray or white matter density that correlates with behavioral measures. Critically, however, the cognitive and anatomical mechanisms underlying these learning-related structural brain changes remain unknown. Here, we combined brain imaging, detailed behavioral analyses, and white matter tractography in English-speaking monolingual adolescents to show that a critical linguistic prerequisite (namely, knowledge of vocabulary) is proportionately related to relative gray matter density in bilateral posterior supramarginal gyri. The effect was specific to the number of words learned, regardless of verbal fluency or other cognitive abilities. The identified region was found to have direct connections to other inferior parietal areas that separately process either the sounds of words or their meanings, suggesting that the posterior supramarginal gyrus plays a role in linking the basic components of vocabulary knowledge. Together, these analyses highlight the cognitive and anatomical mechanisms that mediate an essential language skill.",
+"publisher": "Society for Neuroscience",
+"priority": "2",
+"issn": "1529-2401",
+"is_unchecked": "N",
+"published": ["2007","01","31"],
+"authors": [ "HweeLing Lee", "Joseph T. Devlin", "Clare Shakeshaft", "Lauren H. Stewart", "Amanda Brennan", "Jen Glensman", "Katherine Pitcher", "Jenny Crinion", "Andrea Mechelli", "Richard S. J. Frackowiak", "David W. Green", "Cathy J. Price" ],
+"linkouts": [
+	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1523\/jneurosci.4442"},
+	{"type": "HighWire", "url": "http:\/\/www.jneurosci.org\/content\/27\/5\/1184.abstract"},
+	{"type": "HighWire (PDF)", "url": "http:\/\/www.jneurosci.org\/content\/27\/5\/1184.full.pdf"},
+	{"type": "HighWire", "url": "http:\/\/www.jneurosci.org\/cgi\/content\/abstract\/27\/5\/1184"},
+	{"type": "Pubmed", "url": "http:\/\/view.ncbi.nlm.nih.gov\/pubmed\/17267574"},
+	{"type": "Hubmed", "url": "http:\/\/www.hubmed.org\/display.cgi?uids=17267574"}
+],
+"doi": "10.1523\/jneurosci.4442",
+"citation": "The Journal of Neuroscience, Vol. 27, No. 5. (31 January 2007), pp. 1184-1189, doi:10.1523\/jneurosci.4442",
+"posted_count": 3,
+"userfiles": [
+	{"fileId" : 996219, "name" : "1184full.pdf", "sha1": "8033a5a56bd418401bed5dc294d007ee56d3e9c9", "path": "/pdf/user/acecentre/article/1179787/996219/1184full.pdf"}
+],
+"tags": ["anatomy", "brain", "language", "neurology", "physiology"],
+"citation_keys": ["citeulike:1179787", "Lee2007Anatomical", null]
+},
+{
+"article_id": "7112872",
+"user_article_id": "10737799",
+"privacy": "public",
+"username": "acecentre",
+"date": "2014-12-01 08:53:05",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/7112872",
+"type": "JOUR",
+"title": "Neural Changes following Remediation in Adult Developmental Dyslexia",
+"volume": "44",
+"issue": "3",
+"start_page": "411",
+"end_page": "422",
+"journal": "Neuron",
+"abstract": "Brain imaging studies have explored the neural mechanisms of recovery in adults following acquired disorders and, more recently, childhood developmental disorders. However, the neural systems underlying adult rehabilitation of neurobiologically based learning disabilities remain unexplored, despite their high incidence. Here we characterize the differences in brain activity during a phonological manipulation task before and after a behavioral intervention in adults with developmental dyslexia. Phonologically targeted training resulted in performance improvements in tutored compared to nontutored dyslexics, and these gains were associated with signal increases in bilateral parietal and right perisylvian cortices. Our findings demonstrate that behavioral changes in tutored dyslexic adults are associated with (1) increased activity in those left-hemisphere regions engaged by normal readers and (2) compensatory activity in the right perisylvian cortex. Hence, behavioral plasticity in adult developmental dyslexia involves two distinct neural mechanisms, each of which has previously been observed either for remediation of developmental or acquired reading disorders.",
+"priority": "2",
+"issn": "08966273",
+"is_unchecked": "N",
+"published": ["2004","10","28"],
+"authors": [ "Guinevere F. Eden", "Karen M. Jones", "Katherine Cappell", "Lynn Gareau", "Frank B. Wood", "Thomas A. Zeffiro", "Nicole A. E. Dietz", "John A. Agnew", " Flowers" ],
+"linkouts": [
+	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1016\/j.neuron.2004.10.019"}
+],
+"doi": "10.1016\/j.neuron.2004.10.019",
+"citation": "Neuron, Vol. 44, No. 3. (28 October 2004), pp. 411-422, doi:10.1016\/j.neuron.2004.10.019",
+"posted_count": 6,
+"userfiles": [
+	{"fileId" : 996218, "name" : "NEURON_intervention_04_eden_et_al.pdf", "sha1": "29177517e26d243e3eeed9670bddd0f494b81252", "path": "/pdf/user/acecentre/article/7112872/996218/NEURON_intervention_04_eden_et_al.pdf"}
+],
+"tags": ["anatomy", "brain", "dyslexia", "language", "neurology", "physiology"],
+"citation_keys": ["citeulike:7112872", "Eden2004Neural", null]
+},
+{
+"article_id": "13350672",
+"user_article_id": "10627900",
+"privacy": "public",
+"username": "acecentre",
+"date": "2014-09-08 15:30:25",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13350672",
+"type": "MTHES",
+"title": "A Comparison of AAC Apps across Accuracy and Latency Measures",
+"abstract": "Purpose: This study examined the latency and accuracy measurements of five different augmentative and alternative communication (AAC) iPad apps evaluated in a previous study by Emmel (2013) and Graydon (2013). Latency can be defined as the amount of time necessary to complete a task, while accuracy can be defined as the correct number of correct button hits during the task. In their studies, Emmel (2013) and Graydon (2013) determined latency and accuracy of prescribed iPad apps through performance measures of typically developing adults who used the apps to complete functional communication tasks. The apps were selected following a systematic search of the iTunes Store and met pre-determined inclusion criteria. The current study sought to look at latency and accuracy more generally when studying Emmel (2013) and Graydon’s (2013) findings. Further analysis sought to investigate the navigation sequence across the five different apps to determine if a difference exists between them that could explain the latency and accuracy data. \nCorrelations between the latency measurements and accuracy scores were calculated using the Pearson r. Further analysis was then performed to assess the sequencing of each app by counting the number of button hits and page sets necessary to complete five chosen sentences. This analysis sought to provide support for the mean latency data produced in the studies by Emmel (2013) and Graydon (2013). Each sentence tested was chosen from a pool of 20 sentences used in Emmel (2013) and Graydon’s (2013) study to generate phrase construction data. \nThe results indicated overall correlations between latency and accuracy of +0.66 for spelling tasks and +0.98 for phrase construction tasks across all five apps. Therefore, the two areas of accuracy and latency are positively correlated. The study also found that support could not be given for the mean latency calculations collected by Emmel (2013) and Graydon (2013).This data cannot be explained through the positive correlation between latency and accuracy due to other factors not addressed in this study.  Future studies should explore the variations between specific apps such as page and display construction to determine if these factors influence the latency and accuracy of phrase construction.",
+"priority": "2",
+"school": "THE UNIVERSITY OF MINNESOTA-DULUTH",
+"is_unchecked": "Y",
+"published": ["2014","05"],
+"authors": [ "Laura Christensen" ],
+"citation": "(May 2014)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 984069, "name" : "PLAN_B_PAPER_-_LC_513.pdf", "sha1": "f0b825ce03bd0f2104b917c56c584b8e375bc630", "path": "/pdf/user/acecentre/article/13350672/984069/PLAN_B_PAPER_-_LC_513.pdf"}
+],
+"tags": ["apps", "comparison", "latency", "measures", "software", "speed"],
+"citation_keys": ["citeulike:13350672", "Christensen2014Comparison", null]
+},
+{
+"article_id": "13332467",
+"user_article_id": "10608408",
+"privacy": "public",
+"username": "acecentre",
+"date": "2014-08-22 10:45:24",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13332467",
+"type": "INCONF",
+"title": "Developing a Centre of Educational Expertise, Adelaide West Special Education Centre's Journey",
+"abstract": "Adelaide West Special Education Centre (AdWest) is a Reception to Year 12 public school for students with physical and associated disabilities in Adelaide, Australia. This presentation describes the journey Adwest has taken to becoming a centre of educational expertise for students Complex Communication Needs (CCN). \n\nWe believe, “All students can learn,” and communication is the key to meaningful and engaging learning. Our 2012 Site Improvement Plan provided a vision of what, where and how our school was going to achieve this. 100% of our schools population has Complex Communication Needs so it was evident that CCN should be a school focus. \n\nThe presentation will show evidence of the intensive resourcing, funding and staffing commitment needed to build the schools knowledge and equipment base. \nOur thirst for knowledge and inquiring nature lead to investigations for appropriate devices, equipment and practices to ensure communication for students with CCN is embedded in our everyday practice. The complexities and individual needs of our students with physical disabilities means that accessibility solutions would be needed. Participants will gain a better understanding of the assistive technology options utilized and the vital support they play in developing our student’s communication. \n\nBecoming a centre of educational expertise for students with CCN has lead AdWest on an exciting and challenging journey. We will share our professional development ideas and strategies for upskilling staff, who now have an extensive knowledge base. We now lead, coordinate and facilitate specialist learning and advice in CCN for education staff and agencies statewide.",
+"booktitle": "ISAAC 2014",
+"location": "Lisbon",
+"priority": "0",
+"is_unchecked": "Y",
+"authors": [ "Leanne Shane", "Sylvia Flato" ],
+"citation": "In ISAAC 2014",
+"posted_count": 2,
+"userfiles": [
+	{"fileId" : 981682, "name" : "345.pdf", "sha1": "cbe5b636f6e5d70cd7b2b4ceb60139dc8e1a7bfa", "path": "/pdf/user/acecentre/article/13332467/981682/345.pdf"}
+],
+"tags": ["educational_practice", "isaac-2014", "isaac-345", "sdisaac"],
+"citation_keys": ["citeulike:13332467", "ShaneDeveloping", null]
+},
+{
 "article_id": "13327017",
 "user_article_id": "10602100",
 "privacy": "public",
@@ -106,7 +1029,7 @@
 	{"type": "Hubmed", "url": "http:\/\/www.hubmed.org\/display.cgi?uids=22711978"}
 ],
 "citation": "Journal of neurolinguistics, Vol. 25, No. 5. (1 September 2012), pp. 408-422",
-"posted_count": 2,
+"posted_count": 9,
 "userfiles": [
 	{"fileId" : 980499, "name" : "A_Neural_Theory_of_Speech_Acquisition_and_Production.pdf", "sha1": "fd47ef77833be370e0d0ac1ef7eaca3a9ae3a9f3", "path": "/pdf/user/acecentre/article/13325825/980499/A_Neural_Theory_of_Speech_Acquisition_and_Production.pdf"}
 ],
@@ -1049,6 +1972,9 @@
 "doi": "10.3109\/07434618.2012.704523",
 "citation": "Augmentative and alternative communication (Baltimore, Md. : 1985), Vol. 28, No. 3. (September 2012), pp. 160-170, doi:10.3109\/07434618.2012.704523",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041584, "name" : "michael_barker_12_reading_1041584.pdf", "sha1": "18cbe7a9fa698c689706296d655bd762559c2100", "path": "/pdf/user/acecentre/article/12591786/1041584/michael_barker_12_reading_1041584.pdf"}
+],
 "tags": ["aac", "assessment", "awareness", "phonological", "reading_instruction", "single_subject_design", "toget"],
 "citation_keys": ["citeulike:12591786", "MichaelBarker2012Reading", null]
 },
@@ -1077,6 +2003,9 @@
 ],
 "citation": "The British journal of psychiatry : the journal of mental science, Vol. 147 (September 1985), pp. 221-232",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041585, "name" : "rogers_85_motor_1041585.pdf", "sha1": "71e08267edd26c6fa36ccaadaa7398ff6831d86f", "path": "/pdf/user/acecentre/article/12591770/1041585/rogers_85_motor_1041585.pdf"}
+],
 "tags": ["neurological_motor_disorder", "psychiatric_disorder", "toget"],
 "citation_keys": ["citeulike:12591770", "Rogers1985Motor", null]
 },
@@ -1108,6 +2037,9 @@
 "doi": "10.1055\/s-2007-967927",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 25-34, doi:10.1055\/s-2007-967927",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041586, "name" : "restrepo_07_optimizing_1041586.pdf", "sha1": "5956248382cea5987cfe7858ffc4e7560e0e7943", "path": "/pdf/user/acecentre/article/12591768/1041586/restrepo_07_optimizing_1041586.pdf"}
+],
 "tags": ["biliteracy", "english_language_learners", "language_transfer", "literacy", "toget"],
 "citation_keys": ["citeulike:12591768", "Restrepo2007Optimizing", null]
 },
@@ -1139,6 +2071,9 @@
 "doi": "10.1055\/s-2007-967929",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 48-57, doi:10.1055\/s-2007-967929",
 "posted_count": 8,
+"userfiles": [
+	{"fileId" : 1041587, "name" : "gillon_07_childhood_1041587.pdf", "sha1": "3e0bc83106a99b10221f1c19cbb712a3a68470c6", "path": "/pdf/user/acecentre/article/12591767/1041587/gillon_07_childhood_1041587.pdf"}
+],
 "tags": ["apraxia", "literacy", "phonological_awareness", "toget", "written_language"],
 "citation_keys": ["citeulike:12591767", "Gillon2007Childhood", null]
 },
@@ -1170,6 +2105,9 @@
 "doi": "10.1055\/s-2007-967926",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 14-24, doi:10.1055\/s-2007-967926",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041592, "name" : "justice_07_targets_1041592.pdf", "sha1": "6d1329d940dd490ff83a25af2dd8daf3ee2f1223", "path": "/pdf/user/acecentre/article/12591763/1041592/justice_07_targets_1041592.pdf"}
+],
 "tags": ["alphabet_knowledge", "emergent_literacy", "intervention", "phonological_awareness", "print_awarenss", "toget"],
 "citation_keys": ["citeulike:12591763", "Justice2007Targets", null]
 },
@@ -1200,6 +2138,9 @@
 "doi": "10.1080\/07434619112331275983",
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 7, No. 4. (1 January 1991), pp. 248-255, doi:10.1080\/07434619112331275983",
 "posted_count": 3,
+"userfiles": [
+	{"fileId" : 1041597, "name" : "_91_children_1041597.pdf", "sha1": "cb3150df816169de5be96d3149aeeb7e54b05821", "path": "/pdf/user/acecentre/article/9609578/1041597/_91_children_1041597.pdf"}
+],
 "tags": ["aac", "children", "demographic", "family_perspective", "service_delivery", "survey", "toget"],
 "citation_keys": ["citeulike:9609578", "1991Children", null]
 },
@@ -1229,6 +2170,9 @@
 "doi": "10.1080\/07434619512331277139",
 "citation": "Augment Altern Commun, Vol. 11, No. 1. (1 January 1995), pp. 49-59, doi:10.1080\/07434619512331277139",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041598, "name" : "_95_communication_1041598.pdf", "sha1": "f4fe7fa4d0d65d5cf7a39eec9057d884dcd20faf", "path": "/pdf/user/acecentre/article/12591750/1041598/_95_communication_1041598.pdf"}
+],
 "tags": ["aac", "intervention", "levels_of_prevention", "profound_disabilities", "sweden", "toget"],
 "citation_keys": ["citeulike:12591750", "1995Communication", null]
 },
@@ -1310,6 +2254,7 @@
 "priority": "2",
 "is_unchecked": "N",
 "published": ["1995","01","01"],
+"authors": [ "Joan Murphy", "Ivana Marková", "Eleanor Moodie", "Janet Scott", "Sally Boa" ],
 "linkouts": [
 	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1080\/07434619512331277119"},
 	{"type": "Informa Healthcare", "url": "http:\/\/www.informahealthcare.com\/doi\/abs\/10.1080\/07434619512331277119"}
@@ -1318,7 +2263,7 @@
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 11, No. 1. (1 January 1995), pp. 26-36, doi:10.1080\/07434619512331277119",
 "posted_count": 3,
 "tags": ["aac", "access", "cerebral_palsy", "communication_modes", "demographic_survey", "intelligibility", "output", "toget"],
-"citation_keys": ["citeulike:2798743", "1995Augmentative", null]
+"citation_keys": ["citeulike:2798743", "Murphy1995Augmentative", null]
 },
 {
 "article_id": "12322128",
@@ -1374,6 +2319,9 @@
 "doi": "10.1080\/07434619612331277428",
 "citation": "Augment Altern Commun, Vol. 12, No. 1. (1 January 1996), pp. 1-12, doi:10.1080\/07434619612331277428",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041609, "name" : "_96_augmentative_1041609.pdf", "sha1": "57fd28cd0c68a77481e8a8cf3de3320fa19a7d64", "path": "/pdf/user/acecentre/article/12591724/1041609/_96_augmentative_1041609.pdf"}
+],
 "tags": ["aac", "developing_countries", "dialogical_model", "implementation", "toget"],
 "citation_keys": ["citeulike:12591724", "1996Augmentative", null]
 },
@@ -1404,6 +2352,9 @@
 "doi": "10.1080\/07434619412331276890",
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 10, No. 3. (1 January 1994), pp. 184-190, doi:10.1080\/07434619412331276890",
 "posted_count": 3,
+"userfiles": [
+	{"fileId" : 1041608, "name" : "_94_consumer_1041608.pdf", "sha1": "b37e119238101982c16e262f95892c6b90e85c65", "path": "/pdf/user/acecentre/article/12136548/1041608/_94_consumer_1041608.pdf"}
+],
 "tags": ["aac", "consumer", "funding", "questionnaire", "service_delivery", "technology", "toget", "users_perspective", "voice_output_communication_aid"],
 "citation_keys": ["citeulike:12136548", "1994Consumer", null]
 },
@@ -1433,6 +2384,9 @@
 "doi": "10.1080\/07434619612331277488",
 "citation": "Augmentative &amp;#38; Alternative Communication (March 1996), pp. 52-58, doi:10.1080\/07434619612331277488",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041607, "name" : "hetzroni_96_cultural_1041607.pdf", "sha1": "d98b72bd14d4669e5d7e7d0e439d1857b7a1fed4", "path": "/pdf/user/acecentre/article/12591698/1041607/hetzroni_96_cultural_1041607.pdf"}
+],
 "tags": ["aac", "communicative_competence", "culture"],
 "citation_keys": ["citeulike:12591698", "Hetzroni1996Cultural", null]
 },
@@ -1464,6 +2418,9 @@
 "doi": "10.1080\/10400435.1993.10132215",
 "citation": "Assistive technology : the official journal of RESNA, Vol. 5, No. 2. (1993), pp. 106-118, doi:10.1080\/10400435.1993.10132215",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041610, "name" : "fisher_93_technology_1041610.pdf", "sha1": "cf5e4da594c45c860a072768994adf3369ea5ab7", "path": "/pdf/user/acecentre/article/12591696/1041610/fisher_93_technology_1041610.pdf"}
+],
 "tags": ["assistive-technology", "needs_survey"],
 "citation_keys": ["citeulike:12591696", "Fisher1993Technology", null]
 },
@@ -1493,6 +2450,9 @@
 "doi": "10.1111\/j.1468-3156.1998.tb00057.x",
 "citation": "British Journal of Learning Disabilities, Vol. 26, No. 3. (1 September 1998), pp. 88-93, doi:10.1111\/j.1468-3156.1998.tb00057.x",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041599, "name" : "van_der_gaag_98_communication_1041599.pdf", "sha1": "0cba81f96da8e7090421cfa0e39d6b163f0468cf", "path": "/pdf/user/acecentre/article/12591695/1041599/van_der_gaag_98_communication_1041599.pdf"}
+],
 "tags": ["adult", "communication", "learning_disability", "quality_of_life", "service_provision"],
 "citation_keys": ["citeulike:12591695", "vanderGaag1998Communication", null]
 },
@@ -1523,6 +2483,9 @@
 "doi": "10.1080\/0156655950420205",
 "citation": "International Journal of Disability, Development and Education, Vol. 42, No. 2. (1 January 1995), pp. 137-153, doi:10.1080\/0156655950420205",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041602, "name" : "rawlings_95_increasing_1041602.pdf", "sha1": "6ff3185cfbb5b8beb8f3ef8d66ca817dd2cfaf54", "path": "/pdf/user/acecentre/article/12591690/1041602/rawlings_95_increasing_1041602.pdf"}
+],
 "tags": ["choice_making", "intellectual_disability"],
 "citation_keys": ["citeulike:12591690", "Rawlings1995Increasing", null]
 },
@@ -1553,6 +2516,9 @@
 "doi": "10.1080\/02674649366780351",
 "citation": "Disability, Handicap & Society, Vol. 8, No. 4. (1 January 1993), pp. 361-375, doi:10.1080\/02674649366780351",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041604, "name" : "jenkinson_93_who_1041604.pdf", "sha1": "b74b6f7927f34a1c1fe3345c68c42c4ea51803a7", "path": "/pdf/user/acecentre/article/12591684/1041604/jenkinson_93_who_1041604.pdf"}
+],
 "tags": ["decision_making", "intellectual_disability", "rights"],
 "citation_keys": ["citeulike:12591684", "Jenkinson1993Who", null]
 },
@@ -1582,6 +2548,9 @@
 "doi": "10.1080\/07434619412331276860",
 "citation": "Augment Altern Commun, Vol. 10, No. 3. (1 January 1994), pp. 151-160, doi:10.1080\/07434619412331276860",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041606, "name" : "_94_application_1041606.pdf", "sha1": "38b6d6d4086597c2d7d9e22fd0bcf8b5adc2f988", "path": "/pdf/user/acecentre/article/12591672/1041606/_94_application_1041606.pdf"}
+],
 "tags": ["cerebral-palsy", "language_acquisition", "vygotskian_theory"],
 "citation_keys": ["citeulike:12591672", "1994Application", null]
 },
@@ -1611,6 +2580,9 @@
 "doi": "10.1080\/07263869400035231",
 "citation": "J Intellect Dev Dis, Vol. 19, No. 3. (1 January 1994), pp. 193-207, doi:10.1080\/07263869400035231",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041613, "name" : "_94_establishing_1041613.pdf", "sha1": "0c9e758cbee697a88cfa9d54c955a264fec2f858", "path": "/pdf/user/acecentre/article/12591669/1041613/_94_establishing_1041613.pdf"}
+],
 "tags": ["aac", "requesting", "severe_disabilities", "symbol"],
 "citation_keys": ["citeulike:12591669", "1994Establishing", null]
 },
@@ -1639,6 +2611,9 @@
 ],
 "citation": "Focus on Autism and Other Developmental Disabilities, Vol. 16, No. 1. (2001), pp. 2-5",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041612, "name" : "jamnia_01_taking_1041612.pdf", "sha1": "ec529d161c10756dcaadebec58b0e3ecd7a0a50d", "path": "/pdf/user/acecentre/article/12591635/1041612/jamnia_01_taking_1041612.pdf"}
+],
 "tags": ["autism", "education", "parent_child_relationship", "personal_narrative", "software"],
 "citation_keys": ["citeulike:12591635", "Jamnia2001Taking", null]
 },
@@ -1668,6 +2643,9 @@
 ],
 "citation": "Journal of autism and developmental disorders, Vol. 12, No. 2. (June 1982), pp. 195-205",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041616, "name" : "maurer_82_childhood_1041616.pdf", "sha1": "732c9d7087014db4615df27fc62b18daffc737bf", "path": "/pdf/user/acecentre/article/12591609/1041616/maurer_82_childhood_1041616.pdf"}
+],
 "tags": ["attention", "autism", "behavioural_neurology", "communication", "perception"],
 "citation_keys": ["citeulike:12591609", "Maurer1982Childhood", null]
 },
@@ -1694,6 +2672,9 @@
 ],
 "citation": "Hospital practice (Office ed.), Vol. 27, No. 4. (15 April 1992)",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041618, "name" : "biklen_92_communication_1041618.pdf", "sha1": "f48d9bc4b05f1187c08aa19e8d07470c23755fd3", "path": "/pdf/user/acecentre/article/12591600/1041618/biklen_92_communication_1041618.pdf"}
+],
 "tags": ["aac", "autism", "facilitated_communication"],
 "citation_keys": ["citeulike:12591600", "Biklen1992Communication", null]
 },
@@ -1724,6 +2705,9 @@
 "doi": "10.1080\/02650538908413409",
 "citation": "Journal of Social Work Practice, Vol. 4, No. 1. (1 November 1989), pp. 13-30, doi:10.1080\/02650538908413409",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041619, "name" : "johnson_89_hellish_1041619.pdf", "sha1": "5fe9604bec1d2534adee0d1b227e878bb446af94", "path": "/pdf/user/acecentre/article/12591591/1041619/johnson_89_hellish_1041619.pdf"}
+],
 "tags": ["aac", "literacy", "mental_handicap", "spelling"],
 "citation_keys": ["citeulike:12591591", "Johnson1989Hellish", null]
 },
@@ -1752,6 +2736,9 @@
 ],
 "citation": "The Journal of neuropsychiatry and clinical neurosciences, Vol. 3, No. 3. (1991), pp. 334-340",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041623, "name" : "rogers_91_catatonia_1041623.pdf", "sha1": "84ebfc161c1c55238d42a5be2a0913d807122946", "path": "/pdf/user/acecentre/article/12591585/1041623/rogers_91_catatonia_1041623.pdf"}
+],
 "tags": ["catatonia", "historical_review", "neurological_motor_disorder", "psychiatric_disorder"],
 "citation_keys": ["citeulike:12591585", "Rogers1991Catatonia", null]
 },
@@ -1780,6 +2767,9 @@
 ],
 "citation": "The British journal of psychiatry : the journal of mental science, Vol. 158 (January 1991), pp. 97-102",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041786, "name" : "rogers_91_motor_1041786.pdf", "sha1": "ed8a2a04d7f190e90727a39b9aca963f33684a2b", "path": "/pdf/user/acecentre/article/12591582/1041786/rogers_91_motor_1041786.pdf"}
+],
 "tags": ["mental_handicap", "motor_disorder", "neuroleptic_medication", "psychiatric_disorder"],
 "citation_keys": ["citeulike:12591582", "Rogers1991Motor", null]
 },
@@ -1881,6 +2871,7 @@
 "citation": "Assistive technology : the official journal of RESNA, Vol. 6, No. 1. (30 June 1994), pp. 42-53, doi:10.1080\/10400435.1994.10132226",
 "posted_count": 8,
 "userfiles": [
+	{"fileId" : 1041791, "name" : "koester_94_learning_1041791.pdf", "sha1": "e868fb8233928b8fc6f9dc9b31cb726fdff80b1c", "path": "/pdf/user/acecentre/article/9521940/1041791/koester_94_learning_1041791.pdf"},
 	{"fileId" : 917619, "name" : "koester_94_learning_917619.pdf", "sha1": "755f8b29d24a19aa5fba6492a175497fc2a44d2a", "path": "/pdf/user/acecentre/article/9521940/917619/koester_94_learning_917619.pdf"}
 ],
 "tags": ["aac", "assistive-technology", "rate_enhancement", "scanning", "word_prediction"],
@@ -1911,6 +2902,9 @@
 ],
 "citation": "The Journal of speech and hearing disorders, Vol. 38, No. 1. (February 1973), pp. 73-88",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041790, "name" : "mcdonald_73_communication_1041790.pdf", "sha1": "4fcd6fc31b314509d4fb54574360bb1647215b5b", "path": "/pdf/user/acecentre/article/12591519/1041790/mcdonald_73_communication_1041790.pdf"}
+],
 "tags": ["aac", "cerebral-palsy", "communication_boards", "low_tech"],
 "citation_keys": ["citeulike:12591519", "McDonald1973Communication", null]
 },
@@ -1940,6 +2934,9 @@
 ],
 "citation": "The British journal of disorders of communication, Vol. 25, No. 3. (December 1990), pp. 295-309",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041789, "name" : "udwin_90_augmentative_1041789.pdf", "sha1": "15baf1e5b9de7826103fc1df6ba419d1702b5475", "path": "/pdf/user/acecentre/article/12591517/1041789/udwin_90_augmentative_1041789.pdf"}
+],
 "tags": ["aac", "blissymbols", "cerebral-palsy", "longitudinal_study", "makaton"],
 "citation_keys": ["citeulike:12591517", "Udwin1990Augmentative", null]
 },
@@ -1969,6 +2966,9 @@
 "doi": "10.1080\/07263869300034901",
 "citation": "J Intellect Dev Dis, Vol. 18, No. 3. (1 January 1993), pp. 133-146, doi:10.1080\/07263869300034901",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041792, "name" : "_93_selecting_1041792.pdf", "sha1": "b3e62eb5482f40084c5adb0b8d86d6b77fc568d8", "path": "/pdf/user/acecentre/article/12591514/1041792/_93_selecting_1041792.pdf"}
+],
 "tags": ["aac", "assessment", "education", "high_tech", "low_tech", "severe_disabilities", "voice_output_communication_aid"],
 "citation_keys": ["citeulike:12591514", "1993Selecting", null]
 },
@@ -2000,6 +3000,9 @@
 "doi": "10.1007\/3-540-58476-5_163",
 "citation": "In Computers for Handicapped Persons, Vol. 860 (1994), pp. 413-420, doi:10.1007\/3-540-58476-5_163",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041795, "name" : "woltosz_94_dynamic_1041795.pdf", "sha1": "3d1b5637c06ab731b09dd3cc47b48f2ee711cd75", "path": "/pdf/user/acecentre/article/12591491/1041795/woltosz_94_dynamic_1041795.pdf"}
+],
 "tags": ["aac", "dynamic_display"],
 "citation_keys": ["citeulike:12591491", "Woltosz1994Dynamic", null]
 },
@@ -2064,6 +3067,9 @@
 "doi": "10.1177\/026461968700500303",
 "citation": "British Journal of Visual Impairment, Vol. 5, No. 3. (01 October 1987), pp. 85-88, doi:10.1177\/026461968700500303",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041793, "name" : "best_87_assessment_1041793.pdf", "sha1": "b5e669b9d9ee982d9c5d2389192ff0b64ec7b6f0", "path": "/pdf/user/acecentre/article/12591476/1041793/best_87_assessment_1041793.pdf"}
+],
 "tags": ["assessment", "children", "visual_impairment"],
 "citation_keys": ["citeulike:12591476", "Best1987Assessment", null]
 },
@@ -2096,6 +3102,9 @@
 "doi": "10.1177\/026461968800600202",
 "citation": "British Journal of Visual Impairment, Vol. 6, No. 2. (01 July 1988), pp. 47-49, doi:10.1177\/026461968800600202",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041794, "name" : "aitken_88_whither_1041794.pdf", "sha1": "56f8be1e31196950d5d93562dc6073d1937601b5", "path": "/pdf/user/acecentre/article/12591472/1041794/aitken_88_whither_1041794.pdf"}
+],
 "tags": ["early_intervention", "pre-school_children", "visual_impairment"],
 "citation_keys": ["citeulike:12591472", "Aitken1988Whither", null]
 },
@@ -2127,6 +3136,7 @@
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 5, No. 2. (1 January 1989), pp. 89-100, doi:10.1080\/07434618912331275066",
 "posted_count": 3,
 "userfiles": [
+	{"fileId" : 1041881, "name" : "_89_customizing_1041881.pdf", "sha1": "4bc856bf009e8aeb43d21ba629def9b8e6087ecd", "path": "/pdf/user/acecentre/article/9000679/1041881/_89_customizing_1041881.pdf"},
 	{"fileId" : 917108, "name" : "_89_customizing_917108.pdf", "sha1": "181eaf858a1ddfd606962d656473b27c5f1fbf4d", "path": "/pdf/user/acecentre/article/9000679/917108/_89_customizing_917108.pdf"}
 ],
 "tags": ["aac", "case_study", "minspeak", "preliterate", "semantic_compaction", "vocabulary", "vocabulary_organisation", "vocabulary_selection"],
@@ -2159,6 +3169,7 @@
 "citation": "Augment Altern Commun, Vol. 17, No. 4. (1 January 2001), pp. 233-244, doi:10.1080\/aac.17.4.233.244",
 "posted_count": 1,
 "userfiles": [
+	{"fileId" : 1041880, "name" : "_01_development_1041880.pdf", "sha1": "11cfefdea1b680abb538402c675a1dddd83ba095", "path": "/pdf/user/acecentre/article/12590834/1041880/_01_development_1041880.pdf"},
 	{"fileId" : 917107, "name" : "_01_development_917107.pdf", "sha1": "3140996e9edf487bc9a39eaa276e823f714c69bb", "path": "/pdf/user/acecentre/article/12590834/917107/_01_development_917107.pdf"}
 ],
 "tags": ["aac", "blissymbols", "minspeak", "vocabulary", "voice_output_communication_aid"],
@@ -2191,6 +3202,7 @@
 "citation": "Augment Altern Commun, Vol. 16, No. 2. (1 January 2000), pp. 79-94, doi:10.1080\/07434610012331278924",
 "posted_count": 1,
 "userfiles": [
+	{"fileId" : 1041879, "name" : "_00_childrens_1041879.pdf", "sha1": "992dd377b0b0a493f11ca7ff3cc08087a1cd6ca5", "path": "/pdf/user/acecentre/article/12590824/1041879/_00_childrens_1041879.pdf"},
 	{"fileId" : 917105, "name" : "_00_childrens_917105.pdf", "sha1": "2b4e42f09a51e1700efcbb73f03c8a0c60e488f6", "path": "/pdf/user/acecentre/article/12590824/917105/_00_childrens_917105.pdf"}
 ],
 "tags": ["aac", "memory", "metacognition", "metamemory", "minspeak", "voice_output_communication_aid"],
@@ -2224,6 +3236,7 @@
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 1, No. 4. (1 January 1985), pp. 151-155, doi:10.1080\/07434618512331273651",
 "posted_count": 3,
 "userfiles": [
+	{"fileId" : 1041877, "name" : "_85_no_1041877.pdf", "sha1": "f3bace91f182058a491a3f817e7e59df7384e460", "path": "/pdf/user/acecentre/article/9000674/1041877/_85_no_1041877.pdf"},
 	{"fileId" : 917102, "name" : "_85_no_917102.pdf", "sha1": "1c4fd03eb33ad37542931347ddff0b35e7e4f0b8", "path": "/pdf/user/acecentre/article/9000674/917102/_85_no_917102.pdf"}
 ],
 "tags": ["aac", "cerebral-palsy", "communication-effectiveness", "etran", "minspeak"],
@@ -2255,7 +3268,7 @@
 ],
 "doi": "10.1080\/07434618912331275126",
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 5, No. 2. (1 January 1989), pp. 137-144, doi:10.1080\/07434618912331275126",
-"posted_count": 8,
+"posted_count": 9,
 "userfiles": [
 	{"fileId" : 917101, "name" : "_89_toward_917101.pdf", "sha1": "a68f6d8b9168e59f1041289111c69215e24ea918", "path": "/pdf/user/acecentre/article/3501879/917101/_89_toward_917101.pdf"}
 ],
@@ -2323,6 +3336,7 @@
 "citation": "Augmentative and alternative communication (Baltimore, Md. : 1985), Vol. 24, No. 2. (2008), pp. 149-161, doi:10.1080\/07434610802038288",
 "posted_count": 1,
 "userfiles": [
+	{"fileId" : 1041885, "name" : "hoag_08_hierarchy_1041885.pdf", "sha1": "c8d260891092b8acf6265df005626788332dbe3f", "path": "/pdf/user/acecentre/article/12590808/1041885/hoag_08_hierarchy_1041885.pdf"},
 	{"fileId" : 917099, "name" : "hoag_08_hierarchy_917099.pdf", "sha1": "c3d3e50086fc90471363f2a42f90bdad0092978d", "path": "/pdf/user/acecentre/article/12590808/917099/hoag_08_hierarchy_917099.pdf"}
 ],
 "tags": ["aac", "attitudes", "communicative_competence", "communicative_interaction", "model"],
@@ -2355,6 +3369,7 @@
 "citation": "Augment Altern Commun, Vol. 19, No. 4. (1 January 2003), pp. 254-272, doi:10.1080\/07434610310001598242",
 "posted_count": 1,
 "userfiles": [
+	{"fileId" : 1041884, "name" : "_03_common_1041884.pdf", "sha1": "a75d7b9e453c11a5e9f718344cd8fbe20a583990", "path": "/pdf/user/acecentre/article/12590807/1041884/_03_common_1041884.pdf"},
 	{"fileId" : 917098, "name" : "_03_common_917098.pdf", "sha1": "731d3060ea862afdd9c579bea6834709fde46b2e", "path": "/pdf/user/acecentre/article/12590807/917098/_03_common_917098.pdf"}
 ],
 "tags": ["aac", "children", "early_intervention", "gesture", "interaction", "prelinguistic", "speech", "symbol", "vocalisation"],
@@ -2414,6 +3429,7 @@
 "priority": "2",
 "is_unchecked": "N",
 "published": ["1994","01","01"],
+"authors": [ "Doreen Blischak" ],
 "linkouts": [
 	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1080\/07434619412331276950"},
 	{"type": "Informa Healthcare", "url": "http:\/\/www.informahealthcare.com\/doi\/abs\/10.1080\/07434619412331276950"}
@@ -2421,8 +3437,12 @@
 "doi": "10.1080\/07434619412331276950",
 "citation": "Augment Altern Commun, Vol. 10, No. 4. (1 January 1994), pp. 245-254, doi:10.1080\/07434619412331276950",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 981217, "name" : "blischak_94_phonologic_981217.pdf", "sha1": "ba288e68e65ac3d21584f25e2f2d8d96472247e4", "path": "/pdf/user/acecentre/article/12590755/981217/blischak_94_phonologic_981217.pdf"},
+	{"fileId" : 1041806, "name" : "blischak_94_phonologic_1041806.pdf", "sha1": "2332ea616b6a0fb74d4869c03bd29a340175f973", "path": "/pdf/user/acecentre/article/12590755/1041806/blischak_94_phonologic_1041806.pdf"}
+],
 "tags": ["literacy", "phonological_awareness", "reading", "speech_impairment"],
-"citation_keys": ["citeulike:12590755", "1994Phonologic", null]
+"citation_keys": ["citeulike:12590755", "Blischak1994Phonologic", null]
 },
 {
 "article_id": "12590735",
@@ -2477,6 +3497,7 @@
 "priority": "2",
 "is_unchecked": "N",
 "published": ["1994","01","01"],
+"authors": [ "Kerri Bishop", "Joan Rankin", "Pat Mirenda" ],
 "linkouts": [
 	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1080\/07434619412331276820"},
 	{"type": "Informa Healthcare", "url": "http:\/\/www.informahealthcare.com\/doi\/abs\/10.1080\/07434619412331276820"}
@@ -2484,8 +3505,12 @@
 "doi": "10.1080\/07434619412331276820",
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 10, No. 2. (1 January 1994), pp. 113-125, doi:10.1080\/07434619412331276820",
 "posted_count": 2,
+"userfiles": [
+	{"fileId" : 981157, "name" : "bishop_94_impact_981157.pdf", "sha1": "ad160f1276cd0a557feb3ac92a5aa80d0805f588", "path": "/pdf/user/acecentre/article/10177959/981157/bishop_94_impact_981157.pdf"},
+	{"fileId" : 1041805, "name" : "bishop_94_impact_1041805.pdf", "sha1": "9e9a3f6c35713f7be6acd9ae488e391fbb3f1f44", "path": "/pdf/user/acecentre/article/10177959/1041805/bishop_94_impact_1041805.pdf"}
+],
 "tags": ["aac", "literacy", "reading", "symbol_sets"],
-"citation_keys": ["citeulike:10177959", "1994Impact", null]
+"citation_keys": ["citeulike:10177959", "Bishop1994Impact", null]
 },
 {
 "article_id": "713383",
@@ -3438,6 +4463,9 @@
 "doi": "10.1055\/s-2007-967932",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 79-89, doi:10.1055\/s-2007-967932",
 "posted_count": 4,
+"userfiles": [
+	{"fileId" : 1041589, "name" : "koppenhaver_07_toward_1041589.pdf", "sha1": "c2f69b294cb71711f093f74c2525145cdca04ff6", "path": "/pdf/user/acecentre/article/9578608/1041589/koppenhaver_07_toward_1041589.pdf"}
+],
 "tags": ["aac", "emergent_literacy", "literacy", "multiple_disabilities"],
 "citation_keys": ["citeulike:9578608", "Koppenhaver2007Toward", null]
 },
@@ -3469,6 +4497,9 @@
 "doi": "10.1055\/s-2007-967928",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 35-47, doi:10.1055\/s-2007-967928",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041591, "name" : "schuele_07_literacy_1041591.pdf", "sha1": "8153dae0b13008d51550c444d4463572ecdfe011", "path": "/pdf/user/acecentre/article/12589731/1041591/schuele_07_literacy_1041591.pdf"}
+],
 "tags": ["emergent_literacy", "literacy", "reading", "specific_language_impairment"],
 "citation_keys": ["citeulike:12589731", "Schuele2007Literacy", null]
 },
@@ -3569,6 +4600,9 @@
 "doi": "10.1055\/s-2007-967931",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 69-78, doi:10.1055\/s-2007-967931",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041593, "name" : "kaderavek_07_facilitating_1041593.pdf", "sha1": "33a3b6691ff41a6475d73afbdf2b128e24f43802", "path": "/pdf/user/acecentre/article/12589567/1041593/kaderavek_07_facilitating_1041593.pdf"}
+],
 "tags": ["child", "hearing", "impairment", "literacy"],
 "citation_keys": ["citeulike:12589567", "Kaderavek2007Facilitating", null]
 },
@@ -4379,6 +5413,9 @@
 "doi": "10.1080\/07434618912331275126",
 "citation": "Augment Altern Commun In Augmentative and Alternative Communication, Vol. 5, No. 2. (1 January 1989), pp. 137-144, doi:10.1080\/07434618912331275126",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041886, "name" : "light_89_toward_1041886.pdf", "sha1": "b677423bf745f283dfdb12e19547b309d3e88fb6", "path": "/pdf/user/acecentre/article/12589615/1041886/light_89_toward_1041886.pdf"}
+],
 "tags": ["aac", "communication", "slt", "speech", "*ww-import"],
 "citation_keys": ["citeulike:12589615", "Light1989Toward", null]
 },
@@ -5703,6 +6740,9 @@
 "doi": "10.1055\/s-2007-967925",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 3-13, doi:10.1055\/s-2007-967925",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1041596, "name" : "hall_07_curriculumbased_1041596.pdf", "sha1": "d83f4b9f792c3634098538bc5f46744f260a4a37", "path": "/pdf/user/acecentre/article/12589561/1041596/hall_07_curriculumbased_1041596.pdf"}
+],
 "tags": ["assessment", "curriculum-based", "emergent", "literacy"],
 "citation_keys": ["citeulike:12589561", "Hall2007Curriculumbased", null]
 },
@@ -5734,6 +6774,9 @@
 "doi": "10.1055\/s-2007-967930",
 "citation": "Seminars in speech and language, Vol. 28, No. 1. (February 2007), pp. 58-68, doi:10.1055\/s-2007-967930",
 "posted_count": 2,
+"userfiles": [
+	{"fileId" : 1041595, "name" : "erickson_07_literacy_1041595.pdf", "sha1": "adc70c5601e02a03aace75c3b623784f2d559287", "path": "/pdf/user/acecentre/article/8681913/1041595/erickson_07_literacy_1041595.pdf"}
+],
 "tags": ["impairment", "literacy", "visual"],
 "citation_keys": ["citeulike:8681913", "Erickson2007Literacy", null]
 },

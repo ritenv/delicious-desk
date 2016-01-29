@@ -1,18 +1,18 @@
 <div layout="column" flex>
-  <div class="intro-head {{headerBgClass}}" ng-class="{'full-height': !appData.searchString}">
+  <div class="intro-head {{headerBgClass}}" ng-class="{'full-height': !data.keyword}">
 
     <section layout="row" layout-sm="column" layout-align="left" class="search-menu">
       <md-input-container flex="50">
         <label><span class="fa fa-search"></span> Search</label>
-        <input ng-model="appData.searchString" ng-model-options="{debounce: 1000}">
+        <input ng-model="data.keyword" ng-model-options="{debounce: 1000}">
       </md-input-container>
       <div class="flex"></div>
 
       <div>
-        <md-button class="groupX {{headerBgClass === 'regular' ? 'active' : ''}}" ng-click="setRippleColor('regular')">All</md-button>
-        <md-button class="groupX {{headerBgClass === 'cyan' ? 'active' : ''}}" ng-click="setRippleColor('cyan')">Books</md-button>
-        <md-button class="groupX {{headerBgClass === 'red' ? 'active' : ''}}" ng-click="setRippleColor('red')">Articles</md-button>
-        <md-button class="groupX {{headerBgClass === 'green' ? 'active' : ''}}" ng-click="setRippleColor('green')">Links</md-button>
+        <md-button class="groupX {{headerBgClass === 'regular' ? 'active' : ''}}" ng-click="setRippleColor('regular'); setSearchType('');">All</md-button>
+        <md-button class="groupX {{headerBgClass === 'cyan' ? 'active' : ''}}" ng-click="setRippleColor('cyan');setSearchType('books');">Books</md-button>
+        <md-button class="groupX {{headerBgClass === 'red' ? 'active' : ''}}" ng-click="setRippleColor('red'); setSearchType('articles');">Articles</md-button>
+        <md-button class="groupX {{headerBgClass === 'green' ? 'active' : ''}}" ng-click="setRippleColor('green'); setSearchType('links');">Links</md-button>
       </div>
       <div>
         <md-menu>
@@ -22,22 +22,22 @@
           <md-menu-content width="4" class="search-options">
             <md-menu-item>
               <div class="md-padding-horiz">
-                <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
-                  Tag
+                <md-checkbox ng-model="data.fields.tags" aria-label="Checkbox 1">
+                  Tags
                 </md-checkbox>
               </div>
             </md-menu-item>
             <md-menu-item>
               <div class="md-padding-horiz">
-                <md-checkbox ng-model="data.cb2" aria-label="Checkbox 1">
+                <md-checkbox ng-model="data.fields.title" aria-label="Checkbox 1">
                   Title / Description
                 </md-checkbox>
               </div>
             </md-menu-item>
             <md-menu-item>
               <div class="md-padding-horiz">
-                <md-checkbox ng-model="data.cb3" aria-label="Checkbox 1">
-                  Author
+                <md-checkbox ng-model="data.fields.authors" aria-label="Checkbox 1">
+                  Authors
                 </md-checkbox>
               </div>
             </md-menu-item>
@@ -49,13 +49,13 @@
     <div layout="row" layout-align="center" layout-fill>
       <div class="main-view-content">
         <div class="heading-container">
-          <h1 ng-if="appData.searchString" class="md-display-2 white">23 result(s) for <strong>{{appData.searchString}}</strong></h1>
-          <h1 ng-if="!appData.searchString" class="md-display-2 white">A really simple search engine.</h1>
+          <h1 ng-if="data.keyword" class="md-display-2 white">23 result(s) for <strong>{{data.keyword}}</strong></h1>
+          <h1 ng-if="!data.keyword" class="md-display-2 white">A really simple search engine.</h1>
         </div>
       </div>
     </div>
   </div>
-  <div class="relative default-ng-transition-vertical" layout="row" layout-align="center" layout-fill ng-if="appData.searchString">
+  <div class="relative default-ng-transition-vertical" layout="row" layout-align="center" layout-fill ng-if="data.keyword">
     <md-card class="main-view-content">
       <md-card-content class="md-subhead">
         <div class="md-padding">
