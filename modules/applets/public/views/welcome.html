@@ -21,7 +21,7 @@
         <div>
           <md-menu>
             <md-button class="md-fab md-primary dark-color" ng-mouseenter="openMenu($mdOpenMenu, $event)">
-              <md-icon md-svg-icon="/images/icons/material/underline6.svg"></md-icon>
+              <md-icon md-svg-icon="/images/icons/flat/guides.svg"></md-icon>
             </md-button>
             <md-menu-content width="4" class="search-options">
               <!-- <md-menu-item>
@@ -69,7 +69,10 @@
     <div layout="row" layout-align="center" layout-fill>
       <div class="main-view-content">
         <div class="heading-container">
-          <h1 ng-if="data.keyword && records.length" class="md-display-0 white">{{records.length}} result(s) for <strong>{{data.keyword}}</strong></h1>
+          <h1 ng-if="data.keyword && records.length" class="md-display-0 white">
+            {{records.length}} result(s) for <strong>{{data.keyword}}</strong>
+             <small>in {{displaySelected.join(', ')}}</small>
+          </h1>
           <h1 ng-if="!data.keyword" class="md-display-0 white">A really simple search engine.</h1>
         </div>
       </div>

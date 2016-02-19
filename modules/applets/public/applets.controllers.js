@@ -104,6 +104,13 @@ angular.module('delicious.applets')
           $rootScope.searchCriteria.fields.push('attachment');
           searchParams.fields.push('attachment');
         }
+
+        var displaySelected = [];
+        $scope.data.fields.title ? displaySelected.push('Title') : false;
+        $scope.data.fields.tags ? displaySelected.push('Tags') : false;
+        $scope.data.fields.authors ? displaySelected.push('Author') : false;
+        $scope.data.fields.attachment ? displaySelected.push('Attachments') : false;
+        $scope.displaySelected = displaySelected;
       }, true);
 
       $rootScope.$watch('searchCriteria', function(newVal, oldVal) {

@@ -887,3 +887,6 @@ md-dialog .md-subheader.md-default-theme {
     text-align: center; }
   md-input-container {
     margin-bottom: 0; } }
+
+h1 small {
+  font-size: 14px; }
