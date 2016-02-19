@@ -6,7 +6,11 @@ module.exports = function(System) {
   var obj = {};
   var json = System.plugins.JSON;
   var event = System.plugins.event;
+  var cron = System.plugins.cron;
   var sck = System.webSocket;
+
+  // Start running the crons
+  cron.start();
 
   /**
    * List all

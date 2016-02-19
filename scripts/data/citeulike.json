@@ -1,5 +1,165 @@
 [
 {
+"article_id": "7288767",
+"user_article_id": "11270152",
+"privacy": "public",
+"username": "acecentre",
+"date": "2016-02-19 10:40:49",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/7288767",
+"type": "JOUR",
+"title": "The design and testing of a novel mechanomyogram-driven switch controlled by small eyebrow movements.",
+"volume": "7",
+"start_page": "22",
+"journal": "Journal of neuroengineering and rehabilitation",
+"abstract": "Individuals with severe physical disabilities and minimal motor behaviour may be unable to use conventional mechanical switches for access. These persons may benefit from access technologies that harness the volitional activity of muscles. In this study, we describe the design and demonstrate the performance of a binary switch controlled by mechanomyogram (MMG) signals recorded from the frontalis muscle during eyebrow movements. Muscle contractions, detected in real-time with a continuous wavelet transform algorithm, were used to control a binary switch for computer access. The automatic selection of scale-specific thresholds reduced the effect of artefact, such as eye blinks and head movement, on the performance of the switch. Switch performance was estimated by cued response-tests performed by eleven participants (one with severe physical disabilities). The average sensitivity and specificity of the switch was 99.7 +\/- 0.4% and 99.9 +\/- 0.1%, respectively. The algorithm performance was robust against typical participant movement. The results suggest that the frontalis muscle is a suitable site for controlling the MMG-driven switch. The high accuracies combined with the minimal requisite effort and training show that MMG is a promising binary control signal. Further investigation of the potential benefits of MMG-control for the target population is warranted.",
+"priority": "2",
+"issn": "1743-0003",
+"is_unchecked": "N",
+"published": ["2010","05","21"],
+"authors": [ "Natasha Alves", "Tom Chau" ],
+"linkouts": [
+	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1186\/1743-0003-7-22"},
+	{"type": "Pubmed Central", "url": "http:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC2890628\/"},
+	{"type": "Pubmed", "url": "http:\/\/view.ncbi.nlm.nih.gov\/pubmed\/20492680"},
+	{"type": "Hubmed", "url": "http:\/\/www.hubmed.org\/display.cgi?uids=20492680"}
+],
+"doi": "10.1186\/1743-0003-7-22",
+"citation": "Journal of neuroengineering and rehabilitation, Vol. 7 (21 May 2010), 22, doi:10.1186\/1743-0003-7-22",
+"posted_count": 4,
+"tags": ["access", "muscle", "omg", "switch"],
+"citation_keys": ["citeulike:7288767", "Alves2010Design", null]
+},
+{
+"article_id": "13934435",
+"user_article_id": "11267821",
+"privacy": "public",
+"username": "acecentre",
+"date": "2016-02-17 12:46:06",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13934435",
+"type": "JOUR",
+"title": "Comparing spoken and written vocabulary use in typically developing children: Informing vocabulary selection for children with complex communication needs",
+"volume": "14",
+"issue": "2",
+"start_page": "69",
+"end_page": "71",
+"journal": "Journal of Clinical Practice in Speech-Language Pathology",
+"abstract": "This project used two datasets to compare the spoken and written vocabularies of typically developing 5-, 6-, and 7-year-old New Zealand children. Similarities and differences between spoken and written words and multiword sequences were identi ed, and word lists were generated that can be used to assist augmentative and alternative communication (AAC) professionals as they engage in selecting vocabulary to support both face-to-face and written communication of children with complex communication needs.",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["2012"],
+"authors": [ "Sally Clendon", "Marleen Westerveld" ],
+"linkouts": [
+	{"type": "URL", "url": "http:\/\/www.speechpathologyaustralia.org.au\/publications\/international-journal-of-speech-language-pathology"}
+],
+"citation": "Journal of Clinical Practice in Speech-Language Pathology, Vol. 14, No. 2. (2012), pp. 69-71",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054348, "name" : "clendon_12_comparing_1054348.pdf", "sha1": "c917a05a5cd046eb0fdebff33ed10858cf89d7f0", "path": "/pdf/user/acecentre/article/13934435/1054348/clendon_12_comparing_1054348.pdf"}
+],
+"tags": ["aac", "children", "comparison", "spoken", "vocabulary", "written"],
+"citation_keys": ["citeulike:13934435", "Clendon2012Comparing", null]
+},
+{
+"article_id": "13933614",
+"user_article_id": "11266861",
+"privacy": "public",
+"username": "acecentre",
+"date": "2016-02-16 10:13:56",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13933614",
+"type": "JOUR",
+"title": "Application of an access technology delivery protocol to two children with cerebral palsy",
+"volume": "11",
+"issue": "2",
+"start_page": "166",
+"end_page": "175",
+"journal": "Disability and Rehabilitation: Assistive Technology",
+"abstract": "ABSTRACTPurpose: This study further delineates the merits and limitations of the Access Technology Delivery Protocol (ATDP) through its application to two children with severe disabilities. Method: We conducted mixed methods case studies to demonstrate the ATDP with two children with no reliable means of access to an external device. Evaluations of response efficiency, satisfaction, goal attainment, technology use and participation were made after 8 and 16 weeks of training with custom access technologies. Results: After 16 weeks, one child's switch offered improved response efficiency, high teacher satisfaction and increased participation. The other child's switch resulted in improved satisfaction and switch effectiveness but lower overall efficiency. The latter child was no longer using his switch by the end of the study. Conclusions: These contrasting findings indicate that changes to any contextual factors that may impact the user's switch performance should mandate a reassessment of the access pathway. Secondly, it is important to ensure that individuals who will be responsible for switch training be identified at the outset and engaged throughout the ATDP. Finally, the ATDP should continue to be tested with individuals with severe disabilities to build an evidence base for the delivery of response efficient access solutions.Implications for RehabilitationA data-driven, comprehensive access technology delivery protocol for children with complex communication needs could help to mitigate technology abandonment.Successful adoption of an access technology requires personalized design, training of the technology user, the teaching staff, the caregivers and other communication partners, and integration with functional activities.",
+"publisher": "Taylor & Francis",
+"priority": "2",
+"is_unchecked": "N",
+"published": ["2016","02","17"],
+"authors": [ "Leslie Mumford", "Tom Chau" ],
+"linkouts": [
+	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.3109\/17483107.2015.1063017"},
+	{"type": "Taylor and Francis Online", "url": "http:\/\/www.tandfonline.com\/doi\/abs\/10.3109\/17483107.2015.1063017"}
+],
+"doi": "10.3109\/17483107.2015.1063017",
+"citation": "Disability and Rehabilitation: Assistive Technology, Vol. 11, No. 2. (17 February 2016), pp. 166-175, doi:10.3109\/17483107.2015.1063017",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054161, "name" : "mumford2015.pdf", "sha1": "41ff4699d5ed5d3fe1a24201a616d214eb53681b", "path": "/pdf/user/acecentre/article/13933614/1054161/mumford2015.pdf"}
+],
+"tags": ["aac", "access", "assessment", "cerebral-palsy", "children", "model", "otaccess"],
+"citation_keys": ["citeulike:13933614", "Mumford2016Application", null]
+},
+{
+"article_id": "13933610",
+"user_article_id": "11266857",
+"privacy": "public",
+"username": "acecentre",
+"date": "2016-02-16 10:12:03",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13933610",
+"type": "JOUR",
+"title": "An access technology delivery protocol for children with severe and multiple disabilities: A case demonstration",
+"volume": "17",
+"issue": "4",
+"start_page": "232",
+"end_page": "242",
+"journal": "Developmental Neurorehabilitation",
+"abstract": "AbstractObjective: This study applied response efficiency theory to create the Access Technology Delivery Protocol (ATDP), a child and family-centred collaborative approach to the implementation of access technologies.Methods: We conducted a descriptive, mixed methods case study to demonstrate the ATDP method with a 12-year-old boy with no reliable means of access to an external device. Evaluations of response efficiency, satisfaction, goal attainment, technology use and participation were made after 8 and 16 weeks of training with a custom smile-based access technology.Results: At the 16 week mark, the new access technology offered better response quality; teacher satisfaction was high; average technology usage was 3--4 times per week for up to 1 h each time; switch sensitivity and specificity reached 78% and 64%, respectively, and participation scores increased by 38%.Conclusion: This case supports further development and testing of the ATDP with additional children with multiple or severe disabilities.",
+"publisher": "Taylor & Francis",
+"priority": "2",
+"is_unchecked": "N",
+"published": ["2014","08","01"],
+"authors": [ "Leslie Mumford", "Rachel Lam", "Virginia Wright", "Tom Chau" ],
+"linkouts": [
+	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.3109\/17518423.2013.776125"},
+	{"type": "Taylor and Francis Online", "url": "http:\/\/www.tandfonline.com\/doi\/abs\/10.3109\/17518423.2013.776125"}
+],
+"doi": "10.3109\/17518423.2013.776125",
+"citation": "Developmental Neurorehabilitation, Vol. 17, No. 4. (1 August 2014), pp. 232-242, doi:10.3109\/17518423.2013.776125",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054160, "name" : "mumford2013.pdf", "sha1": "fccb8aca17c080d8505ead7694744255b220760a", "path": "/pdf/user/acecentre/article/13933610/1054160/mumford2013.pdf"}
+],
+"tags": ["access", "assessment", "atdp", "mac", "model", "otaccess"],
+"citation_keys": ["citeulike:13933610", "Mumford2014Access", null]
+},
+{
+"article_id": "13924559",
+"user_article_id": "11256654",
+"privacy": "public",
+"username": "acecentre",
+"date": "2016-02-03 10:02:56",
+"href": "http:\/\/www.citeulike.org\/user\/acecentre\/article\/13924559",
+"type": "JOUR",
+"title": "The Impact of Augmentative and Alternative Communication Intervention on the Speech Production of Individuals With Developmental Disabilities: A Research Review",
+"volume": "49",
+"issue": "2",
+"start_page": "248",
+"end_page": "264",
+"journal": "Journal of Speech, Language, and Hearing Research",
+"abstract": "Background: The impact of augmentative and alternative communication (ACC) on individuals with developmental disabilities has been controversial (i.e., whether ACC inhibits or benefits speech production). Although a previous review of ACC effectiveness exists, it is limited by the lack of selection criteria for the included studies. A systemic review of the current research is also needed to inform the impact of the ACC interventions. \n\nObjectives: To investigate the impact of ACC interventions on speech development in people with developmental disabilities.\n\nSearch strategy: The authors searched PsycINFO, ERIC, and MEDLINE, conducted hand searches of journals, and reviewed the reference lists of 46 articles. Keywords used for the electronic searches included non-speaking, non-vocal, augmentative communication, speech production, and speech development. \n\nSelection criteria: Studies that included the following were included in the review: (a) implementation of AAC for people with developmental disabilities who had significant speech impairments as well as the progress in the use of ACC, (b) speech production before and after the ACC intervention, and (c) publication year between 1975 and 2003. \n\nData collection and analysis: The authors reviewed and coded the studies that met the criteria according to key elements (e.g., study goals, design, participants, dependent variables, etc.). In addition, the authors assessed the methodological quality of each study. \n\nMain results: A total of 23 studies met the inclusion criteria. The findings showed the increase of speech; however, 17 of the 23 studies failed to establish experimental control. In addition, Some of the studies relied on intervention strategies that would not be considered current best practices. Five of six studies with the most rigorous experimental design investigated the effects of unaided AAC interventions and showed the positive impact of the ACC interventions on speech production. \n\nConclusions: The results of this review provide preliminary evidence of the benefits of ACC interventions. More research is needed to better determine the relationship between AAC interventions and speech production.",
+"priority": "2",
+"is_unchecked": "Y",
+"published": ["2006"],
+"authors": [ "Diane C. Millar", "Janice C. Light", "Ralf W. Schlosser" ],
+"linkouts": [
+	{"type": "URL", "url": "https:\/\/www.researchgate.net\/publication\/7108526_The_Impact_of_Augmentative_and_Alternative_Communication_Intervention_on_the_Speech_Production_of_Individuals_With_Developmental_Disabilities_A_Research_Review"},
+	{"type": "URL", "url": "http:\/\/dx.doi.org\/10.1044\/1092-4388(2006\/021)"},
+	{"type": "URL", "url": "http:\/\/ktdrr.org\/cgi-bin\/lib_systematic_search.cgi?location=sr&#38;sel_1=64"},
+	{"type": "DOI", "url": "http:\/\/dx.doi.org\/10.1044\/1092-4388(2006\/021)"}
+],
+"doi": "10.1044\/1092-4388(2006\/021)",
+"citation": "Journal of Speech, Language, and Hearing Research, Vol. 49, No. 2. (2006), pp. 248-264, doi:10.1044\/1092-4388(2006\/021)",
+"posted_count": 1,
+"userfiles": [
+	{"fileId" : 1052444, "name" : "millar_06_impact_1052444.pdf", "sha1": "4e0db970328f023dfae89e10487002021ed5c43b", "path": "/pdf/user/acecentre/article/13924559/1052444/millar_06_impact_1052444.pdf"}
+],
+"tags": ["aac", "review", "speech", "systematic"],
+"citation_keys": ["citeulike:13924559", "Millar2006Impact", "doi:10.1044\/1092-4388(2006\/021)"]
+},
+{
 "article_id": "13859113",
 "user_article_id": "11187535",
 "privacy": "public",
@@ -1907,6 +2067,9 @@
 "doi": "10.1080\/0743461031000112061",
 "citation": "Augment Altern Commun, Vol. 19, No. 2. (1 January 2003), pp. 74-85, doi:10.1080\/0743461031000112061",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054155, "name" : "_03_semantic_1054155.pdf", "sha1": "9910df3dfa0eeeaf55249ad48f8b4d2d9bf7cd4d", "path": "/pdf/user/acecentre/article/12699723/1054155/_03_semantic_1054155.pdf"}
+],
 "tags": ["aac", "semantic_organisation", "vocabulary_organisation", "vocabulary_selection"],
 "citation_keys": ["citeulike:12699723", "2003Semantic", null]
 },
@@ -2202,6 +2365,9 @@
 "doi": "10.1080\/07434619512331277169",
 "citation": "Augment Altern Commun, Vol. 11, No. 2. (1 January 1995), pp. 79-88, doi:10.1080\/07434619512331277169",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054076, "name" : "_95_augmentative_1054076.pdf", "sha1": "e2299eabf73ebcff76ab4dbb8ae89052989cdb5e", "path": "/pdf/user/acecentre/article/12591739/1054076/_95_augmentative_1054076.pdf"}
+],
 "tags": ["aac", "adults", "aided_communication", "communication_competence", "efficacy", "empowerment", "intervention", "service_delivery", "toget", "users_perspective"],
 "citation_keys": ["citeulike:12591739", "1995Augmentative", null]
 },
@@ -5533,6 +5699,9 @@
 ],
 "citation": "Journal of Rehabilitation Research and Development, Vol. 39, No. 6. (November 2002), pp. 39-53",
 "posted_count": 4,
+"userfiles": [
+	{"fileId" : 1054156, "name" : "vanderheiden_02_journey_1054156.pdf", "sha1": "c9a7d8a43e81ec74518ee867125064aba97044a9", "path": "/pdf/user/acecentre/article/12589611/1054156/vanderheiden_02_journey_1054156.pdf"}
+],
 "tags": ["aac", "access", "computer", "history", "otaccess", "*ww-import"],
 "citation_keys": ["citeulike:12589611", "Vanderheiden2002A", null]
 },
@@ -5788,6 +5957,9 @@
 "doi": "10.1055\/s-2008-1079125",
 "citation": "Seminars in speech and language, Vol. 29, No. 2. (May 2008), pp. 112-119, doi:10.1055\/s-2008-1079125",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054158, "name" : "fallon_08_augmentative_1054158.pdf", "sha1": "7e08634c41c03f3094015c08a3af2a25e2191d2c", "path": "/pdf/user/acecentre/article/12589602/1054158/fallon_08_augmentative_1054158.pdf"}
+],
 "tags": ["aac", "competencies", "occupational-therapy", "*ww-import"],
 "citation_keys": ["citeulike:12589602", "Fallon2008Augmentative", null]
 },
@@ -5961,6 +6133,9 @@
 "doi": "10.1111\/j.1365-2214.2011.01214.x",
 "citation": "Child: Care, Health and Development, Vol. 38, No. 1. (2012), pp. 87-97, doi:10.1111\/j.1365-2214.2011.01214.x",
 "posted_count": 1,
+"userfiles": [
+	{"fileId" : 1054159, "name" : "wadnerkar_12_single_1054159.pdf", "sha1": "687e34ffaa7bac282b3d62a082e468012d4f444c", "path": "/pdf/user/acecentre/article/12589596/1054159/wadnerkar_12_single_1054159.pdf"}
+],
 "tags": ["aac", "cerebral-palsy", "communication", "eyegaze", "*ww-import"],
 "citation_keys": ["citeulike:12589596", "Wadnerkar2012A", null]
 },

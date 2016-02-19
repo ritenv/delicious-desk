@@ -54,10 +54,6 @@ app.controller('AppCtrl', [
       keyword: ''
     };
 
-    $rootScope.$watch('searchCriteria', function(newVal, oldVal) {
-      console.log(newVal);
-    }, true);
-
     $rootScope.doRipple = function(ev) {
       $myElementInkRipple.attach($scope, $('.intro-head'), { center: false, fitRipple: false, colorElement: $($rootScope.rippleColorElement) });
     };

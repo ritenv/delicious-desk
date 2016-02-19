@@ -13,7 +13,7 @@ dataDir = './scripts/data/'
 books = json.load(open(dataDir+'libthing.json'))
 
 for book in books['books']:
-    title = abstract = comments = urls = citeulike = authors = tags = citation = created = file64 = fname = attachment = ''
+    title = abstract = comments = urls = citeulike = authors = tags = citation = created = file64 = fname = attachment = isbn = ''
     # there is a bug with the date thing.. cant work out what it is..
     b = books['books'][book]
     for item in b['collections']:
@@ -27,6 +27,7 @@ for book in books['books']:
     doc = {
         'id': b['book_id'],
         'title': b['title'],
+        'isbn': b['ISBN'],
         'authors' : b['author_fl'],
         'comments': b['comments'] if 'comments' in b else '',
         'tags' : b['tags'] if 'tags' in b else {},

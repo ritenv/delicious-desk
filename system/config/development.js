@@ -26,5 +26,13 @@ module.exports = {
   elastic: {
     server: 'localhost:9200',
     db: 'aceresources'
+  },
+  crons: {
+    runEvery: 1 //minutes
+  },
+  diigo: {
+    apiKey: process.env.DIIGO_API_KEY,
+    username: process.env.DIIGO_USERNAME,
+    password: process.env.DIIGO_PASSWORD
   }
 };

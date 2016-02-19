@@ -85,7 +85,7 @@ class CiteULikeReader(object):
         #return ''.join(response.readlines())
         
     def getBibText(self):
-        self.browser.retrieve('http://www.citeulike.org/bibtex/user/'+self.cUser+'?do_username_prefix=0&key_type=4&incl_amazon=0&clean_urls=1&smart_wrap=0&export_attachment_names=t&fieldmap=posted-at:date-added', localDir+self.cUser+'.bib')
+        self.browser.retrieve('http://www.citeulike.org/bibtex/user/'+self.cUser+'?do_username_prefix=0&key_type=3&incl_amazon=0&clean_urls=1&smart_wrap=0&export_attachment_names=t&fieldmap=posted-at:date-added', localDir+self.cUser+'.bib')
 
     def getJson(self):
         self.browser.retrieve(culikeJson, localJsonPath)
@@ -118,4 +118,4 @@ class CiteULikeReader(object):
 cureader = CiteULikeReader(cUser, cPass, localDir)
 cureader.getJson()
 # cureader.getBibText()
-# cureader.downloadPDFS()
+cureader.downloadPDFS()

@@ -4,8 +4,9 @@ angular.module('delicious.applets')
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/modules/applets/views/welcome.html',
-        controller: 'AppletsCtrl'
+        templateUrl: '/modules/applets/views/welcome.html?q&fields&type',
+        controller: 'AppletsCtrl',
+        reloadOnSearch: false
       })
       .when('/intro', {
         templateUrl: '/modules/applets/views/intro.html',

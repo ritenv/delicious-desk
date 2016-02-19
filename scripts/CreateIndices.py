@@ -69,6 +69,7 @@ es.indices.put_mapping(
                 'title': {'type': 'string'},
                 'authors': {'type': 'string'},
                 'date': {'type': 'string'},
+                'isbn': {'type': 'string'},
                 'comments': {'type': 'string'},
                 'tags': {'type': 'string'},
                 'cover': {'type': 'string'}

@@ -40,11 +40,9 @@ for cite in cites:
     file64 = ''
     if 'userfiles' in cite:
         fname = dataDir+'files/'+cite['userfiles'][0]['name']
-        print 'finding: ' + fname
         if os.path.isfile(fname):
-            print 'found!'   
             file64 = open(fname, "rb").read().encode("base64")
-    attachment = file64        
+    attachment = file64
     
     
     doc = {
@@ -61,5 +59,5 @@ for cite in cites:
     
     #print doc
     res = es.index(index="aceresources", doc_type='articles', id=cite['article_id'], body=doc)
-    print(res['created'])
+    # print(res['created'])
     

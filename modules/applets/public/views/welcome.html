@@ -1,72 +1,108 @@
-<div layout="column" flex>
+<div layout="column" flex ng-class="{'results-shown': data.keyword}">
   <div class="intro-head {{headerBgClass}}" ng-class="{'full-height': !data.keyword}">
 
-    <section layout="row" layout-sm="column" layout-align="left" class="search-menu">
-      <md-input-container flex="50">
+    <section layout="row" layout-sm="column" layout-xs="column" layout-align="left" class="search-menu">
+      <center>
+        <img src="/images/logo-main.png" class="logo">
+      </center>
+      <md-input-container flex="50" flex-xs="100" flex-sm="100">
         <label><span class="fa fa-search"></span> Search</label>
         <input ng-model="data.keyword" ng-model-options="{debounce: 1000}">
       </md-input-container>
       <div class="flex"></div>
 
-      <div>
-        <md-button class="groupX {{headerBgClass === 'regular' ? 'active' : ''}}" ng-click="setRippleColor('regular'); setSearchType('');">All</md-button>
-        <md-button class="groupX {{headerBgClass === 'cyan' ? 'active' : ''}}" ng-click="setRippleColor('cyan');setSearchType('books');">Books</md-button>
-        <md-button class="groupX {{headerBgClass === 'red' ? 'active' : ''}}" ng-click="setRippleColor('red'); setSearchType('articles');">Articles</md-button>
-        <md-button class="groupX {{headerBgClass === 'green' ? 'active' : ''}}" ng-click="setRippleColor('green'); setSearchType('links');">Links</md-button>
-      </div>
-      <div>
-        <md-menu>
-          <md-button class="md-fab md-primary dark-color" ng-mouseenter="openMenu($mdOpenMenu, $event)">
-            <md-icon md-svg-icon="/images/icons/material/underline6.svg"></md-icon>
-          </md-button>
-          <md-menu-content width="4" class="search-options">
-            <md-menu-item>
-              <div class="md-padding-horiz">
-                <md-checkbox ng-model="data.fields.tags" aria-label="Checkbox 1">
-                  Tags
-                </md-checkbox>
-              </div>
-            </md-menu-item>
-            <md-menu-item>
-              <div class="md-padding-horiz">
-                <md-checkbox ng-model="data.fields.title" aria-label="Checkbox 1">
-                  Title / Description
-                </md-checkbox>
-              </div>
-            </md-menu-item>
-            <md-menu-item>
-              <div class="md-padding-horiz">
-                <md-checkbox ng-model="data.fields.authors" aria-label="Checkbox 1">
-                  Authors
-                </md-checkbox>
-              </div>
-            </md-menu-item>
-          </md-menu-content>
-        </md-menu>
+      <div layout="row"> <!-- new-->
+        <div>
+          <md-button class="groupX {{headerBgClass === 'regular' ? 'active' : ''}}" ng-click="setRippleColor('regular'); setSearchType('');">All</md-button>
+          <md-button class="groupX {{headerBgClass === 'cyan' ? 'active' : ''}}" ng-click="setRippleColor('cyan');setSearchType('books');">Books</md-button>
+          <md-button class="groupX {{headerBgClass === 'red' ? 'active' : ''}}" ng-click="setRippleColor('red'); setSearchType('articles');">Articles</md-button>
+          <md-button class="groupX {{headerBgClass === 'green' ? 'active' : ''}}" ng-click="setRippleColor('green'); setSearchType('links');">Links</md-button>
+        </div>
+        <div>
+          <md-menu>
+            <md-button class="md-fab md-primary dark-color" ng-mouseenter="openMenu($mdOpenMenu, $event)">
+              <md-icon md-svg-icon="/images/icons/material/underline6.svg"></md-icon>
+            </md-button>
+            <md-menu-content width="4" class="search-options">
+              <!-- <md-menu-item>
+                <div class="md-padding-horiz">
+                  <md-checkbox ng-model="data.isAll" ng-click="selectAll()" aria-label="Checkbox 1">
+                    All Fields
+                  </md-checkbox>
+                </div>
+              </md-menu-item> -->
+              <md-menu-item>
+                <div class="md-padding-horiz">
+                  <md-checkbox ng-model="data.fields.tags" aria-label="Checkbox 1">
+                    Tags
+                  </md-checkbox>
+                </div>
+              </md-menu-item>
+              <md-menu-item>
+                <div class="md-padding-horiz">
+                  <md-checkbox ng-model="data.fields.title" aria-label="Checkbox 1">
+                    Title / Description
+                  </md-checkbox>
+                </div>
+              </md-menu-item>
+              <md-menu-item>
+                <div class="md-padding-horiz">
+                  <md-checkbox ng-model="data.fields.authors" aria-label="Checkbox 1">
+                    Authors
+                  </md-checkbox>
+                </div>
+              </md-menu-item>
+              <md-menu-item ng-if="searchCriteria.type === 'articles' || searchCriteria.type === ''">
+                <div class="md-padding-horiz">
+                  <md-checkbox ng-model="data.fields.attachment" aria-label="Checkbox 1">
+                    Attachments
+                  </md-checkbox>
+                </div>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
+        
       </div>
     </section>
 
     <div layout="row" layout-align="center" layout-fill>
       <div class="main-view-content">
         <div class="heading-container">
-          <h1 ng-if="data.keyword" class="md-display-2 white">23 result(s) for <strong>{{data.keyword}}</strong></h1>
-          <h1 ng-if="!data.keyword" class="md-display-2 white">A really simple search engine.</h1>
+          <h1 ng-if="data.keyword && records.length" class="md-display-0 white">{{records.length}} result(s) for <strong>{{data.keyword}}</strong></h1>
+          <h1 ng-if="!data.keyword" class="md-display-0 white">A really simple search engine.</h1>
         </div>
       </div>
     </div>
   </div>
-  <div class="relative default-ng-transition-vertical" layout="row" layout-align="center" layout-fill ng-if="data.keyword">
+  <div class="relative default-ng-transition-vertical zIndex" layout="row" layout-align="center" layout-fill ng-if="data.keyword">
     <md-card class="main-view-content">
       <md-card-content class="md-subhead">
         <div class="md-padding">
           <div class="link-items">
-            <div ng-repeat="i in [1,2,3,4,5]" class="link-item">
-              <p class="title">
-                <a href="#">Results template design pending</a>
-              </p>
-              <p>
-                Each three services have an API of sorts. These are a little limited to do full-text searching so I created some scripts to export the data from each including any attachments and...
-              </p>
+            <div ng-if="!records.length">
+              <p><strong>No results found.</strong></p>
+              <p>You may want to refine your search criteria.</p>
+              <span class="fa fa-meh-o large-meh"></span>
+            </div>
+            <div ng-repeat="record in records" class="link-item" layout="row">
+              <div layout="column">
+                <span class="fa type-icon" ng-class="{'fa-book': record._type === 'books', 'fa-file-text-o': record._type === 'articles', 'fa-share-square-o': record._type === 'links'}"></span>
+              </div>
+              <div layout="column" flex>
+                <p class="title">
+                  <a target="_blank" ng-href="{{getLink(record)}}">{{record._source.title}}</a>
+                </p>
+                <p>
+                  {{getDescription(record)}}
+                </p>
+              </div>
+              <div layout="column" ng-if="record._source.cover">
+                <a ng-href="{{record._source.cover}}" target="_blank">
+                  <img ng-src="{{record._source.cover}}" width="60" class="scale-on-hover">
+                </a>
+              </div>
+
             </div>
           </div>
         </md-content>
