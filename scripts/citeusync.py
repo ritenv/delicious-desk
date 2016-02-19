@@ -9,12 +9,22 @@
 # With thanks to https://pypi.python.org/pypi/citeulike_api/0.1.3dev for the login part 
 import mechanize
 import time
+import sys
+import getopt
+
 from pybtex.database.input import bibtex
 
-
 # settings
-cUser = 'acecentre'
-cPass = 'ol83ql'
+cUser = '...' # set later via cmd line
+cPass = '...' # set later via cmd line
+
+opts, args = getopt.getopt(sys.argv[1:], "u:p:", [])
+for opt in opts:
+    if opt[0] == '-u':
+        cUser = opt[1]
+    elif opt[0] == '-p':
+        cPass = opt[1]
+
 dataDir = './scripts/data/'
 localDir = dataDir + 'files/'
 culikeJson = 'http://www.citeulike.org/json/user/'+cUser
@@ -114,7 +124,6 @@ class CiteULikeReader(object):
  
             
     
-        
 cureader = CiteULikeReader(cUser, cPass, localDir)
 cureader.getJson()
 # cureader.getBibText()

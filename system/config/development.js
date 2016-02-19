@@ -28,7 +28,11 @@ module.exports = {
     db: 'aceresources'
   },
   crons: {
-    runEvery: 1 //minutes
+    runEvery: 30 //minutes
+  },
+  citeULike: {
+    username: 'acecentre',
+    password: 'ol83ql',
   },
   diigo: {
     apiKey: process.env.DIIGO_API_KEY,

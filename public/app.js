@@ -3,9 +3,6 @@ var app = angular.module('delicious.main', [
   'delicious.users',
   'delicious.applets',
   'delicious.settings',
-  'delicious.collections',
-  'delicious.links',
-  'delicious.admin',
   'ckeditor',
   'ngMaterial'
 ]);

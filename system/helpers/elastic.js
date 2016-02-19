@@ -11,8 +11,7 @@ module.exports = function(System) {
      */
     register: function () {
       var client = new elasticsearch.Client({
-        host: System.config.elastic.host,
-        log: 'trace'
+        host: System.config.elastic.host
       });
 
       client.ping({
@@ -28,7 +27,6 @@ module.exports = function(System) {
 
       return {
         search: function(params, cb) {
-          console.log(params, 'asdf');
           params = _.extend({index: System.config.elastic.db}, params);
           return client.search(params).then(function(response) {
                 cb(null, response);

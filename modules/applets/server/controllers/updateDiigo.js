@@ -7,11 +7,9 @@ module.exports = function(System) {
   var obj = {};
   var maxLimit = 20;
 
-  obj.updateDiigo = function() {
+  obj.updateDiigo = function(cb) {
     var start = 0;
-    save10linksRecursively(0, function() {
-      console.log('Done!');
-    })
+    save10linksRecursively(0, cb)
   }
 
   function save10linksRecursively(start, cb) {
@@ -26,6 +24,9 @@ module.exports = function(System) {
           var elastic = System.plugins.elastic;
           links.map(function(link) {
             link.id = link.url; //ensure unique
+            link.description = link.desc;
+            delete link.desc;
+
             elastic.upsert(link, function(err, response) {
               //nothing to log
             });

@@ -14,9 +14,8 @@ angular.module('delicious.applets')
     'appLocation',
     'appWebSocket',
     'appUsersSearch',
-    'appCollections',
     'appExternals',
-    function($scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appCollections, appExternals) {
+    function($scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appExternals) {
       var params = $scope.params = $routeParams;
       var searchParams = {
         type: params.type || '',
@@ -187,9 +186,8 @@ angular.module('delicious.applets')
     'appLocation',
     'appWebSocket',
     'appUsersSearch',
-    'appCollections',
     'appLinks',
-    function($sce, $scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appCollections, appLinks) {
+    function($sce, $scope, $route, $rootScope, $routeParams, $timeout, appApplets, appAuth, appToast, appStorage, appLocation, appWebSocket, appUsersSearch, appLinks) {
       $scope.introText = $sce.trustAsHtml('<p>Coming soon.</p>');
       
       $scope.onIconOpen = function() {

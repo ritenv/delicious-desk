@@ -22,8 +22,6 @@ for book in books['books']:
         else:
             location = ''
     
-    print location
-        
     doc = {
         'id': b['book_id'],
         'title': b['title'],
@@ -38,9 +36,3 @@ for book in books['books']:
     
     #print doc
     res = es.index(index="aceresources", doc_type='books', id=b['book_id'], body=doc)
-    print(res['created'])
-    
-
-
-
-    

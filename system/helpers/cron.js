@@ -2,15 +2,15 @@ var PythonShell = require('python-shell');
 var _ = require('lodash');
 var unirest = require('unirest');
 
-
-var options = {
-  mode: 'text',
-  pythonPath: 'python',
-  pythonOptions: ['-u'],
-  scriptPath: './scripts/'
-};
-
 module.exports = function(System) {
+  var options = {
+    mode: 'text',
+    pythonPath: 'python',
+    pythonOptions: ['-u'],
+    scriptPath: './scripts/',
+    args: ['-u', System.config.citeULike.username, '-p', System.config.citeULike.password]
+  };
+
   var plugin = {
     /**
      * The helper register method
@@ -46,6 +46,10 @@ module.exports = function(System) {
                 });
             });
 
+          runScript('lt2es.py')
+            .then(function(results) {
+              console.log('Libthing is done!');
+            })
 
         },
 
@@ -71,7 +75,9 @@ module.exports = function(System) {
 
         updateDiigo: function() {
           var ctrl = require('../../modules/applets/server/controllers/updateDiigo')(System);
-          ctrl.updateDiigo();
+          ctrl.updateDiigo(function() {
+            console.log('Diigo is done!');
+          });
         }
       };
     }
