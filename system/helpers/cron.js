@@ -1,5 +1,7 @@
 var PythonShell = require('python-shell');
 var _ = require('lodash');
+var unirest = require('unirest');
+
 
 var options = {
   mode: 'text',
@@ -24,16 +26,18 @@ module.exports = function(System) {
           if (isStarted) return; //run only once
 
           isStarted = true;
+
+          self.updateDiigo();
           self.runScripts();
+
           setInterval(function() {
+            self.updateDiigo();
             self.runScripts();
           }, System.config.crons.runEvery * 60 * 1000);
         },
 
         runScripts: function() {
-          var runScript = this.runScript;
-          console.log(runScript);
-
+          var runScript = this.runScript;          
           runScript('citeusync.py')
             .then(function(results) {
               runScript('cul2es.py')
@@ -57,11 +61,17 @@ module.exports = function(System) {
           function init() {
             PythonShell.run(name, options, function (err, results) {
               if (err) throw err;
+              results = results === null ? 'No output from script' : results;
               // results is an array consisting of messages collected during execution 
               console.log('%s: %j', name, results);
               thenFunc(results);
             });
           }
+        },
+
+        updateDiigo: function() {
+          var ctrl = require('../../modules/applets/server/controllers/updateDiigo')(System);
+          ctrl.updateDiigo();
         }
       };
     }

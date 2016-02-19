@@ -35,6 +35,14 @@ module.exports = function(System) {
               }, function(err) {
                 cb(err, {});
               });
+        },
+        upsert: function(doc, cb) {
+          client.create({
+            index: System.config.elastic.db,
+            type: 'links',
+            body: doc
+          }, cb);
+
         }
       };
     }
